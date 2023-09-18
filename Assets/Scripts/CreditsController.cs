@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class CreditsController : MonoBehaviour
 {
-    [SerializeField] MoveToPoint m_MoveImage;
+    [SerializeField] Animation m_CreditAnimation;
     [SerializeField] SceneLoader m_SceneLoader;
 
+    float m_Timer = 0;
+
     // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        m_MoveImage.TransformToPoint();
-        if (m_MoveImage.IsOnPoint())
-            m_SceneLoader.UnloadSceneByName("Menu_Creditos");
+        m_CreditAnimation.Play();
+    }
+
+    private void Update()
+    {
+        m_Timer += Time.deltaTime;
+        if (m_Timer > m_CreditAnimation.clip.length)
+            m_SceneLoader.UnloadSceneByName("Menu_Credits");
     }
 }
