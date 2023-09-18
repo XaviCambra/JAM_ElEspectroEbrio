@@ -9,19 +9,44 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(l_SceneName);
     }
 
-    public void LoadSceneByIndex(int l_SceneIndex)
-    {
-        SceneManager.LoadScene(l_SceneIndex);
-    }
-
     public void LoadSceneAsyncByName(string l_SceneName)
     {
-        StartCoroutine(SceneAsync(SceneManager.GetSceneByName(l_SceneName).buildIndex));
+        StartCoroutine(LoadSceneAsync(l_SceneName));
     }
 
-    IEnumerator SceneAsync(int l_SceneIndex)
+    public void LoadSceneAsyncAdditiveByName(string l_SceneName)
     {
-        AsyncOperation l_AsyncLoad = SceneManager.LoadSceneAsync(l_SceneIndex);
+        StartCoroutine(LoadSceneAsyncAdditive(l_SceneName));
+    }
+
+    public void UnloadSceneByName(string l_SceneName)
+    {
+        StartCoroutine(UnloadSceneAsync(l_SceneName));
+    }
+
+    IEnumerator LoadSceneAsync(string l_SceneName)
+    {
+        AsyncOperation l_AsyncLoad = SceneManager.LoadSceneAsync(l_SceneName);
+
+        while (!l_AsyncLoad.isDone)
+        {
+            yield return null;
+        }
+    }
+
+    IEnumerator LoadSceneAsyncAdditive(string l_SceneName)
+    {
+        /*AsyncOperation l_AsyncLoad = */SceneManager.LoadSceneAsync(l_SceneName, LoadSceneMode.Additive);
+        yield return null;
+        //while (!l_AsyncLoad.isDone)
+        //{
+        //    yield return null;
+        //}
+    }
+
+    IEnumerator UnloadSceneAsync(string l_SceneName)
+    {
+        AsyncOperation l_AsyncLoad = SceneManager.UnloadSceneAsync(l_SceneName);
 
         while (!l_AsyncLoad.isDone)
         {
