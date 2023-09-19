@@ -308,10 +308,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1331,8 +1331,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 675144ea07e682f4894ecbca0dcde87f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CreditAnimation: {fileID: 1203846355}
   m_SceneLoader: {fileID: 1187288433}
+  m_SceneName: Menu_Credits
+  m_Animation: {fileID: 1203846355}
+  m_IntroAnimationClip: {fileID: 7400000, guid: 3fb89aebeb924c84480c0e0953bc5bb1, type: 2}
+  m_OutroAnimationClip: {fileID: 0}
+  m_AutomaticUnload: 1
 --- !u!111 &1203846355
 Animation:
   m_ObjectHideFlags: 0
