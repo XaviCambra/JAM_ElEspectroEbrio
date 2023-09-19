@@ -14,5 +14,9 @@ public class Ingredient
         Grain,
         Decoration  //opcional
     }
-    
+}
+
+public class Drink
+{
+    public List<Ingredient> Ingredients;
 }
