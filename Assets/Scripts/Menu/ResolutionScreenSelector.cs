@@ -10,6 +10,8 @@ public class ResolutionScreenSelector : MonoBehaviour
 
     Resolution[] m_Resolution;
 
+    [SerializeField] SetOptions m_SetOptions;
+
     private void Start()
     {
         m_Resolution = Screen.resolutions;
@@ -24,5 +26,15 @@ public class ResolutionScreenSelector : MonoBehaviour
                 m_Dropdown.value = i;
             }
         }
+
+        m_Dropdown.onValueChanged.AddListener(delegate
+        {
+            SetResolutionById(m_Dropdown);
+        });
+    }
+
+    public void SetResolutionById(TMP_Dropdown l_Dropdown)
+    {
+        m_SetOptions.SetResolution(m_Resolution[l_Dropdown.value]);
     }
 }

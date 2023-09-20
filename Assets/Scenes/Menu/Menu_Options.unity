@@ -946,13 +946,13 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1244059837}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1244059840}
+        m_TargetAssemblyTypeName: SetOptions, Assembly-CSharp
+        m_MethodName: SetResolution
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1010,6 +1010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Dropdown: {fileID: 469260419}
+  m_SetOptions: {fileID: 1244059840}
 --- !u!1 &532983511
 GameObject:
   m_ObjectHideFlags: 0

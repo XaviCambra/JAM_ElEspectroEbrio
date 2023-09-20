@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class SetOptions : MonoBehaviour
 {
-    Resolution m_Resolution { get; set; }
-    bool m_Fullscreen { get; set; }
+    [SerializeField] Resolution m_Resolution;
+    [SerializeField] bool m_Fullscreen;
 
-
+    public void SetResolution(Resolution l_Resolution)
+    {
+        m_Resolution = l_Resolution;
+    }
 
 }
