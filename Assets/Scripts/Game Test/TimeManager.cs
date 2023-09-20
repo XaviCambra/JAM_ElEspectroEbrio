@@ -10,6 +10,9 @@ public class TimeManager : MonoBehaviour
     private float TimeCountdown;
     private float CurrentTime;
     private TextMeshProUGUI TextMeshPro;
+
+    [SerializeField] SceneLoader m_SceneLoader;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +30,7 @@ public class TimeManager : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Game Over");
+            m_SceneLoader.LoadSceneByName("Game Over");
         }
     }
 }

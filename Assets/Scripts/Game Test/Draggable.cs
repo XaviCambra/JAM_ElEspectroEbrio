@@ -8,13 +8,17 @@ public class Draggable : MonoBehaviour
     private GlassManager glassManager;
     private Ingredient ingredient;
 
+    private Vector3 m_StartingPosition;
+
     private void Start()
     {
         ingredient = GetComponent<IngredientManager>().Ingredient;
+        m_StartingPosition = transform.position;
     }
     private void OnMouseDown()
     {
         difference = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
+        Instantiate(this, m_StartingPosition, Quaternion.Euler(0, 0, 0));
     }
 
     private void OnMouseUp()
@@ -22,8 +26,8 @@ public class Draggable : MonoBehaviour
         if(glassManager != null)
         {
             glassManager.AddIngredient(ingredient);
-            Destroy(gameObject);
         }
+        Destroy(gameObject);
     }
 
     private void OnMouseDrag()
