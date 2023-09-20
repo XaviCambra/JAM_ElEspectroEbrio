@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e807156795427b42a0a6f8f453fb819, type: 3}
-  m_Name: "Jugo de murci\xE9lago"
+  m_Name: Hadas
   m_EditorClassIdentifier: 
   Name: 
   Description: 
