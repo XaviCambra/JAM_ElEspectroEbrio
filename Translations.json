@@ -2,15 +2,27 @@
     "TextsByLang": {
         "ESP": {
             "Texto_BuenosDias": "Buenos dias",
-            "Texto_BuenasNoches": "Buenas noches"
+            "Texto_BuenasNoches": "Buenas noches",
+            "Texto_Jugar": "Jugar",
+            "Texto_Opciones": "Opciones",
+            "Texto_Creditos": "Créditos",
+            "Texto_Salir": "Salir"
         },
         "CAT": {
             "Texto_BuenosDias": "Bon dia",
-            "Texto_BuenasNoches": "Bona nit"
+            "Texto_BuenasNoches": "Bona nit",
+            "Texto_Jugar": "Jugar",
+            "Texto_Opciones": "Opcions",
+            "Texto_Creditos": "Crèdits",
+            "Texto_Salir": "Sortir"
         },
         "EN": {
             "Texto_BuenosDias": "Good morning",
-            "Texto_BuenasNoches": "Good afternoon"
+            "Texto_BuenasNoches": "Good afternoon",
+            "Texto_Jugar": "Play",
+            "Texto_Opciones": "Options",
+            "Texto_Creditos": "Credits",
+            "Texto_Salir": "Exit"
         }
     },
     "SingleDict": {
