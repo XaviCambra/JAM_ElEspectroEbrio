@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e807156795427b42a0a6f8f453fb819, type: 3}
-  m_Name: Bebida espumosa fantasmal
+  m_Name: Alma Malvada
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
+  Name: Alma Malvada
+  Description: "En el culo de la botella se ve \u201843 de 108\u2019\u2019"
   Type: 0
-  SlotsOccupied: 0
-  m_Properties: 
+  SlotsOccupied: 1
+  m_Properties: 0000000005000000
   m_IngredientColor: {r: 0, g: 0, b: 0, a: 0}
