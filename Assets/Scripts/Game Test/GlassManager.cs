@@ -10,7 +10,8 @@ public class GlassManager : MonoBehaviour
     [SerializeField] List<Ingredient> ingredients = new List<Ingredient>();
     private bool UnDrinkable;
 
-    private Ingredient nextIngredient;
+    [SerializeField] IngredientManager m_IngredientManager;
+
     public void AddIngredient(Ingredient ing)
     {
         if (ing.Type == IngredientType.Mixed)
@@ -29,6 +30,7 @@ public class GlassManager : MonoBehaviour
         Vector3 RGBColor = Vector3.zero;
         foreach(Ingredient ingredient in ingredients)
         {
+            ingredientResult.AddIngredient(ingredient);
             foreach(IngredientProperties property in ingredient.m_Properties)
             {
                 if (!ingredientResult.m_Properties.Contains(property))
@@ -43,7 +45,7 @@ public class GlassManager : MonoBehaviour
         }
         ingredientResult.Type = IngredientType.Mixed;
         ingredientResult.m_IngredientColor = new Color(RGBColor.x / ingredients.Count, RGBColor.y / ingredients.Count, RGBColor.z / ingredients.Count, 1);
-        Debug.Log(ingredientResult.m_IngredientColor);
-        GetComponent<SpriteRenderer>().color = ingredientResult.m_IngredientColor;
+
+        m_IngredientManager.Ingredient = ingredientResult;
     }
 }

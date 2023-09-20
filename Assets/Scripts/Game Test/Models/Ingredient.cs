@@ -13,8 +13,6 @@ public class Ingredient : ScriptableObject
     {
         Liquid,
         Solid,
-        Grain,
-        Decoration,  //opcional
         Mixed
     }
     public List<IngredientProperties> m_Properties = new List<IngredientProperties>();
@@ -30,8 +28,25 @@ public class Ingredient : ScriptableObject
         Magic,
         Mundano
     }
-
+    public IngredientTemperature m_Temperature;
+    public enum IngredientTemperature
+    {
+        Frio,
+        Neutro,
+        Caliente
+    }
     public Color m_IngredientColor;
+
+    List<Ingredient> mixedIngredientList = new List<Ingredient>();
+    public void AddIngredient(Ingredient ingredient)
+    {
+        mixedIngredientList.Add(ingredient);
+    }
+
+    public List<Ingredient> GetIngredientList()
+    {
+        return mixedIngredientList;
+    }
 }
 
 public class Drink
