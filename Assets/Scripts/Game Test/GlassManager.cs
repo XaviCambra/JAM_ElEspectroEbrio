@@ -6,9 +6,8 @@ using static Ingredient;
 
 public class GlassManager : MonoBehaviour
 {
-    [SerializeField] int m_GlassSlots;  // ranuras de ingredientes del vaso
+    [SerializeField] int m_GlassSlots;
     [SerializeField] List<Ingredient> ingredients = new List<Ingredient>();
-    //[SerializeField] Ingredient ingredientResult; 
     private bool UnDrinkable;
 
     private Ingredient nextIngredient;
@@ -24,7 +23,7 @@ public class GlassManager : MonoBehaviour
     public void MixIngredients()
     {
         Ingredient ingredientResult = ScriptableObject.CreateInstance<Ingredient>();
-        ingredientResult.SlotsOccupied = m_GlassSlots;
+        ingredientResult.SlotsOccupied = m_GlassSlots / 2;
         ingredientResult.Name = "Mezcla";
 
         Vector3 RGBColor = Vector3.zero;

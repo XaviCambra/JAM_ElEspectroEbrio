@@ -18,7 +18,6 @@ public class Draggable : MonoBehaviour
     private void OnMouseDown()
     {
         difference = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
-        Instantiate(this, m_StartingPosition, Quaternion.Euler(0, 0, 0));
     }
 
     private void OnMouseUp()
@@ -27,7 +26,7 @@ public class Draggable : MonoBehaviour
         {
             glassManager.AddIngredient(ingredient);
         }
-        Destroy(gameObject);
+        transform.position = m_StartingPosition;
     }
 
     private void OnMouseDrag()
