@@ -12,4 +12,13 @@ public class SetOptions : MonoBehaviour
         m_Resolution = l_Resolution;
     }
 
+    public void SetFullscreen(bool l_Fullscreen)
+    {
+        m_Fullscreen = l_Fullscreen;
+    }
+
+    public void ApplyResolution()
+    {
+        Screen.SetResolution(m_Resolution.width, m_Resolution.height, m_Fullscreen);
+    }
 }
