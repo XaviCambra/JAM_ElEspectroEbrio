@@ -1,0 +1,19 @@
+{
+    "TextsByLang": {
+        "ESP": {
+            "Texto_BuenosDias": "Buenos dias",
+            "Texto_BuenasNoches": "Buenas noches"
+        },
+        "CAT": {
+            "Texto_BuenosDias": "Bon dia",
+            "Texto_BuenasNoches": "Bona nit"
+        },
+        "EN": {
+            "Texto_BuenosDias": "Good morning",
+            "Texto_BuenasNoches": "Good afternoon"
+        }
+    },
+    "SingleDict": {
+        "SingleTranslation": "Hola"
+    }
+}
