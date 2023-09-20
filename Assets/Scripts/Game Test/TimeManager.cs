@@ -30,7 +30,7 @@ public class TimeManager : MonoBehaviour
         }
         else
         {
-            m_SceneLoader.LoadSceneByName("Game Over");
+            m_SceneLoader.LoadSceneByName("Menu_GameOver");
         }
     }
 }

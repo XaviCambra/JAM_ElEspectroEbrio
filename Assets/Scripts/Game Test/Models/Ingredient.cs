@@ -14,9 +14,10 @@ public class Ingredient : ScriptableObject
         Liquid,
         Solid,
         Grain,
-        Decoration  //opcional
+        Decoration,  //opcional
+        Mixed
     }
-    public IngredientProperties[] m_Properties;
+    public List<IngredientProperties> m_Properties = new List<IngredientProperties>();
     public enum IngredientProperties
     {
         Fuerte,
@@ -29,6 +30,8 @@ public class Ingredient : ScriptableObject
         Magic,
         Mundano
     }
+
+    public Color m_IngredientColor;
 }
 
 public class Drink
