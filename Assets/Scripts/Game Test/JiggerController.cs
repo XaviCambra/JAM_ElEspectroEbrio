@@ -25,6 +25,7 @@ public class JiggerController : Tools
                 }
             }
             m_Ingredient.m_Temperature = l_IngredientToAdd.m_Temperature;
+            m_Ingredient.m_IngredientColor = l_IngredientToAdd.m_IngredientColor;
             m_Ingredient.Type = IngredientType.Jiggled;
             m_Draggable.AddIngredient(m_Ingredient);
         }

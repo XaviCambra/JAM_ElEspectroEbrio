@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e807156795427b42a0a6f8f453fb819, type: 3}
   m_Name: Zumo de Zombie Zanoides
   m_EditorClassIdentifier: 
-  Name: Zumo de Zombie Zanoides 3Z
+  Name: "Zumo de Zombie Zumb\xF3n 3Z"
   Description: "Notas un escalofr\xEDo en el cerebro"
   Type: 0
   SlotsOccupied: 1
   m_Properties: 0000000006000000
   m_Temperature: 0
-  m_IngredientColor: {r: 0, g: 0.5471698, b: 0.13899702, a: 0}
+  m_IngredientColor: {r: 0, g: 0.5471698, b: 0.13899702, a: 1}
+  m_Sprite: {fileID: 21300000, guid: fab454a304269b24f8392b9963ca3dbb, type: 3}
+  mixedIngredientList: []

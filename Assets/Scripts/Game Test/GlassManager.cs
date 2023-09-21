@@ -8,6 +8,7 @@ public class GlassManager : Tools
 {
     [SerializeField] int m_GlassSlots;
     [SerializeField] List<Ingredient> ingredients = new List<Ingredient>();
+    [SerializeField] SpriteRenderer m_ColorResultTest;
     private bool UnDrinkable;
 
     public override void AddIngredient(Ingredient ing)
@@ -27,11 +28,13 @@ public class GlassManager : Tools
     {
         Ingredient ingredientResult = ScriptableObject.CreateInstance<Ingredient>();
         ingredientResult.SlotsOccupied = m_GlassSlots / 2;
+        m_GlassSlots = 0;
         ingredientResult.Name = "";
 
         Vector3 RGBColor = Vector3.zero;
         ingredientResult.mixedIngredientList = new List<Ingredient>();
         ingredientResult.m_Properties = new List<IngredientProperties>();
+        ingredientResult.mixedIngredientList = new List<Ingredient>();
         foreach (Ingredient ingredient in ingredients)
         {
             if (ingredient == ingredients[ingredients.Count - 1])
@@ -55,8 +58,10 @@ public class GlassManager : Tools
         ingredientResult.name = ingredientResult.Name;
         ingredientResult.Type = IngredientType.Mixed;
         ingredientResult.m_IngredientColor = new Color(RGBColor.x / ingredients.Count, RGBColor.y / ingredients.Count, RGBColor.z / ingredients.Count, 1);
+        m_ColorResultTest.color = ingredientResult.m_IngredientColor;
         ingredients.Clear();
         m_Ingredient = ingredientResult;
+        m_Draggable.AddIngredient(m_Ingredient);
     }
 
     private void OnMouseDown()

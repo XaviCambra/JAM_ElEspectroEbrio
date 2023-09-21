@@ -16,11 +16,12 @@ public class StrainerManager : Tools
         {
             if(ingredient.Type == IngredientType.Solid)
             {
-                ing.SlotsOccupied -= ingredient.SlotsOccupied;
+                ing.SlotsOccupied -= ingredient.SlotsOccupied/2;
             }
         }
 
         Debug.Log("Peso después: " + ing.SlotsOccupied);
         m_Ingredient = ing;
+        m_Draggable.AddIngredient(m_Ingredient);
     }
 }
