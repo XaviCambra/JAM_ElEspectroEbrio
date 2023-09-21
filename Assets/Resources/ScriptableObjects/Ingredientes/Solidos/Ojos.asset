@@ -17,4 +17,6 @@ MonoBehaviour:
   Type: 1
   SlotsOccupied: 4
   m_Properties: 05000000
+  m_Temperature: 0
   m_IngredientColor: {r: 0.8867924, g: 0.88565785, b: 0.7738519, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 514dccdc62986c04da68e518449f3f2f, type: 3}

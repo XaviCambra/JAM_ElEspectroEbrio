@@ -22,7 +22,7 @@ public class TranslationsManager : MonoBehaviour
     private string GetCurrentLanguage()
     {
         // TODO: implementar esto para que coja el idioma seleccionado en opciones
-        return "CAT";
+        return "EN";
     }
 
 }

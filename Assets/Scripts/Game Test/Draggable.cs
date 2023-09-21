@@ -5,47 +5,86 @@ using UnityEngine;
 public class Draggable : MonoBehaviour
 {
     private Vector2 difference;
-    private GlassManager glassManager;
-    private Ingredient ingredient;
+    Tools m_Tool;
+    [SerializeField] GlassManager m_GlassManager;
+    [SerializeField] JiggerController m_JiggerController;
+    [SerializeField] StrainerManager m_StrainerManager;
+    private Ingredient m_Ingredient;
 
     private Vector3 m_StartingPosition;
 
     private void Start()
     {
-        ingredient = GetComponent<IngredientManager>().Ingredient;
+        try
+        {
+            m_Ingredient = GetComponent<IngredientManager>().Ingredient;
+        }
+        catch (System.Exception) { }
+        try
+        {
+            m_Tool = GetComponent<Tools>();
+        }
+        catch (System.Exception) { }
+
         m_StartingPosition = transform.position;
     }
     private void OnMouseDown()
     {
-        difference = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
+        if(gameObject.GetComponent<Draggable>().enabled)
+            difference = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
     }
 
     private void OnMouseUp()
     {
-        if(glassManager != null)
+        if(m_GlassManager != null)
         {
-            glassManager.AddIngredient(ingredient);
+            m_GlassManager.AddIngredient(m_Ingredient);
+            if (m_Tool != null)
+                m_Tool.Clear();
         }
+        if(m_JiggerController != null)
+        {
+            m_JiggerController.AddIngredient(m_Ingredient);
+            if (m_Tool != null)
+                m_Tool.Clear();
+        }
+        if(m_StrainerManager != null)
+        {
+            m_StrainerManager.AddIngredient(m_Ingredient);
+            if (m_Tool != null)
+                m_Tool.Clear();
+        }
+        
         transform.position = m_StartingPosition;
     }
 
     private void OnMouseDrag()
     {
-        transform.position = (Vector2)Camera.main.ScreenToWorldPoint((Vector2)Input.mousePosition) - difference;
+        if (gameObject.GetComponent<Draggable>().enabled)
+            transform.position = (Vector2)Camera.main.ScreenToWorldPoint((Vector2)Input.mousePosition) - difference;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "glass")
         {
-            glassManager = collision.gameObject.GetComponent<GlassManager>();            
+            m_GlassManager = collision.gameObject.GetComponent<GlassManager>();
+            m_JiggerController = collision.gameObject.GetComponent<JiggerController>();
+            m_StrainerManager = collision.gameObject.GetComponent<StrainerManager>();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "glass")
         {
-            glassManager = null;
+            m_GlassManager = null;
+            m_JiggerController = null;
+            m_StrainerManager = null;
         }
+    }
+
+    public void AddIngredient(Ingredient ingredient)
+    {
+        m_Ingredient = ingredient;
     }
 }

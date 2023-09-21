@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using static Ingredient;
 
-public class StrainerManager : MonoBehaviour
+public class StrainerManager : Tools
 {
-    [SerializeField] Ingredient m_Ingredient;
-
-    public void AddIngredient(Ingredient ing)
+    public override void AddIngredient(Ingredient ing)
     {
         if (ing.Type != IngredientType.Mixed)
             return;
