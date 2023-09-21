@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Slime en botella
   m_EditorClassIdentifier: 
   Name: Slime en botella
-  Description: Botella cuki con un slime feliz
+  Description: Garantizan que han sido aspirados humanamente
   Type: 0
   SlotsOccupied: 1
   m_Properties: 0200000004000000
+  m_Temperature: 0
   m_IngredientColor: {r: 0.25, g: 1, b: 0.25, a: 1}

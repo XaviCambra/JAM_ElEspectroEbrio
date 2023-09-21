@@ -16,5 +16,6 @@ MonoBehaviour:
   Description: Sientes el abrazo adorable del yeti
   Type: 0
   SlotsOccupied: 1
-  m_Properties: 00000000
+  m_Properties: 0000000008000000
+  m_Temperature: 0
   m_IngredientColor: {r: 0.9019608, g: 1, b: 1, a: 0}

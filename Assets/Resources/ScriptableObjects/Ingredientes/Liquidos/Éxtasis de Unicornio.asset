@@ -17,4 +17,5 @@ MonoBehaviour:
   Type: 0
   SlotsOccupied: 1
   m_Properties: 020000000700000004000000
-  m_IngredientColor: {r: 0, g: 0, b: 0, a: 0}
+  m_Temperature: 0
+  m_IngredientColor: {r: 0.5939551, g: 0.130162, b: 0.7075472, a: 0}
