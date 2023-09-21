@@ -7,5 +7,7 @@ public class Client
 {
     public string Name;
     public string Description;
-    public List<Drink> WantedDrinks;    //puede que solo sea uno
+    public Drink WantedDrinks;    
+    public List<string> DialogueLines;
+    public string Sprite;
 }
