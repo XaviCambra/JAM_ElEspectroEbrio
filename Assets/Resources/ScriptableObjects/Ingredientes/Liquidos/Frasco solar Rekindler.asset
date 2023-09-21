@@ -15,6 +15,7 @@ MonoBehaviour:
   Name: 'Frasco solar Rekindler '
   Description: El favorito de los no muertos
   Type: 0
-  SlotsOccupied: 0
-  m_Properties: 
-  m_IngredientColor: {r: 0, g: 0, b: 0, a: 0}
+  SlotsOccupied: 1
+  m_Properties: 0300000004000000
+  m_Temperature: 0
+  m_IngredientColor: {r: 1, g: 0.51984906, b: 0, a: 0}

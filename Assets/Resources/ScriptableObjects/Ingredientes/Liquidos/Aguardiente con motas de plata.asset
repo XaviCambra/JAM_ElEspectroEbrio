@@ -15,6 +15,7 @@ MonoBehaviour:
   Name: Aguardiente con motas de plata
   Description: "M\xE1s de un hombre lobo se atraganto"
   Type: 0
-  SlotsOccupied: 0
+  SlotsOccupied: 1
   m_Properties: 0000000008000000
-  m_IngredientColor: {r: 0, g: 0, b: 0, a: 0}
+  m_Temperature: 0
+  m_IngredientColor: {r: 0.32809716, g: 0.36124563, b: 0.6886792, a: 0}

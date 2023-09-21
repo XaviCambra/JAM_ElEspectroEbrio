@@ -16,5 +16,6 @@ MonoBehaviour:
   Description: "Da una sensaci\xF3n de que tienes a tu espalda a la parca"
   Type: 0
   SlotsOccupied: 1
-  m_Properties: 000000000000000000000000
-  m_IngredientColor: {r: 0, g: 0, b: 0, a: 0}
+  m_Properties: 0200000005000000
+  m_Temperature: 0
+  m_IngredientColor: {r: 0, g: 0.2924528, b: 0.015951956, a: 0}
