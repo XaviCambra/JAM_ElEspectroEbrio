@@ -536,7 +536,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Language
+  m_text: Texto_Language
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1309,7 +1309,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4403498072755909502, guid: 0c984726619050b439824ff828369f67, type: 3}
       propertyPath: texts.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4403498072755909502, guid: 0c984726619050b439824ff828369f67, type: 3}
       propertyPath: texts.Array.data[0]
@@ -1322,7 +1322,11 @@ PrefabInstance:
     - target: {fileID: 4403498072755909502, guid: 0c984726619050b439824ff828369f67, type: 3}
       propertyPath: texts.Array.data[2]
       value: 
-      objectReference: {fileID: 2071070846}
+      objectReference: {fileID: 1133140528}
+    - target: {fileID: 4403498072755909502, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: texts.Array.data[3]
+      value: 
+      objectReference: {fileID: 114426279}
     - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2876,7 +2880,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fullscreen
+  m_text: Texto_Fullscreen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
