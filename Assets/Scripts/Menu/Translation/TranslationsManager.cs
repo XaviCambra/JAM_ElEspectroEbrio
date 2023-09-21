@@ -7,12 +7,13 @@ public class TranslationsManager : MonoBehaviour
 {
     [SerializeField]
     private List<TextMeshProUGUI> texts;
-    void Start()
+
+    private void Start()
     {
         string lang = GetCurrentLanguage();
-        Translations trans = Translations.LoadTranslationsFromFile("Translations.json");
+        Translations trans = Translations.LoadTranslationsFromFile("Assets\\Resources\\Localization\\Translations.json");
         var translations = trans.TextsByLang[lang];
-        foreach(TextMeshProUGUI text in texts)
+        foreach (TextMeshProUGUI text in texts)
         {
             text.text = translations[text.text];
         }
@@ -21,7 +22,7 @@ public class TranslationsManager : MonoBehaviour
     private string GetCurrentLanguage()
     {
         // TODO: implementar esto para que coja el idioma seleccionado en opciones
-        return "ESP";
+        return "CAT";
     }
 
 }

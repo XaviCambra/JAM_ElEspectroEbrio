@@ -5,6 +5,8 @@ using static Ingredient;
 
 public class StrainerManager : MonoBehaviour
 {
+    [SerializeField] Ingredient m_Ingredient;
+
     public void AddIngredient(Ingredient ing)
     {
         if (ing.Type != IngredientType.Mixed)
@@ -21,5 +23,6 @@ public class StrainerManager : MonoBehaviour
         }
 
         Debug.Log("Peso después: " + ing.SlotsOccupied);
+        m_Ingredient = ing;
     }
 }
