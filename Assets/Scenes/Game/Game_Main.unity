@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 136759452}
   - component: {fileID: 136759453}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Coctelera
   m_TagString: glass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 234496040}
   - component: {fileID: 234496041}
   m_Layer: 0
-  m_Name: Capsule (1)
+  m_Name: Medidor
   m_TagString: glass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -561,7 +561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8622243731494916326, guid: 150b186dcb4c151459cf12af7b0bf90a, type: 3}
       propertyPath: m_Name
-      value: Ingredient_Base (1)
+      value: Aguardiente con motas de plata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -626,13 +626,74 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8622243731494916326, guid: 150b186dcb4c151459cf12af7b0bf90a, type: 3}
       propertyPath: m_Name
-      value: Ingredient_Base (2)
+      value: Bebida espumosa fantasmal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 150b186dcb4c151459cf12af7b0bf90a, type: 3}
+--- !u!1001 &608778917
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 275.09167
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 134.22223
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.9386377
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4970388583925990303, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_Name
+      value: TranslationsManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c984726619050b439824ff828369f67, type: 3}
 --- !u!1001 &625830773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -691,7 +752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8622243731494916326, guid: 150b186dcb4c151459cf12af7b0bf90a, type: 3}
       propertyPath: m_Name
-      value: Ingredient_Base (6)
+      value: Slime en botella
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -756,7 +817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8622243731494916326, guid: 150b186dcb4c151459cf12af7b0bf90a, type: 3}
       propertyPath: m_Name
-      value: Ingredient_Base (7)
+      value: Zumo Zombie Zanoides
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -821,7 +882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8622243731494916326, guid: 150b186dcb4c151459cf12af7b0bf90a, type: 3}
       propertyPath: m_Name
-      value: Ingredient_Base (3)
+      value: "Calent\xF3n de Yeti"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1062,7 +1123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8622243731494916326, guid: 150b186dcb4c151459cf12af7b0bf90a, type: 3}
       propertyPath: m_Name
-      value: Ingredient_Base (4)
+      value: Frasco solar Rekindler
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1127,7 +1188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8622243731494916326, guid: 150b186dcb4c151459cf12af7b0bf90a, type: 3}
       propertyPath: m_Name
-      value: Ingredient_Base
+      value: Cola de lagarto
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1192,7 +1253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8622243731494916326, guid: 150b186dcb4c151459cf12af7b0bf90a, type: 3}
       propertyPath: m_Name
-      value: Ingredient_Base (5)
+      value: "L\xE1grimas de Nyarlathotep"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1214,7 +1275,7 @@ GameObject:
   - component: {fileID: 1979574348}
   - component: {fileID: 1979574349}
   m_Layer: 0
-  m_Name: Capsule (2)
+  m_Name: Colador
   m_TagString: glass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
