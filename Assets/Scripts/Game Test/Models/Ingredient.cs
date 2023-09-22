@@ -75,5 +75,7 @@ public class Ingredient : ScriptableObject
 
 public class Drink
 {
+    public string Name;
+    public string Description;
     public List<Ingredient> Ingredients;
 }
