@@ -30,7 +30,7 @@ public class TranslationsManager : MonoBehaviour
         }
     }
 
-    private string GetCurrentLanguage()
+    public string GetCurrentLanguage()
     {
         return gameController.GetLanguage().m_LanguageName;
     }

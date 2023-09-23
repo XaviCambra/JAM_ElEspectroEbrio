@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Juana
   WantedDrinks:
-  - TextDescriptionKey: "\xA1ESTOY FURIOSA! Me acaba de dejar mi novio porque seg\xFAn
-      \xE9l TENGO MUCHAS SERPIENTES EN LA CABEZA!!, \xBFte lo puedes creer? Dame
-      un alma malvada con algo mundano. \xA1Pero nada espeso! Es tan asqueroso como
-      mi ex."
+  - TextDescriptionKey: Test_Gorgona
+    Ingredients: []
+    Properties: 
+    UndesiredIngredients: []
+    UndesiredProperties: 
+  - TextDescriptionKey: Test_Gorgona_2
     Ingredients: []
     Properties: 
     UndesiredIngredients: []

@@ -6,10 +6,9 @@ using UnityEngine.UIElements;
 
 public class CustomerManager : MonoBehaviour
 {
-    [SerializeField]
-    private Transform topX;
-    [SerializeField]
-    private UIKey customerDialogue;
+    [SerializeField]  Transform topX;
+    [SerializeField] float m_Speed;
+    [SerializeField] UIKey customerDialogue;
     [SerializeField] TranslationsManager translationManager;
     private bool customerEntranceFinished = true;
     [SerializeField] List<Client> customerList = new List<Client>();
@@ -24,7 +23,7 @@ public class CustomerManager : MonoBehaviour
         if (!customerEntranceFinished)
         {
             if (transform.position.x <= topX.transform.position.x)
-                transform.position += new Vector3(2, 0, 0);
+                transform.position += Vector3.right * m_Speed;
             else
             {
                 //TODO: el texto debe ser cargado desde un json y debe poderse pasar a otros diálogos

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using static Unity.VisualScripting.Icons;
 
 public class TranslationChoser : MonoBehaviour
 {
@@ -14,12 +15,20 @@ public class TranslationChoser : MonoBehaviour
         if (m_Translator == null)
             return;
         List< LanguageSO> l_LanguagesList = m_Translator[0].GetLanguagesList();
-        foreach (LanguageSO language in l_LanguagesList)
+        for(int i = 0;  i < l_LanguagesList.Count; i++)
         {
             TMP_Dropdown.OptionData option = new TMP_Dropdown.OptionData();
-            option.text = language.m_LanguageName;
-            option.image = language.m_Sprite;
+            option.text = l_LanguagesList[i].m_LanguageName;
+            option.image = l_LanguagesList[i].m_Sprite;
             m_Dropdown.options.Add(option);
+        }
+        for (int i = 0; i < l_LanguagesList.Count; i++)
+        {
+            
+            if (l_LanguagesList[i].m_LanguageName == m_Translator[0].GetCurrentLanguage())
+            {
+                m_Dropdown.value = i;
+            }
         }
     }
 

@@ -5,7 +5,7 @@ using TMPro;
 
 public class UIKey : MonoBehaviour
 {
-    public string m_Key;
+    public string m_Key = "";
     TMP_Text m_Text;
 
     public void SetText(string l_Text)

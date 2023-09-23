@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public GameController m_Instance;
+    public static GameController m_Instance;
 
     [SerializeField] private LanguageSO m_Language;
     [SerializeField] List<LanguageSO> m_LanguagesList = new List<LanguageSO>();
@@ -13,10 +13,10 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         if (m_Instance != null && m_Instance != this)
-            Destroy(m_Instance);
+            Destroy(gameObject);
         else
             m_Instance = this;
-            DontDestroyOnLoad(m_Instance);
+            DontDestroyOnLoad(gameObject);
     }
 
     public LanguageSO GetLanguage()
