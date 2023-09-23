@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e807156795427b42a0a6f8f453fb819, type: 3}
   m_Name: Dedos
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
-  Type: 0
-  SlotsOccupied: 0
-  m_Properties: 
+  Name: Dedos
+  Description: "Si no nos pagas, pagar\xE1s con tus dedos"
+  Type: 2
+  SlotsOccupied: 3
+  m_Properties: 08000000
   m_Temperature: 1
-  m_IngredientColor: {r: 0, g: 0, b: 0, a: 0}
-  m_Sprite: {fileID: 0}
+  m_IngredientColor: {r: 1, g: 0.82863444, b: 0.6650944, a: 0.09803922}
+  m_Sprite: {fileID: 21300000, guid: 955d632e6a8b69b4cba848caadc9028c, type: 3}
   mixedIngredientList: []

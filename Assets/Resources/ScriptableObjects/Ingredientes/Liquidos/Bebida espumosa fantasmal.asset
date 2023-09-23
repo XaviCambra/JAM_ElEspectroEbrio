@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bebida espumosa fantasmal
   m_EditorClassIdentifier: 
   Name: Bebida espumosa fantasmal
-  Description: "Da una sensaci\xF3n de que tienes a tu espalda a la parca"
+  Description: Siente a la parca en tu espalda
   Type: 0
   SlotsOccupied: 1
   m_Properties: 0200000005000000
