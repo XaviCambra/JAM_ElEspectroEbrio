@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086e67330c904d94799def259ab8f22c, type: 3}
   m_Name: EN
   m_EditorClassIdentifier: 
-  m_Name: 
+  m_LanguageName: EN
   m_Sprite: {fileID: 21300000, guid: 350e36dec2c3cda4ca813282c4938cd3, type: 3}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086e67330c904d94799def259ab8f22c, type: 3}
   m_Name: ESP
   m_EditorClassIdentifier: 
-  m_Name: 
+  m_LanguageName: ESP
   m_Sprite: {fileID: 21300000, guid: c98e8a6db7eb35545aac6d647c14e237, type: 3}

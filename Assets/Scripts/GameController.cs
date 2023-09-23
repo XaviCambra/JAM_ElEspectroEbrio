@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public static GameController m_Instance { get; private set; }
+    public GameController m_Instance;
 
-    private LanguageSO m_Language;
+    [SerializeField] private LanguageSO m_Language;
     [SerializeField] List<LanguageSO> m_LanguagesList = new List<LanguageSO>();
     
 
     private void Awake()
     {
-        if(m_Instance != null && m_Instance != this)
-            Destroy(m_Instance );
+        if (m_Instance != null && m_Instance != this)
+            Destroy(m_Instance);
         else
             m_Instance = this;
+            DontDestroyOnLoad(m_Instance);
     }
 
     public LanguageSO GetLanguage()
@@ -25,5 +26,10 @@ public class GameController : MonoBehaviour
     public void SetLanguage(LanguageSO l_Language)
     {
         m_Language = l_Language;
+    }
+
+    public List<LanguageSO> GetLanguagesList()
+    {
+        return m_LanguagesList;
     }
 }

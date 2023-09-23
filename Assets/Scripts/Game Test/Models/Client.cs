@@ -5,16 +5,13 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Client
+[CreateAssetMenu(fileName = "New Client", menuName = "Clients/New Client")]
+public class Client : ScriptableObject
 {
     public string Name;
-    public string Description;
-    //TODO: todas estas listas pueden tener cosas que NO se quieran, así que hay que crear strcuts con propiedad objeto y un bool que dice si se quiere o no
-    public List<Ingredient> WantedIngredients;
-    public List<Ingredient.IngredientProperties> WantedIngredientProperties;
     public List<Drink> WantedDrinks;
     public List<string> DialogueLines;
-    public string Sprite;
+    public Sprite Sprite;
 }
 
 public class ClientsInLevel

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -73,9 +74,13 @@ public class Ingredient : ScriptableObject
     }
 }
 
+
+[Serializable]
 public class Drink
 {
-    public string Name;
-    public string Description;
+    [TextArea(1, 5)] public string TextDescriptionKey;
     public List<Ingredient> Ingredients;
+    public List<Ingredient.IngredientProperties> Properties;
+    public List<Ingredient> UndesiredIngredients;
+    public List<Ingredient.IngredientProperties> UndesiredProperties;
 }

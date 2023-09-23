@@ -123,6 +123,71 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &79653081
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4403498072755909502, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: texts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1195096625}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 275.09167
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 134.22223
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.9386377
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4970388583925990303, guid: 0c984726619050b439824ff828369f67, type: 3}
+      propertyPath: m_Name
+      value: TranslationsManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c984726619050b439824ff828369f67, type: 3}
 --- !u!1001 &513048846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -419,6 +484,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5776d60e90a453449a29cdc6a1254e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_GlassManager: {fileID: 0}
+  m_JiggerController: {fileID: 0}
+  m_StrainerManager: {fileID: 0}
 --- !u!212 &703137446
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -607,7 +675,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topX: {fileID: 1544846855}
-  customerDialogue: {fileID: 1195096623}
+  customerDialogue: {fileID: 1195096625}
+  translationManager: {fileID: 943644159}
+  customerList:
+  - {fileID: 11400000, guid: 01e2ccbeb665f234ca4791bc5e3885d5, type: 2}
+--- !u!114 &943644159 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4403498072755909502, guid: 0c984726619050b439824ff828369f67, type: 3}
+  m_PrefabInstance: {fileID: 79653081}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797a4a675918f0d4f975047f36c07ee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1195096621
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,6 +701,7 @@ GameObject:
   - component: {fileID: 1195096622}
   - component: {fileID: 1195096624}
   - component: {fileID: 1195096623}
+  - component: {fileID: 1195096625}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -743,6 +826,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1195096621}
   m_CullTransparentMesh: 1
+--- !u!114 &1195096625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195096621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e956f0e48ea5141820c96fbfe70535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Key: 
 --- !u!1 &1544846854
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,6 +956,7 @@ GameObject:
   - component: {fileID: 1822325535}
   - component: {fileID: 1822325537}
   - component: {fileID: 1822325536}
+  - component: {fileID: 1822325538}
   m_Layer: 0
   m_Name: COCTEL
   m_TagString: glass
@@ -970,7 +1067,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.61, y: 2.91}
+    oldSize: {x: 1, y: 1.8074534}
     newSize: {x: 1.61, y: 2.91}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -991,9 +1088,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4840a94c97a640644a86dbb99f54a2b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Ingredient: {fileID: 0}
   m_GlassSlots: 0
   ingredients: []
-  m_IngredientManager: {fileID: 0}
+  m_ColorResultTest: {fileID: 0}
 --- !u!50 &1822325537
 Rigidbody2D:
   serializedVersion: 4
@@ -1021,6 +1119,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1822325538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822325531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5776d60e90a453449a29cdc6a1254e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_GlassManager: {fileID: 0}
+  m_JiggerController: {fileID: 0}
+  m_StrainerManager: {fileID: 0}
 --- !u!1 &2074497538
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086e67330c904d94799def259ab8f22c, type: 3}
   m_Name: CAT
   m_EditorClassIdentifier: 
-  m_Name: 
+  m_LanguageName: CAT
   m_Sprite: {fileID: 21300000, guid: 9d57fd761d1af8c4f9e4feba9801fd51, type: 3}
