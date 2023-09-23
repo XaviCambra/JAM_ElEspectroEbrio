@@ -73,9 +73,27 @@ public class Ingredient : ScriptableObject
     }
 }
 
+public class IngredientOrder
+{
+    public Ingredient Ingredient;
+    public bool Wanted;
+}
+
+public class IngredientPropertyOrder
+{
+    public Ingredient.IngredientType IngredientType;
+    public bool Wanted;
+}
+
 public class Drink
 {
     public string Name;
     public string Description;
     public List<Ingredient> Ingredients;
+}
+
+public class DrinkOrder
+{
+    public Drink Drink;
+    public bool Want;
 }

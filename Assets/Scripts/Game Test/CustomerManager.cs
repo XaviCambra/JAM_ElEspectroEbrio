@@ -15,7 +15,7 @@ public class CustomerManager : MonoBehaviour
     private int customerIndex;
     private void Start()
     {
-        List<Client> customerList = fetchClientList();
+        customerList = fetchClientList();
     }
     void FixedUpdate()
     {
@@ -35,11 +35,9 @@ public class CustomerManager : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && customerEntranceFinished)
-        {
-            GameObject go = new GameObject();
-            go.AddComponent<SpriteRenderer>();
+        {            
             Sprite sprite = Resources.Load<Sprite>(customerList[customerIndex].Sprite);
-            go.GetComponent<SpriteRenderer>().sprite = sprite;
+            gameObject.GetComponent<UnityEngine.UI.Image>().sprite = sprite;
             customerEntranceFinished = false;
         }
     }
@@ -53,12 +51,45 @@ public class CustomerManager : MonoBehaviour
             new Client{ 
                 Name = "Vampiro",
                 Sprite = "Sprites/Vampiro",
-                WantedDrinks = new List<Drink>
+                WantedIngredients = new List<IngredientOrder>
                 {
-                    
+                    new IngredientOrder
+                    {
+                        //Ingredient = new Ingredient("","",null,null,null,null,null),
+                        Wanted = true,
+                    }
                 }
             },
             new Client{ },
         }; 
+    }
+
+    public bool ProcessOrder(Drink d)
+    {
+        var customer = customerList[customerIndex];
+        foreach(var cond in customer.WantedDrinks)
+        {
+            if(cond.Want && cond.Drink != d)            
+                return false;
+            if (!cond.Want && cond.Drink == d)
+                return false;
+        }
+        int wantedIngredients = customer.WantedIngredients.Count;
+        int gotWantedIngredients = 0;
+        foreach(IngredientOrder io in customer.WantedIngredients)
+        {
+            foreach (Ingredient i in d.Ingredients)
+            {
+                if (io.Wanted && io.Ingredient == i)
+                {
+                    gotWantedIngredients++;
+                }
+                if (!io.Wanted && io.Ingredient == i)
+                    return false;
+            }            
+        }
+        if (wantedIngredients < gotWantedIngredients)
+            return false;
+        return true;
     }
 }
