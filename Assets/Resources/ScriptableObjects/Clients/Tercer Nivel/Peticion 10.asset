@@ -22,5 +22,10 @@ MonoBehaviour:
     Properties: 
     UndesiredIngredients: []
     UndesiredProperties: 
-  DialogueLines: []
+  DialogueLines:
+  - "Barman, requiero tu asistencia en una misi\xF3n de vital importancia, pues esta
+    noche debo cazar y mi alquimista est\xE1 de baja. Podr\xEDas fabricarme un brebaje
+    que me haga menos apetecible a las criaturas de la noche y con un componente
+    potencie mis capacidades arcanas. Si puede ser poneme un vaso relativamente peque\xF1o,
+    necesito mantener el control sobre mi mismo."
   Sprite: {fileID: 21300000, guid: 4f7adc1d13460f047b7f0ae66c87866d, type: 3}

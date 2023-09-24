@@ -19,5 +19,6 @@ MonoBehaviour:
     Properties: 0100000005000000
     UndesiredIngredients: []
     UndesiredProperties: 
-  DialogueLines: []
+  DialogueLines:
+  - 
   Sprite: {fileID: 21300000, guid: 00d4231bfbd485d4aa78869d564f12d7, type: 3}

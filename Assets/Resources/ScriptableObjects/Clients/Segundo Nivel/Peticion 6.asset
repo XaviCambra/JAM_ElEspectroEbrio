@@ -20,5 +20,8 @@ MonoBehaviour:
     Properties: 02000000
     UndesiredIngredients: []
     UndesiredProperties: 
-  DialogueLines: []
+  DialogueLines:
+  - "Perdona, podr\xEDas ponerme un buen chute de lo que sea? Ten\xEDa una cita con
+    un vampiro gilipollas que me ha intentado morder EN LA PRIMERA NOCHE. Algo que
+    se me quede en la garganta y me quite ese mal sabor de boca\u2026"
   Sprite: {fileID: 21300000, guid: bc7324508502ab0498a196e19e0f0e07, type: 3}

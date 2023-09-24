@@ -14,4 +14,8 @@ public class UIKey : MonoBehaviour
             m_Text = GetComponent<TMP_Text>();
         m_Text.text = l_Text;
     }
+    public void EmptyText()
+    {
+        m_Text.text = "";
+    }
 }

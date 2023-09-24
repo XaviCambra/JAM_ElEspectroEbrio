@@ -20,5 +20,8 @@ MonoBehaviour:
     UndesiredIngredients:
     - {fileID: 11400000, guid: 33f5566e67cb211438d3945645066f6b, type: 2}
     UndesiredProperties: 
-  DialogueLines: []
+  DialogueLines:
+  - "HeeeeeeeeeeeeeeeeeeeeY! Adivina qui\xE9n ha cumplido los 18 hoooooooooy?! Mi
+    pana X! Ponle un trago del licor no-muerto m\xE1s fuerte que teng\xE1is. Pero
+    nada de almas que luego te maldicen y los exorcistas est\xE1n caros."
   Sprite: {fileID: 21300000, guid: 4fcf3da49ea013c41ab70ca2e643b917, type: 3}

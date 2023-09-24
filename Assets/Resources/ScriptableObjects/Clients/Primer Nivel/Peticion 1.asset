@@ -12,17 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9367b7e48e239fa4a9796435f7de6fa0, type: 3}
   m_Name: Peticion 1
   m_EditorClassIdentifier: 
-  Name: Vampiro
-  WantedDrink:
-    TextDescriptionKey: "Estoy sediento, no he encontrado ninguna v\xEDctima.\\r\\nDame
-      algo de sangre con un poco de jugo de murci\xE9lago.\\r\\nM\xE1s te vale que
-      est\xE9 caliente, o te usare como tentempi\xE9 a ti. \\r\\n"
-    Ingredients:
-    - {fileID: 11400000, guid: ef02f0dfd7f81b2478503902ddf04a77, type: 2}
-    - {fileID: 11400000, guid: 6220bfc040721cd41a79650ac1c6f25c, type: 2}
-    Properties: 06000000
-    UndesiredIngredients: []
-    UndesiredProperties: 
+  Name: Texto_Peticion1_nivel_1
   DialogueLines:
   - 
   Sprite: Sprites/HUD Assets/Personajes/vampiro

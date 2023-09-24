@@ -22,5 +22,9 @@ MonoBehaviour:
     Properties: 
     UndesiredIngredients: []
     UndesiredProperties: 
-  DialogueLines: []
+  DialogueLines:
+  - "Tu mindundi!!!, quiero tomar un Calent\xF3n del Yeti pero a\xF1\xE1dele esa
+    constituci\xF3n densa\u2026 como una gelatina que se me mueva en la boca. Por
+    cierto que sea Calent\xF3n no como la \xFAltima vez que lo tome. Lo quiero para
+    ya!!"
   Sprite: {fileID: 21300000, guid: ddd2c1570b758984e82045529ba21814, type: 3}

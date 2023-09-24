@@ -21,5 +21,11 @@ MonoBehaviour:
     UndesiredIngredients:
     - {fileID: 11400000, guid: d6727a74cb2af114498c61eca124744e, type: 2}
     UndesiredProperties: 000000000100000003000000
-  DialogueLines: []
+  DialogueLines:
+  - "Mi buen amigo barman, mira tengo un problema. Hay una furia con la que estoy
+    flirteando en la pista de baile a la que puede que le haya dicho que soy un experto
+    en bebidas y\u2026 no sea cierto del todo. Ha dicho que le gustaban exclusivamente
+    las bebidas con substancia, que pueda saborear toda la noche. Tambi\xE9n pidi\xF3
+    que le recordaran al inframundo, pero nada de bebidas espumosas que luego se
+    hincha. Todo en un vaso con estilo y una peque\xF1a piedra magm\xE1tica."
   Sprite: {fileID: 21300000, guid: c68c4538771b8e94fb2df9bfb69b621c, type: 3}

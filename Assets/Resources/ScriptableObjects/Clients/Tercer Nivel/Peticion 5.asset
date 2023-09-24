@@ -19,5 +19,10 @@ MonoBehaviour:
     Properties: 010000000500000006000000
     UndesiredIngredients: []
     UndesiredProperties: 08000000
-  DialogueLines: []
+  DialogueLines:
+  - "Holaaaaaa! Mira, s\xE9 que te va a sonar raro pero me en-can-ta el sabor del
+    Beso de Raphael pero soy terriblemente al\xE9rgica. Podr\xEDas hacerme algo que
+    sepa m\xE1s o menos igual con otra cosa? Y ponm\xE9lo bien fresquito en un vaso
+    que sea as\xED chick que quiero hacerle fotos para pentagram. Ah y nada de sabores
+    mundanos que tengo est\xE1ndares"
   Sprite: {fileID: 21300000, guid: c7c13696785b1e14d9da57fb6ceb1966, type: 3}
