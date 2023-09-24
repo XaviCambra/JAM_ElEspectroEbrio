@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WantedDrink:
     TextDescriptionKey: 
-    Ingredients: []
-    Properties: 030000000500000004000000
+    Ingredients:
+    - {fileID: 0}
+    Properties: 03000000050000000400000007000000
     UndesiredIngredients:
     - {fileID: 11400000, guid: 0e9c6e7701abb3448b04d944eeb0af91, type: 2}
     UndesiredProperties: 
