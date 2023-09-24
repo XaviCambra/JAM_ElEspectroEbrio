@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: Peticion 4
   m_EditorClassIdentifier: 
   Name: 
-  WantedDrinks: []
+  WantedDrink:
+    TextDescriptionKey: Dialogo_Vampiro_2
+    Ingredients:
+    - {fileID: 11400000, guid: 0e9c6e7701abb3448b04d944eeb0af91, type: 2}
+    Properties: 07000000
+    UndesiredIngredients: []
+    UndesiredProperties: 0200000000000000
   DialogueLines: []
-  Sprite: {fileID: 0}
+  Sprite: Sprites/HUD Assets/Personajes/vampiro

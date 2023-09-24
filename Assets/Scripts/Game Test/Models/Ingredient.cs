@@ -54,9 +54,10 @@ public class Ingredient : ScriptableObject
     public IngredientTemperature m_Temperature;
     public enum IngredientTemperature
     {
+        Indiferente,
         Frio,
         Neutro,
-        Caliente
+        Caliente        
     }
     public Color m_IngredientColor;
 
@@ -83,4 +84,5 @@ public class Drink
     public List<Ingredient.IngredientProperties> Properties;
     public List<Ingredient> UndesiredIngredients;
     public List<Ingredient.IngredientProperties> UndesiredProperties;
+    public Ingredient.IngredientTemperature Temperature;
 }

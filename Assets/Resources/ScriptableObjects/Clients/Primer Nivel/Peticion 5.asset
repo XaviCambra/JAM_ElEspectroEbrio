@@ -13,6 +13,11 @@ MonoBehaviour:
   m_Name: Peticion 5
   m_EditorClassIdentifier: 
   Name: 
-  WantedDrinks: []
+  WantedDrink:
+    TextDescriptionKey: Dialogo_Bruja_1
+    Ingredients: []
+    Properties: 04000000
+    UndesiredIngredients: []
+    UndesiredProperties: 
   DialogueLines: []
-  Sprite: {fileID: 0}
+  Sprite: Sprites/HUD Assets/Personajes/bruja

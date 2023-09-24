@@ -81,8 +81,10 @@ public class CustomerManager : MonoBehaviour
         return new List<Client>() { //TODO: comentar esto
             Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 1"),
             Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 2"),
-            Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 3")
-
+            Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 3"),
+            Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 4"),
+            Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 5"),
+            Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 6")
         };
     }
 
