@@ -163,6 +163,11 @@ public class CustomerManager : MonoBehaviour
         }
         if (desiredPropertiesCount < customer.WantedDrink.Properties.Count)
             return false;
+        if(customer.WantedDrink.GlassTypesAccepted.Count > 0)
+        {
+            if (!customer.WantedDrink.GlassTypesAccepted.Contains(actualDrink.GlassType))
+                return false;
+        }
         return true;
     }
 }
