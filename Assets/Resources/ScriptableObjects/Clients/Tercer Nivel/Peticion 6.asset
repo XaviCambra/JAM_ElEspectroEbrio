@@ -20,5 +20,5 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a72838a7020a62a4792259266a9d924e, type: 2}
     UndesiredProperties: 
     Temperature: 3
-    GlassType: 2
+    GlassTypesAccepted: 02000000
   Sprite: {fileID: 21300000, guid: 544fa20f08f4d8e488a2712cb8863223, type: 3}

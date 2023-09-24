@@ -19,5 +19,5 @@ MonoBehaviour:
     UndesiredIngredients: []
     UndesiredProperties: 08000000
     Temperature: 0
-    GlassType: 1
+    GlassTypesAccepted: 01000000
   Sprite: {fileID: 21300000, guid: c7c13696785b1e14d9da57fb6ceb1966, type: 3}

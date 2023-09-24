@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WantedDrink:
     TextDescriptionKey: 
-    Ingredients:
-    - {fileID: 0}
+    Ingredients: []
     Properties: 03000000050000000400000007000000
     UndesiredIngredients:
     - {fileID: 11400000, guid: 0e9c6e7701abb3448b04d944eeb0af91, type: 2}
     UndesiredProperties: 
     Temperature: 0
-    GlassType: 3
+    GlassTypesAccepted: 03000000
   Sprite: {fileID: 21300000, guid: 131cdfd1a3cffcb4d8242ea306618ab9, type: 3}
