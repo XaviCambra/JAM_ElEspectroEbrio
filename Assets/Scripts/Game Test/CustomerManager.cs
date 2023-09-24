@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -11,7 +10,7 @@ public class CustomerManager : MonoBehaviour
 
     [SerializeField]  Transform topX;
     [SerializeField] float m_Speed;
-    [SerializeField] TextMeshProUGUI customerDialogue;  // preguntar por qué esto era antes un UIKey
+    [SerializeField] TextMeshProUGUI customerDialogue;  // preguntar por quï¿½ esto era antes un UIKey
     [SerializeField] TranslationsManager translationManager;
     private bool customerEntranceFinished = true;
     [SerializeField] List<Client> customerList = new List<Client>();
@@ -28,7 +27,7 @@ public class CustomerManager : MonoBehaviour
                 transform.position += Vector3.right * m_Speed;
             else
             {
-                //TODO: el texto debe ser cargado desde un json y debe poderse pasar a otros diálogos
+                //TODO: el texto debe ser cargado desde un json y debe poderse pasar a otros diï¿½logos
                 customerDialogue.text = customerList[customerIndex].WantedDrink.TextDescriptionKey;
                 translationManager.TranslateTexts();
                 customerEntranceFinished = true;
@@ -39,7 +38,7 @@ public class CustomerManager : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && customerEntranceFinished)
-        {
+        {            
             Sprite sprite = Resources.Load<Sprite>(customerList[customerIndex].Sprite);
             gameObject.GetComponent<UnityEngine.UI.Image>().sprite = sprite;
             customerEntranceFinished = false;
@@ -51,17 +50,16 @@ public class CustomerManager : MonoBehaviour
         //TODO: usar las siguient lineas
         //ClientsInLevel cil = ClientsInLevel.LoadClientsFromFile("Assets\\Resources\\ClientsInLevels.json");
         //return cil.Clients;
-        
         return new List<Client>() { //TODO: comentar esto
             Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 1")
         };
     }
 
-    public bool ProcessOrder()
+    public bool ProcessOrder(Drink d)
     {
         List<Ingredient> actualDrink = gm.GetIngredients();
         var customer = customerList[customerIndex];
-        //checkear por si hay algún ingrediente no deseado en la bebida
+        //checkear por si hay algï¿½n ingrediente no deseado en la bebida
         foreach (Ingredient notWantedIng in customer.WantedDrink.UndesiredIngredients)
         {
             foreach(Ingredient i in actualDrink)
@@ -84,7 +82,7 @@ public class CustomerManager : MonoBehaviour
         }
         //TODO: check de temperatura
 
-        //checkear si todos los ingredientes deseados están
+        //checkear si todos los ingredientes deseados estï¿½n
         int desiredIngredientsCount = 0;
         foreach(Ingredient i in customer.WantedDrink.Ingredients)
         {
@@ -97,7 +95,7 @@ public class CustomerManager : MonoBehaviour
         if (desiredIngredientsCount < customer.WantedDrink.Ingredients.Count)
             return false;
 
-        //checkear si todas las propiedades deseadas están
+        //checkear si todas las propiedades deseadas estï¿½n
         int desiredPropertiesCount = 0;
         foreach (Ingredient.IngredientProperties ip in customer.WantedDrink.Properties)
         {
@@ -105,15 +103,14 @@ public class CustomerManager : MonoBehaviour
             {
                 foreach (Ingredient.IngredientProperties actualip in i.m_Properties)
                 {
-                    if (actualip == ip)
-                        desiredPropertiesCount++;
+                    gotWantedIngredients++;
                 }
-            }
+                if (!io.Wanted && io.Ingredient == i)
+                    return false;
+            }            
         }
-        if (desiredPropertiesCount < customer.WantedDrink.Properties.Count)
+        if (wantedIngredients < gotWantedIngredients)
             return false;
-
         return true;
-
     }
 }

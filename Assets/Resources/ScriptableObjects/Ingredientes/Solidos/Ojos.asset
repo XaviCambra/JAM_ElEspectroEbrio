@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: Ojos
   m_EditorClassIdentifier: 
   Name: Ojos
-  Description: "Ojo, No preguntes de d\xF3nde han salido"
-  Type: 2
+  Description: 'Bote tipo en salmonella con ojos  '
+  Type: 1
   SlotsOccupied: 4
   m_Properties: 05000000
-  m_Temperature: 1
+  m_Temperature: 0
   m_IngredientColor: {r: 0.8867924, g: 0.88565785, b: 0.7738519, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 8d1880aa6a7e2734b910925da8203aa8, type: 3}
-  mixedIngredientList: []
+  m_Sprite: {fileID: 21300000, guid: 514dccdc62986c04da68e518449f3f2f, type: 3}

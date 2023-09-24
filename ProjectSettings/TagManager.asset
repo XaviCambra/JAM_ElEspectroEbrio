@@ -40,18 +40,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 4103060259
-    locked: 0
-  - name: Client
-    uniqueID: 755480643
-    locked: 0
-  - name: Bar
-    uniqueID: 4189044047
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Tools
-    uniqueID: 442291847
     locked: 0

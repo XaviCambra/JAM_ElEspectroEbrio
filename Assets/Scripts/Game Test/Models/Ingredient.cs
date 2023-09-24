@@ -54,10 +54,9 @@ public class Ingredient : ScriptableObject
     public IngredientTemperature m_Temperature;
     public enum IngredientTemperature
     {
-        Indiferente,
         Frio,
         Neutro,
-        Caliente        
+        Caliente
     }
     public Color m_IngredientColor;
 
@@ -91,16 +90,10 @@ public class Drink
 {
     [TextArea(1, 5)] public string TextDescriptionKey;
     public List<Ingredient> Ingredients;
-    public List<Ingredient.IngredientProperties> Properties;
-    public List<Ingredient> UndesiredIngredients;
-    public List<Ingredient.IngredientProperties> UndesiredProperties;
-    public Ingredient.IngredientTemperature Temperature;
+}
 
-   /* public Drink() 
-    { 
-        Ingredients = new List<Ingredient>();
-        Properties = new List<Ingredient.IngredientProperties>();
-        UndesiredIngredients = new List<Ingredient>();
-        UndesiredProperties = new List<Ingredient.IngredientProperties>();
-    }*/
+public class DrinkOrder
+{
+    public Drink Drink;
+    public bool Want;
 }

@@ -26,9 +26,9 @@ public class GlassManager : Tools
         if (m_Ingredient != null)
             return;
 
-        //if (ing.Type == IngredientType.Mixed ||   // TODO: preguntar por qué estaba esto
-          //  ing.Type == IngredientType.Liquid)
-            //return;
+        if (ing.Type == IngredientType.Mixed ||
+            ing.Type == IngredientType.Liquid)
+            return;
 
         drink.Ingredients.Add(ing);
         m_GlassSlots += ing.SlotsOccupied;
