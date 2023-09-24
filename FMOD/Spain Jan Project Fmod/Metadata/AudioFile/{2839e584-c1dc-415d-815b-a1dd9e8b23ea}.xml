@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{2839e584-c1dc-415d-815b-a1dd9e8b23ea}">
+		<property name="assetPath">
+			<value>Coqueteleira_mixing.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>15.595270833333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b94bb56e-951c-4345-8d81-38e691669aed}</destination>
+		</relationship>
+	</object>
+</objects>

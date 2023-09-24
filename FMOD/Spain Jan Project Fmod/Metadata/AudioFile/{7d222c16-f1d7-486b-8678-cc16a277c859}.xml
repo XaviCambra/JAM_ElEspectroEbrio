@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7d222c16-f1d7-486b-8678-cc16a277c859}">
+		<property name="assetPath">
+			<value>Voices, Laugh, Witch High Voice, Cackle 01 SND82050 5.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.2142499999999998</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b94bb56e-951c-4345-8d81-38e691669aed}</destination>
+		</relationship>
+	</object>
+</objects>
