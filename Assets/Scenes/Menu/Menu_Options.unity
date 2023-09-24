@@ -489,6 +489,7 @@ GameObject:
   - component: {fileID: 114426278}
   - component: {fileID: 114426280}
   - component: {fileID: 114426279}
+  - component: {fileID: 114426281}
   m_Layer: 5
   m_Name: Language_Title
   m_TagString: Untagged
@@ -613,6 +614,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114426277}
   m_CullTransparentMesh: 1
+--- !u!114 &114426281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114426277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e956f0e48ea5141820c96fbfe70535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Key: Texto_Language
 --- !u!1 &250945688
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,13 +961,13 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1244059840}
-        m_TargetAssemblyTypeName: SetOptions, Assembly-CSharp
-        m_MethodName: SetResolution
-        m_Mode: 3
+      - m_Target: {fileID: 469260422}
+        m_TargetAssemblyTypeName: ResolutionScreenSelector, Assembly-CSharp
+        m_MethodName: SetResolutionById
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 469260419}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Dropdown, Unity.TextMeshPro
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1133,7 +1147,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539527412}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1146,7 +1160,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c98e8a6db7eb35545aac6d647c14e237, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1314,19 +1328,19 @@ PrefabInstance:
     - target: {fileID: 4403498072755909502, guid: 0c984726619050b439824ff828369f67, type: 3}
       propertyPath: texts.Array.data[0]
       value: 
-      objectReference: {fileID: 854094499}
+      objectReference: {fileID: 854094501}
     - target: {fileID: 4403498072755909502, guid: 0c984726619050b439824ff828369f67, type: 3}
       propertyPath: texts.Array.data[1]
       value: 
-      objectReference: {fileID: 2071070846}
+      objectReference: {fileID: 2071070848}
     - target: {fileID: 4403498072755909502, guid: 0c984726619050b439824ff828369f67, type: 3}
       propertyPath: texts.Array.data[2]
       value: 
-      objectReference: {fileID: 1133140528}
+      objectReference: {fileID: 1133140530}
     - target: {fileID: 4403498072755909502, guid: 0c984726619050b439824ff828369f67, type: 3}
       propertyPath: texts.Array.data[3]
       value: 
-      objectReference: {fileID: 114426279}
+      objectReference: {fileID: 114426281}
     - target: {fileID: 4774900455026969247, guid: 0c984726619050b439824ff828369f67, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1380,6 +1394,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c984726619050b439824ff828369f67, type: 3}
+--- !u!114 &569720848 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4403498072755909502, guid: 0c984726619050b439824ff828369f67, type: 3}
+  m_PrefabInstance: {fileID: 569720847}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797a4a675918f0d4f975047f36c07ee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &627979384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,6 +1417,7 @@ GameObject:
   - component: {fileID: 627979389}
   - component: {fileID: 627979388}
   - component: {fileID: 627979387}
+  - component: {fileID: 627979390}
   m_Layer: 5
   m_Name: Language_Dropdown
   m_TagString: Untagged
@@ -1472,16 +1498,22 @@ MonoBehaviour:
   m_ItemImage: {fileID: 2075722734}
   m_Value: 0
   m_Options:
-    m_Options:
-    - m_Text: Castellano
-      m_Image: {fileID: 21300000, guid: c98e8a6db7eb35545aac6d647c14e237, type: 3}
-    - m_Text: English
-      m_Image: {fileID: 21300000, guid: 350e36dec2c3cda4ca813282c4938cd3, type: 3}
-    - m_Text: "Catal\xE0"
-      m_Image: {fileID: 21300000, guid: 9d57fd761d1af8c4f9e4feba9801fd51, type: 3}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 627979390}
+        m_TargetAssemblyTypeName: TranslationChoser, Assembly-CSharp
+        m_MethodName: ChangeLanguage
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 627979387}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Dropdown, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &627979388
 MonoBehaviour:
@@ -1521,6 +1553,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627979384}
   m_CullTransparentMesh: 1
+--- !u!114 &627979390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627979384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b582c7a6ef1d542978e9644604552f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Dropdown: {fileID: 627979387}
+  m_Translator: {fileID: 569720848}
 --- !u!1 &708266877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1958,9 +2004,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 854094497}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8429c6bbe31dc704fa69a0c557018680, type: 3}
+  m_Script: {fileID: 11500000, guid: 66e956f0e48ea5141820c96fbfe70535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Key: Texto_Opciones
 --- !u!1 &899448171
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,7 +2066,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Castellano
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2833,6 +2880,7 @@ GameObject:
   - component: {fileID: 1133140527}
   - component: {fileID: 1133140529}
   - component: {fileID: 1133140528}
+  - component: {fileID: 1133140530}
   m_Layer: 5
   m_Name: Fullscreen_Title
   m_TagString: Untagged
@@ -2957,6 +3005,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133140526}
   m_CullTransparentMesh: 1
+--- !u!114 &1133140530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133140526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e956f0e48ea5141820c96fbfe70535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Key: Texto_Fullscreen
 --- !u!1 &1192763516
 GameObject:
   m_ObjectHideFlags: 0
@@ -4275,6 +4336,7 @@ GameObject:
   - component: {fileID: 2071070845}
   - component: {fileID: 2071070847}
   - component: {fileID: 2071070846}
+  - component: {fileID: 2071070848}
   m_Layer: 5
   m_Name: Resolution_Title
   m_TagString: Untagged
@@ -4399,6 +4461,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2071070844}
   m_CullTransparentMesh: 1
+--- !u!114 &2071070848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071070844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e956f0e48ea5141820c96fbfe70535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Key: Texto_Resolucion
 --- !u!1 &2075722732
 GameObject:
   m_ObjectHideFlags: 0

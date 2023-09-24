@@ -1,25 +1,34 @@
 {
     "TextsByLang": {
         "ESP": {
+            "": "",
             "Texto_Jugar": "Jugar",
             "Texto_Opciones": "Opciones",
             "Texto_Creditos": "Créditos",
             "Texto_Salir": "Salir",
-            "Texto_Resolucion": "Resolución"
+            "Texto_Resolucion": "Resolución",
+            "Test_Gorgona": "¡Estoy furiosa! Me acaba de dejar mi novio porque según él tengo muchas serpientes en la cabeza! ¿Te lo puedes creer? Dame un alma malvada con algo mundano. ¡Pero nada espeso! Es tan asqueroso como mi ex.",
+            "Test_Gorgona_2": "Holaaaaaa! Mira, sé que te va a sonar raro pero me en-can-ta el sabor del Beso de Raphael pero soy terriblemente alérgica. Podrías hacerme algo que sepa más o menos igual con otra cosa?"
         },
         "CAT": {
+            "": "",
             "Texto_Jugar": "Jugar",
             "Texto_Opciones": "Opcions",
             "Texto_Creditos": "Crèdits",
             "Texto_Salir": "Sortir",
-            "Texto_Resolucion": "Resolució"
+            "Texto_Resolucion": "Resolució",
+            "Test_Gorgona": "Estic furiosa! M'acaba de deixar la meva parella perquè segons ell tinc massa serps al cap! T'ho pots creure? Dona'm una Ànima malvada amb un toc mundà. Però gens espès! És tan fatigós com el meu ex.",
+            "Test_Gorgona_2": "Holaaaaaa! Mira, sé que et semblarà extrany però m'en-can-ta el sabor del Petó de Raphael pero soc terriblement alérgica. Podríes fer-me algo que tingui un sabor similar amb una altre cosa?"
         },
         "EN": {
+            "": "",
             "Texto_Jugar": "Play",
             "Texto_Opciones": "Options",
             "Texto_Creditos": "Credits",
             "Texto_Salir": "Exit",
-            "Texto_Resolucion": "Resolution"
+            "Texto_Resolucion": "Resolution",
+            "Test_Gorgona": "Ingles: ¡ESTOY FURIOSA! Me acaba de dejar mi novio porque según él TENGO MUCHAS SERPIENTES EN LA CABEZA!!, ¿te lo puedes creer? Dame un alma malvada con algo mundano. ¡Pero nada espeso! Es tan asqueroso como mi ex.",
+            "Test_Gorgona_2": "Inglés: Holaaaaaa! Mira, sé que te va a sonar raro pero me en-can-ta el sabor del Beso de Raphael pero soy terriblemente alérgica. Podrías hacerme algo que sepa más o menos igual con otra cosa? Y ponmélo bien fresquito en un vaso que sea así chick que quiero hacerle fotos para pentagram. Ah y nada de sabores mundanos que tengo estándares."
         }
     }
 }

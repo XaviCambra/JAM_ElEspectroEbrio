@@ -6,13 +6,14 @@ using UnityEngine.UIElements;
 
 public class CustomerManager : MonoBehaviour
 {
-    [SerializeField]
-    private Transform topX;
-    [SerializeField]
-    private TextMeshProUGUI customerDialogue;
+    [SerializeField]  Transform topX;
+    [SerializeField] float m_Speed;
+    [SerializeField] UIKey customerDialogue;
+    [SerializeField] TranslationsManager translationManager;
     private bool customerEntranceFinished = true;
-    private List<Client> customerList;
+    [SerializeField] List<Client> customerList = new List<Client>();
     private int customerIndex;
+    int drinkOfCostumerIndex;
     private void Start()
     {
         customerList = fetchClientList();
@@ -22,11 +23,13 @@ public class CustomerManager : MonoBehaviour
         if (!customerEntranceFinished)
         {
             if (transform.position.x <= topX.transform.position.x)
-                transform.position += new Vector3(2, 0, 0);
+                transform.position += Vector3.right * m_Speed;
             else
             {
-                //TODO: el texto debe ser cargado desde un json y debe poderse pasar a otros diálogos
-                customerDialogue.text = "¡ESTOY FURIOSA! Me acaba de dejar mi novio porque según él TENGO MUCHAS SERPIENTES EN LA CABEZA!!, ¿te lo puedes creer? Dame un alma malvada con algo mundano. ¡Pero nada espeso! Es tan asqueroso como mi ex.";
+                //TODO: el texto debe ser cargado desde un json y debe poderse pasar a otros diï¿½logos
+                drinkOfCostumerIndex = Random.Range(0, customerList[customerIndex].WantedDrinks.Count);
+                customerDialogue.m_Key = customerList[customerIndex].WantedDrinks[drinkOfCostumerIndex].TextDescriptionKey;
+                translationManager.TranslateTexts();
                 customerEntranceFinished = true;
                 customerIndex++;
             }

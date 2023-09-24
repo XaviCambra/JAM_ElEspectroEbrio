@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,7 +30,7 @@ public class Ingredient : ScriptableObject
     public string Name;
     public string Description;
     public IngredientType Type;
-    [Tooltip("Numero de slots que ocupa. En los líquidos siempre es 1")] public int SlotsOccupied;
+    [Tooltip("Numero de slots que ocupa. En los lï¿½quidos siempre es 1")] public int SlotsOccupied;
     public enum IngredientType
     {
         Liquid,
@@ -45,7 +46,7 @@ public class Ingredient : ScriptableObject
         Espeso,
         Ligero,
         Vivo,
-        Necrótico,
+        Necrï¿½tico,
         Bloody,
         Magic,
         Mundano
@@ -87,8 +88,7 @@ public class IngredientPropertyOrder
 
 public class Drink
 {
-    public string Name;
-    public string Description;
+    [TextArea(1, 5)] public string TextDescriptionKey;
     public List<Ingredient> Ingredients;
 }
 
