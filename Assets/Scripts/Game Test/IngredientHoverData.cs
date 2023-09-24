@@ -10,17 +10,27 @@ public class IngredientHoverData : MonoBehaviour
 
     private IngredientManager im;
     private TextMeshProUGUI IngredientName;
+    private UnityEngine.UI.Image panel;
     private void Start()
     {
         im = GetComponent<IngredientManager>();
         IngredientName = GameObject.Find(PanelName).GetComponentInChildren<TextMeshProUGUI>();
+        panel = GameObject.Find(PanelName).GetComponent<UnityEngine.UI.Image>();
     }
     public void DisplayIngredientData(Vector2 newPosition)
     {
         if(im != null)
         {
+            panel.enabled = true;
+            IngredientName.enabled = true;
             IngredientName.text = im.Ingredient.name;
             IngredientName.transform.parent.position = Input.mousePosition;
         }
+    }
+
+    public void HideIngredientData()
+    {
+        panel.enabled = false;
+        IngredientName.enabled = false;
     }
 }

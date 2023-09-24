@@ -32,7 +32,7 @@ public class CustomerManager : MonoBehaviour
                 customerDialogue.text = customerList[customerIndex].WantedDrink.TextDescriptionKey;
                 translationManager.TranslateTexts();
                 customerEntranceFinished = true;
-                customerIndex++;
+                //customerIndex++;
             }
         }        
     }

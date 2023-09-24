@@ -15,6 +15,10 @@ public class Button : MonoBehaviour
 
     void TaskOnClick()
     {
-        customerManager.ProcessOrder();
+        bool orderCorrect = customerManager.ProcessOrder();
+        if (orderCorrect)
+            Debug.Log("Order correct! :D");
+        else
+            Debug.Log("Order not correct! D:");
     }
 }

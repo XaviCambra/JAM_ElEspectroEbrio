@@ -21,5 +21,9 @@ public class MouseOverEffect : MonoBehaviour
     private void OnMouseExit()
     {
         transform.localScale = transform.localScale * 0.8f;
+        if (ihd != null)
+        {
+            ihd.HideIngredientData();
+        }
     }
 }
