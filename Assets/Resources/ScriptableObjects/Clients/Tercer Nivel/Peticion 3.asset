@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: Peticion 3
   m_EditorClassIdentifier: 
   Name: 
-  WantedDrinks: []
+  WantedDrinks:
+  - TextDescriptionKey: 
+    Ingredients:
+    - {fileID: 11400000, guid: 13604c1c390db2445b0f68e4e9d892ef, type: 2}
+    Properties: 020000000000000006000000
+    UndesiredIngredients: []
+    UndesiredProperties: 
   DialogueLines: []
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: 481b3f57cbbe67849bb9f1059530cf80, type: 3}
