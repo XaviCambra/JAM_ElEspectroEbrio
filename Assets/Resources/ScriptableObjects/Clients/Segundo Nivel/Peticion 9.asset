@@ -13,6 +13,16 @@ MonoBehaviour:
   m_Name: Peticion 9
   m_EditorClassIdentifier: 
   Name: 
-  WantedDrinks: []
-  DialogueLines: []
-  Sprite: {fileID: 0}
+  WantedDrinks:
+  - TextDescriptionKey: 
+    Ingredients: []
+    Properties: 
+    UndesiredIngredients:
+    - {fileID: 11400000, guid: 22540a2ad1567df4783cd4bd5365713b, type: 2}
+    UndesiredProperties: 02000000
+  DialogueLines:
+  - "Feeeeeeeeliz luna llena, camarada. Estoy pensando en pillarme un buen pedal
+    esta noche as\xED que me gustar\xEDa que me hicieras algo absolutamente loco
+    con un poco de todo. Pero nada de bebidas espesas que luego tengo el pelo del
+    hocico pegajoso."
+  Sprite: {fileID: 21300000, guid: c68c4538771b8e94fb2df9bfb69b621c, type: 3}

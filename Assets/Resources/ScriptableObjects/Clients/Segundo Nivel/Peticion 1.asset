@@ -13,6 +13,13 @@ MonoBehaviour:
   m_Name: Peticion 1
   m_EditorClassIdentifier: 
   Name: 
-  WantedDrinks: []
-  DialogueLines: []
-  Sprite: {fileID: 0}
+  WantedDrinks:
+  - TextDescriptionKey: 
+    Ingredients: []
+    Properties: 06000000
+    UndesiredIngredients: []
+    UndesiredProperties: 02000000
+  DialogueLines:
+  - "S\xE9 un buen tentempi\xE9 y hazme un chorrito de algo que me quite esta sed
+    de\u2026 carne que tengo. Pero nada muy espeso me llena y esta noche tengo compa\xF1\xEDa."
+  Sprite: {fileID: 21300000, guid: c7c13696785b1e14d9da57fb6ceb1966, type: 3}
