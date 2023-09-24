@@ -11,7 +11,7 @@ public class CustomerManager : MonoBehaviour
 
     [SerializeField]  Transform topX;
     [SerializeField] float m_Speed;
-    [SerializeField] TextMeshProUGUI customerDialogue;  // preguntar por qué esto era antes un UIKey
+    [SerializeField] UIKey customerDialogue;  // preguntar por qué esto era antes un UIKey
     [SerializeField] TranslationsManager translationManager;
     private bool customerEntranceFinished = true;
     [SerializeField] List<Client> customerList = new List<Client>();
@@ -29,7 +29,7 @@ public class CustomerManager : MonoBehaviour
             else
             {
                 //TODO: el texto debe ser cargado desde un json y debe poderse pasar a otros diálogos
-                customerDialogue.text = customerList[customerIndex].WantedDrink.TextDescriptionKey;
+                customerDialogue.m_Key = customerList[customerIndex].WantedDrink.TextDescriptionKey.Trim();
                 translationManager.TranslateTexts();
                 customerEntranceFinished = true;
                 //customerIndex++;

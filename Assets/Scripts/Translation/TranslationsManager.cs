@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -12,6 +13,7 @@ public class TranslationsManager : MonoBehaviour
     private void Start()
     {
         TranslateTexts();
+        texts = FindObjectsByType<UIKey>(FindObjectsSortMode.None).ToList();
     }
 
     public void TranslateTexts()

@@ -2319,8 +2319,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 136759448}
   topX: {fileID: 1260023621}
-  m_Speed: 4
-  customerDialogue: {fileID: 1561026954}
+  m_Speed: 8
+  customerDialogue: {fileID: 1561026956}
   translationManager: {fileID: 253840862}
   customerList: []
 --- !u!224 &846288903
@@ -3143,6 +3143,7 @@ GameObject:
   - component: {fileID: 1561026953}
   - component: {fileID: 1561026955}
   - component: {fileID: 1561026954}
+  - component: {fileID: 1561026956}
   m_Layer: 5
   m_Name: CustomerDialogue
   m_TagString: Untagged
@@ -3267,6 +3268,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561026952}
   m_CullTransparentMesh: 1
+--- !u!114 &1561026956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561026952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e956f0e48ea5141820c96fbfe70535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Key: Dialogo_Vampiro_1
 --- !u!4 &1577941333 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4257687512650260439, guid: 150b186dcb4c151459cf12af7b0bf90a, type: 3}

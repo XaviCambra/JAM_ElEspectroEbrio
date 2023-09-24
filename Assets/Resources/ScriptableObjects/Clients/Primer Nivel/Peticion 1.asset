@@ -14,9 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Vampiro
   WantedDrink:
-    TextDescriptionKey: "Estoy sediento, no he encontrado ninguna v\xEDctima.\\r\\nDame
-      algo de sangre con un poco de jugo de murci\xE9lago.\\r\\nM\xE1s te vale que
-      est\xE9 caliente, o te usare como tentempi\xE9 a ti. \\r\\n"
+    TextDescriptionKey: Dialogo_Vampiro_1
     Ingredients:
     - {fileID: 11400000, guid: ef02f0dfd7f81b2478503902ddf04a77, type: 2}
     Properties: 06000000
