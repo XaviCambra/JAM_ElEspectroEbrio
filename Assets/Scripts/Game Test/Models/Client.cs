@@ -8,9 +8,7 @@ using UnityEngine.SceneManagement;
 [CreateAssetMenu(fileName = "New Client", menuName = "Clients/New Client")]
 public class Client : ScriptableObject
 {
-    public string Name;
     public Drink WantedDrink;
-    public List<string> DialogueLines;
     public Sprite Sprite;
 }
 

@@ -12,20 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9367b7e48e239fa4a9796435f7de6fa0, type: 3}
   m_Name: Peticion 9
   m_EditorClassIdentifier: 
-  Name: 
-  WantedDrinks:
-  - TextDescriptionKey: 
-    Ingredients:
-    - {fileID: 11400000, guid: b53d56da11ac6204ea7daee501f2ff65, type: 2}
-    Properties: 030000000500000004000000
+  WantedDrink:
+    TextDescriptionKey: 
+    Ingredients: []
+    Properties: 03000000050000000400000007000000
     UndesiredIngredients:
     - {fileID: 11400000, guid: 0e9c6e7701abb3448b04d944eeb0af91, type: 2}
     UndesiredProperties: 
-  DialogueLines:
-  - "La clientela casi no nota la ausencia del otro barman, eres bueno. Hab\xEDa
-    una bebida que \xE9l siempre me hac\xEDa y nunca supe replicar al 100%. La describ\xEDa
-    como un trago casi et\xE9reo, estar\xEDa la esencia m\xE1gica de un ser vivo
-    exclusivamente y luego dec\xEDa que hac\xEDa un suced\xE1neo de los restos de
-    un dios durmiente. No te voy a mentir, mi \xFAnico dios es el mercado, pero ese
-    chupito es merecedor de adoraci\xF3n."
+    Temperature: 0
+    GlassTypesAccepted: 03000000
   Sprite: {fileID: 21300000, guid: 131cdfd1a3cffcb4d8242ea306618ab9, type: 3}

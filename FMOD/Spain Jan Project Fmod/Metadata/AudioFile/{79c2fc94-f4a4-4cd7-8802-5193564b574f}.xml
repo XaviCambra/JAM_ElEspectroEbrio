@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{79c2fc94-f4a4-4cd7-8802-5193564b574f}">
+		<property name="assetPath">
+			<value>Water, Bubbles, Bubble, Single Pop 01 SND66526 1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>192</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.34270833333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b94bb56e-951c-4345-8d81-38e691669aed}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -12,6 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9367b7e48e239fa4a9796435f7de6fa0, type: 3}
   m_Name: Peticion 4
   m_EditorClassIdentifier: 
-  Name: Texto_Peticion4_nivel_1
-  DialogueLines: []
-  Sprite: Sprites/HUD Assets/Personajes/vampiro
+  WantedDrink:
+    TextDescriptionKey: Texto_Peticion4_nivel_1
+    Ingredients:
+    - {fileID: 11400000, guid: 0e9c6e7701abb3448b04d944eeb0af91, type: 2}
+    Properties: 07000000
+    UndesiredIngredients: []
+    UndesiredProperties: 0200000000000000
+    Temperature: 0
+    GlassTypesAccepted: 0300000001000000
+    GlassType: 0
+  Sprite: {fileID: 21300000, guid: c366967ad9051b041aad19509b967ea6, type: 3}

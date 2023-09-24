@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{09cbe138-eb1a-4eb4-bd6a-6a0052745fba}">
+		<property name="assetPath">
+			<value>Objects, Furniture, Chair, Wood, Dragged Around On Floor, Heavy SND4216 5.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.11360416666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b94bb56e-951c-4345-8d81-38e691669aed}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{3af84f4f-f873-45f7-b07a-6de30b92088f}">
+		<property name="assetPath">
+			<value>solid_droping_liquid.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.67366666666666664</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b94bb56e-951c-4345-8d81-38e691669aed}</destination>
+		</relationship>
+	</object>
+</objects>
