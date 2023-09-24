@@ -2827,8 +2827,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 0}
-  customer1: {fileID: 0}
-  customer2: {fileID: 0}
+  customer1: {fileID: 413383481}
+  customer2: {fileID: 2081246278}
   topX: {fileID: 1260023621}
   topX2: {fileID: 0}
   m_Speed: 8
