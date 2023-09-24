@@ -678,6 +678,7 @@ MonoBehaviour:
   topX: {fileID: 1544846855}
   m_Speed: 5
   customerDialogue: {fileID: 1195096625}
+  customerDialogueText: {fileID: 1195096623}
   translationManager: {fileID: 943644159}
   customerList:
   - {fileID: 11400000, guid: 01e2ccbeb665f234ca4791bc5e3885d5, type: 2}
