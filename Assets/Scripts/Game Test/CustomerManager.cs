@@ -66,7 +66,7 @@ public class CustomerManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && customerEntranceFinished)
         {
-            Sprite sprite = Resources.Load<Sprite>(customerList[customerIndex].Sprite);
+            Sprite sprite =customerList[customerIndex].Sprite;
             customer1.sprite = sprite;
             customerEntranceFinished = false;
         }
@@ -105,7 +105,7 @@ public class CustomerManager : MonoBehaviour
             customerLeaving = customer1;
         }
            
-        Sprite sprite = Resources.Load<Sprite>(customerList[customerIndex].Sprite);
+        Sprite sprite = customerList[customerIndex].Sprite;
         customerEntering.sprite = sprite;
         List<Ingredient> actualDrinkIngredients = gm.GetIngredients();
         Drink actualDrink = gm.GetDrink();
