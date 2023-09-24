@@ -20,5 +20,9 @@ MonoBehaviour:
     Properties: 07000000
     UndesiredIngredients: []
     UndesiredProperties: 0200000000000000
-  DialogueLines: []
+  DialogueLines:
+  - "Hey mi reinaaa! Mira te cuento guapeton, hay un vampiro all\xED con unos colmillos
+    que me pone los pelos de punta! Le voy a invitar a una copita de martini, ponle
+    L\xE1grimas de Nyarlathotep con un toquecito m\xE1gico pero nada muy fuerte o
+    cargante que lo quiero l\xFAcido para esta noche."
   Sprite: {fileID: 21300000, guid: c366967ad9051b041aad19509b967ea6, type: 3}

@@ -20,5 +20,8 @@ MonoBehaviour:
     Properties: 04000000
     UndesiredIngredients: []
     UndesiredProperties: 
-  DialogueLines: []
+  DialogueLines:
+  - "*bosteza* Estoy cansad\xEDsima, el trabajo me deja fatal\u2026 \xBFTen\xE9is
+    algo que me devuelva un poco al mundo de los vivos?  Si puede ser, que est\xE9
+    fresquito\u2026 *se duerme el la barra*"
   Sprite: {fileID: 21300000, guid: 66bd0187dd1b3b64598bb8a3c5cdb5d1, type: 3}

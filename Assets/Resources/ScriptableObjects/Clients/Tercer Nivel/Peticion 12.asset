@@ -22,5 +22,9 @@ MonoBehaviour:
     Properties: 
     UndesiredIngredients: []
     UndesiredProperties: 
-  DialogueLines: []
+  DialogueLines:
+  - "Oye, la escoba se me ha jodido de camino a aqu\xED y voy a necesitar un equivalente
+    a la poci\xF3n de levitaci\xF3n que la espabile. Normalmente se usa un componente
+    de criatura voladora con esencia espiritual. Mantenla fr\xEDa, es la quinta vez
+    que decide dejarme tirada esta semana y no se merece un mejor trato, la verdad."
   Sprite: {fileID: 21300000, guid: bc7324508502ab0498a196e19e0f0e07, type: 3}

@@ -22,5 +22,7 @@ MonoBehaviour:
     Properties: 
     UndesiredIngredients: []
     UndesiredProperties: 
-  DialogueLines: []
+  DialogueLines:
+  - "Umm\u2026 Si\u2026 H-hola\u2026 M-me pondr\xEDas un re-refresco de cola, co-con
+    hielo, si.. y ..y con.. una po-poci\xF3n de man\xE1\u2026  Ay qu\xE9 verg\xFCenza\u2026"
   Sprite: {fileID: 21300000, guid: c68c4538771b8e94fb2df9bfb69b621c, type: 3}

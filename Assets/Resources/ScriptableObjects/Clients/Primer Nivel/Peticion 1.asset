@@ -22,5 +22,7 @@ MonoBehaviour:
     UndesiredIngredients: []
     UndesiredProperties: 
   DialogueLines:
-  - 
+  - "Estoy sediento, no he encontrado ninguna v\xEDctima. Dame algo de sangre con
+    un poco de jugo de murci\xE9lago. M\xE1s te vale que est\xE9 caliente, o te usare
+    como tentempi\xE9 a ti. "
   Sprite: {fileID: 21300000, guid: 4f7adc1d13460f047b7f0ae66c87866d, type: 3}

@@ -21,5 +21,11 @@ MonoBehaviour:
     Properties: 070000000000000004000000
     UndesiredIngredients: []
     UndesiredProperties: 
-  DialogueLines: []
+  DialogueLines:
+  - "Wooooo! Esta noche las hermanas gorgonas salimos de fiesta! Venga camarero ponme
+    un buen chorro de lo que me pido siempre! \xBFQu\xE9 no sabes lo que es? Pueeeees\u2026.
+    Creo que llevaba algo con componentes arcanos y creeme que esa mierda quemaba
+    al bajar as\xED que creo que todo lo que llevaba era puro FUEGO. Hab\xEDa un
+    peque\xF1o regustillo a algo mortal y el barman siempre me pon\xEDa algo en el
+    vaso de rocks que dec\xEDa que le recordaba a mis serpientes. "
   Sprite: {fileID: 21300000, guid: 544fa20f08f4d8e488a2712cb8863223, type: 3}

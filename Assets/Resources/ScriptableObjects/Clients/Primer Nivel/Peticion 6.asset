@@ -20,5 +20,9 @@ MonoBehaviour:
     Properties: 08000000
     UndesiredIngredients: []
     UndesiredProperties: 02000000
-  DialogueLines: []
+  DialogueLines:
+  - "\xA1ESTOY FURIOSA! Me acaba de dejar mi novio porque, seg\xFAn \xE9l, TENGO
+    MUCHAS SERPIENTES EN LA CABEZA!! \xBFTe lo puedes creer? Dame un alma malvada
+    con algo mundano. \xA1Pero nada espeso! No quiero que se me atragante como mi
+    ex"
   Sprite: {fileID: 21300000, guid: fe88ed552d320d44f95a64b008d07d59, type: 3}
