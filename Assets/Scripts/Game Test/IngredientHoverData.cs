@@ -17,7 +17,6 @@ public class IngredientHoverData : MonoBehaviour
     }
     public void DisplayIngredientData(Vector2 newPosition)
     {
-        Debug.Log(newPosition);
         if(im != null)
         {
             IngredientName.text = im.Ingredient.name;
