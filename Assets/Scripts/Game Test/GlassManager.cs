@@ -116,18 +116,22 @@ public class GlassManager : MonoBehaviour
             case Drink.GlassTypeEnum.Shot:
                 GetComponent<SpriteRenderer>().sprite = glassSprites[0];
                 maxSlots = 1;
+                drink.GlassType = Drink.GlassTypeEnum.Shot;
                 break;
             case Drink.GlassTypeEnum.Martini:
                 GetComponent<SpriteRenderer>().sprite = glassSprites[1];
                 maxSlots = 3;
+                drink.GlassType = Drink.GlassTypeEnum.Martini;
                 break;
             case Drink.GlassTypeEnum.Rocks:
                 GetComponent<SpriteRenderer>().sprite = glassSprites[2];
                 maxSlots = 4;
+                drink.GlassType = Drink.GlassTypeEnum.Rocks;
                 break;
             case Drink.GlassTypeEnum.Tube:
                 GetComponent<SpriteRenderer>().sprite = glassSprites[3];
                 maxSlots = 6;
+                drink.GlassType = Drink.GlassTypeEnum.Tube;
                 break;
         }
     }

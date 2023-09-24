@@ -96,6 +96,7 @@ public class Drink
     public List<Ingredient.IngredientProperties> UndesiredProperties;
     public Ingredient.IngredientTemperature Temperature;
     public List<GlassTypeEnum> GlassTypesAccepted;
+    public GlassTypeEnum GlassType;
     public enum GlassTypeEnum
     {
         Tube,
