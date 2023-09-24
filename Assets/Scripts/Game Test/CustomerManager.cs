@@ -40,7 +40,7 @@ public class CustomerManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && customerEntranceFinished)
         {
-            Sprite sprite = Resources.Load<Sprite>(customerList[customerIndex].Sprite);
+            Sprite sprite = customerList[customerIndex].Sprite;
             gameObject.GetComponent<UnityEngine.UI.Image>().sprite = sprite;
             customerEntranceFinished = false;
         }

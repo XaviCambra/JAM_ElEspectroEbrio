@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9367b7e48e239fa4a9796435f7de6fa0, type: 3}
   m_Name: Peticion 1
   m_EditorClassIdentifier: 
-  Name: Texto_Peticion1_nivel_1
+  WantedDrink:
+    TextDescriptionKey: 
+    Ingredients: []
+    Properties: 
+    UndesiredIngredients: []
+    UndesiredProperties: 
+    Temperature: 0
   DialogueLines:
   - 
-  Sprite: Sprites/HUD Assets/Personajes/vampiro
+  Sprite: {fileID: 21300000, guid: ddd2c1570b758984e82045529ba21814, type: 3}
