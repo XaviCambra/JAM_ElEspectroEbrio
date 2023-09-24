@@ -9,7 +9,7 @@ public class CustomerManager : MonoBehaviour
 {
     public GlassManager gm;
 
-    [SerializeField]  Transform topX;
+    [SerializeField] Transform topX;
     [SerializeField] float m_Speed;
     [SerializeField] TextMeshProUGUI customerDialogue;  // preguntar por qu� esto era antes un UIKey
     [SerializeField] TranslationsManager translationManager;
@@ -34,13 +34,13 @@ public class CustomerManager : MonoBehaviour
                 customerEntranceFinished = true;
                 //customerIndex++;
             }
-        }        
+        }
     }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && customerEntranceFinished)
         {
-            Sprite sprite = Resources.Load<Sprite>(customerList[customerIndex].Sprite);
+            Sprite sprite = customerList[customerIndex].Sprite;
             gameObject.GetComponent<UnityEngine.UI.Image>().sprite = sprite;
             customerEntranceFinished = false;
         }
@@ -51,7 +51,7 @@ public class CustomerManager : MonoBehaviour
         //TODO: usar las siguient lineas
         //ClientsInLevel cil = ClientsInLevel.LoadClientsFromFile("Assets\\Resources\\ClientsInLevels.json");
         //return cil.Clients;
-        
+
         return new List<Client>() { //TODO: comentar esto
             Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 1")
         };
@@ -59,32 +59,33 @@ public class CustomerManager : MonoBehaviour
 
     public bool ProcessOrder()
     {
-        List<Ingredient> actualDrink = gm.GetIngredients();
+        Drink actualDrink = gm.GetDrink();
+        List<Ingredient> actualDrinkIngredients = gm.GetIngredients();
         var customer = customerList[customerIndex];
         //checkear por si hay alg�n ingrediente no deseado en la bebida
         foreach (Ingredient notWantedIng in customer.WantedDrink.UndesiredIngredients)
         {
-            foreach(Ingredient i in actualDrink)
+            foreach (Ingredient i in actualDrinkIngredients)
             {
-                if(i.name == notWantedIng.name)
+                if (i.name == notWantedIng.name)
                     return false;
             }
         }
         //checkear si hay alguna propiedad no deseada en la bebida
         foreach (Ingredient.IngredientProperties ip in customer.WantedDrink.UndesiredProperties)
         {
-            foreach (Ingredient i in actualDrink)
+            foreach (Ingredient i in actualDrinkIngredients)
             {
-                foreach(Ingredient.IngredientProperties actualip in i.m_Properties)
+                foreach (Ingredient.IngredientProperties actualip in i.m_Properties)
                 {
                     if (actualip == ip)
                         return false;
                 }
             }
         }
-        if(customer.WantedDrink.Temperature != Ingredient.IngredientTemperature.Indiferente)
+        if (customer.WantedDrink.Temperature != Ingredient.IngredientTemperature.Indiferente)
         {
-            if(customer.WantedDrink.Temperature != actualDrink.Temperature)
+            if (customer.WantedDrink.Temperature != actualDrink.Temperature)
             {
                 return false;
             }
@@ -92,9 +93,9 @@ public class CustomerManager : MonoBehaviour
 
         //checkear si todos los ingredientes deseados est�n
         int desiredIngredientsCount = 0;
-        foreach(Ingredient i in customer.WantedDrink.Ingredients)
+        foreach (Ingredient i in customer.WantedDrink.Ingredients)
         {
-            foreach(Ingredient actualIngredient in actualDrink)
+            foreach (Ingredient actualIngredient in actualDrinkIngredients)
             {
                 if (i.name == actualIngredient.Name)
                     desiredIngredientsCount++;
@@ -107,7 +108,7 @@ public class CustomerManager : MonoBehaviour
         int desiredPropertiesCount = 0;
         foreach (Ingredient.IngredientProperties ip in customer.WantedDrink.Properties)
         {
-            foreach (Ingredient i in actualDrink)
+            foreach (Ingredient i in actualDrinkIngredients)
             {
                 foreach (Ingredient.IngredientProperties actualip in i.m_Properties)
                 {
