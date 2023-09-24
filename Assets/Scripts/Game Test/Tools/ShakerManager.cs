@@ -16,6 +16,10 @@ public class ShakerManager : Tools
           ing.Type == IngredientType.Liquid)
             return;
 
+        if (ingredients.Contains(ing) &&
+            ing.Type == IngredientType.Solid)
+            return;
+
         ingredients.Add(ing);
     }
 
