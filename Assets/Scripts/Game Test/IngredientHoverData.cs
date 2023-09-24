@@ -14,7 +14,8 @@ public class IngredientHoverData : MonoBehaviour
     private void Start()
     {
         im = GetComponent<IngredientManager>();
-        IngredientName = GameObject.Find(PanelName).GetComponentInChildren<TextMeshProUGUI>();
+        var ingredientNameObject = GameObject.Find(PanelName);
+        IngredientName = ingredientNameObject.GetComponentInChildren<TextMeshProUGUI>();
         panel = GameObject.Find(PanelName).GetComponent<UnityEngine.UI.Image>();
     }
     public void DisplayIngredientData(Vector2 newPosition)
