@@ -86,7 +86,7 @@ public class IngredientPropertyOrder
     public Ingredient.IngredientType IngredientType;
     public bool Wanted;
 }
-
+[Serializable]
 public class Drink
 {
     [TextArea(1, 5)] public string TextDescriptionKey;
@@ -96,11 +96,11 @@ public class Drink
     public List<Ingredient.IngredientProperties> UndesiredProperties;
     public Ingredient.IngredientTemperature Temperature;
 
-    public Drink() 
+   /* public Drink() 
     { 
         Ingredients = new List<Ingredient>();
         Properties = new List<Ingredient.IngredientProperties>();
         UndesiredIngredients = new List<Ingredient>();
         UndesiredProperties = new List<Ingredient.IngredientProperties>();
-    }
+    }*/
 }

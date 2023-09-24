@@ -18,7 +18,7 @@ public class GlassManager : Tools
     }
     public List<Ingredient> GetIngredients()
     {
-        return ingredients;
+        return drink.Ingredients;
     }
 
     public override void AddIngredient(Ingredient ing)
@@ -30,7 +30,7 @@ public class GlassManager : Tools
           //  ing.Type == IngredientType.Liquid)
             //return;
 
-        ingredients.Add(ing);
+        drink.Ingredients.Add(ing);
         m_GlassSlots += ing.SlotsOccupied;
     }
 
@@ -45,7 +45,7 @@ public class GlassManager : Tools
         ingredientResult.mixedIngredientList = new List<Ingredient>();
         ingredientResult.m_Properties = new List<IngredientProperties>();
         ingredientResult.mixedIngredientList = new List<Ingredient>();
-        foreach (Ingredient ingredient in ingredients)
+        foreach (Ingredient ingredient in drink.Ingredients)
         {
             if (ingredient == ingredients[ingredients.Count - 1])
                 ingredientResult.Name += ingredient.Name;
