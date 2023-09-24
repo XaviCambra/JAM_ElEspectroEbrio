@@ -138,7 +138,6 @@ public class CustomerManager : MonoBehaviour
                 return false;
             }
         }
-        //TODO: check de temperatura
 
         //checkear si todos los ingredientes deseados est�n
         int desiredIngredientsCount = 0;

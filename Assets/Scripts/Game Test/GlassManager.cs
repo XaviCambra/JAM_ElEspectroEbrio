@@ -4,14 +4,21 @@ using System.Linq;
 using UnityEngine;
 using static Ingredient;
 
-public class GlassManager : Tools
+public class GlassManager : MonoBehaviour
 {
     [SerializeField] int m_GlassSlots;
     [SerializeField] List<Ingredient> ingredients = new List<Ingredient>();
     [SerializeField] SpriteRenderer m_ColorResultTest;
+    [SerializeField] List<Sprite> glassSprites; // order is chupito, martini, rocks, tubo
     private bool UnDrinkable;
     private Drink drink;
+    private int maxSlots;
 
+    private void Start()
+    {
+        drink = new Drink();
+        maxSlots = 6;
+    }
     public Drink GetDrink()
     {
         return drink;
@@ -21,19 +28,32 @@ public class GlassManager : Tools
         return drink.Ingredients;
     }
 
-    public override void AddIngredient(Ingredient ing)
+    public void AddIngredient(Ingredient ing)
     {
-        if (m_Ingredient != null)
-            return;
+        //if (m_Ingredient != null)
+          //  return;
 
         //if (ing.Type == IngredientType.Mixed ||   // TODO: preguntar por qué estaba esto
           //  ing.Type == IngredientType.Liquid)
             //return;
+        if(maxSlots < drink.Ingredients.Count)
+        {
+            drink.Ingredients.Add(ing);
+            m_GlassSlots += ing.SlotsOccupied;
+            if (ing.m_Temperature == Ingredient.IngredientTemperature.Frio)
+                drink.Temperature = IngredientTemperature.Frio;
+            if (ing.m_Temperature == Ingredient.IngredientTemperature.Caliente)
+                drink.Temperature = IngredientTemperature.Caliente;
 
-        drink.Ingredients.Add(ing);
-        m_GlassSlots += ing.SlotsOccupied;
+        }
+        else
+        {
+            // alertar de que el vaso está lleno
+        }
+       
     }
 
+    // esto tendría que estar en el script de coctelera??
     public void MixIngredients()
     {
         Ingredient ingredientResult = ScriptableObject.CreateInstance<Ingredient>();
@@ -70,8 +90,8 @@ public class GlassManager : Tools
         ingredientResult.m_IngredientColor = new Color(RGBColor.x / ingredients.Count, RGBColor.y / ingredients.Count, RGBColor.z / ingredients.Count, 1);
         m_ColorResultTest.color = ingredientResult.m_IngredientColor;
         ingredients.Clear();
-        m_Ingredient = ingredientResult;
-        m_Draggable.AddIngredient(m_Ingredient);
+        //m_Ingredient = ingredientResult;
+        //m_Draggable.AddIngredient(m_Ingredient);
     }
 
     private void OnMouseDown()
@@ -82,9 +102,33 @@ public class GlassManager : Tools
         }
     }
 
-    public override void Clear()
+    public void Clear()
     {
-        base.Clear();
-        ingredients = new List<Ingredient>();
+        drink.Ingredients = new List<Ingredient>();
+        drink.Temperature = IngredientTemperature.Neutro;
+    }
+
+    public void ChangeGlassType(Drink.GlassTypeEnum glassType)
+    {
+        Clear();
+        switch (glassType)
+        {
+            case Drink.GlassTypeEnum.Shot:
+                GetComponent<SpriteRenderer>().sprite = glassSprites[0];
+                maxSlots = 1;
+                break;
+            case Drink.GlassTypeEnum.Martini:
+                GetComponent<SpriteRenderer>().sprite = glassSprites[1];
+                maxSlots = 3;
+                break;
+            case Drink.GlassTypeEnum.Rocks:
+                GetComponent<SpriteRenderer>().sprite = glassSprites[2];
+                maxSlots = 4;
+                break;
+            case Drink.GlassTypeEnum.Tube:
+                GetComponent<SpriteRenderer>().sprite = glassSprites[3];
+                maxSlots = 6;
+                break;
+        }
     }
 }
