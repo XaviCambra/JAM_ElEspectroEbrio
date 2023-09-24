@@ -46,7 +46,7 @@ public class Ingredient : ScriptableObject
         Espeso,
         Ligero,
         Vivo,
-        Necr�tico,
+        Necrótico,
         Bloody,
         Magic,
         Mundano
