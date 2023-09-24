@@ -9,6 +9,7 @@ public class CustomerManager : MonoBehaviour
     [SerializeField]  Transform topX;
     [SerializeField] float m_Speed;
     [SerializeField] UIKey customerDialogue;
+    [SerializeField] TextMeshProUGUI customerDialogueText;
     [SerializeField] TranslationsManager translationManager;
     private bool customerEntranceFinished = true;
     [SerializeField] List<Client> customerList = new List<Client>();
@@ -27,10 +28,11 @@ public class CustomerManager : MonoBehaviour
             else
             {
                 //TODO: el texto debe ser cargado desde un json y debe poderse pasar a otros di�logos
-                drinkOfCostumerIndex = Random.Range(0, customerList[customerIndex].WantedDrinks.Count);
-                customerDialogue.m_Key = customerList[customerIndex].WantedDrinks[drinkOfCostumerIndex].TextDescriptionKey;
-                translationManager.TranslateTexts();
-                customerEntranceFinished = true;
+                //drinkOfCostumerIndex = Random.Range(0, customerList[customerIndex].WantedDrinks.Count);
+                //customerDialogue.m_Key = customerList[customerIndex].WantedDrinks[drinkOfCostumerIndex].Drink.TextDescriptionKey;
+                //translationManager.TranslateTexts();
+                customerDialogueText.text = "�ESTOY FURIOSA! Me acaba de dejar mi novio porque seg�n �l TENGO MUCHAS SERPIENTES EN LA CABEZA!!, �te lo puedes creer? Dame un alma malvada con algo mundano. �Pero nada espeso! Es tan asqueroso como mi ex.";
+                //customerEntranceFinished = true;
                 customerIndex++;
             }
         }        

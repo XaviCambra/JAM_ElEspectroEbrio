@@ -15,7 +15,7 @@ public class Client : ScriptableObject
     public List<IngredientPropertyOrder> WantedIngredientProperties;
     public List<DrinkOrder> WantedDrinks;
     public List<string> DialogueLines;
-    public Sprite Sprite;
+    public string Sprite;
 }
 
 public class ClientsInLevel
