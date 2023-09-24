@@ -1,22 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class CustomerManager : MonoBehaviour
 {
+    public GlassManager gm;
+
     [SerializeField]  Transform topX;
     [SerializeField] float m_Speed;
-    [SerializeField] UIKey customerDialogue;
+    [SerializeField] TextMeshProUGUI customerDialogue;  // preguntar por qué esto era antes un UIKey
     [SerializeField] TranslationsManager translationManager;
     private bool customerEntranceFinished = true;
     [SerializeField] List<Client> customerList = new List<Client>();
     private int customerIndex;
-    int drinkOfCostumerIndex;
     private void Start()
     {
-        //List<Client> customerList = fetchClientList();
+        customerList = fetchClientList();
     }
     void FixedUpdate()
     {
@@ -27,8 +29,7 @@ public class CustomerManager : MonoBehaviour
             else
             {
                 //TODO: el texto debe ser cargado desde un json y debe poderse pasar a otros diálogos
-                drinkOfCostumerIndex = Random.Range(0, customerList[customerIndex].WantedDrinks.Count);
-                customerDialogue.m_Key = customerList[customerIndex].WantedDrinks[drinkOfCostumerIndex].TextDescriptionKey;
+                customerDialogue.text = customerList[customerIndex].WantedDrink.TextDescriptionKey;
                 translationManager.TranslateTexts();
                 customerEntranceFinished = true;
                 customerIndex++;
@@ -47,50 +48,80 @@ public class CustomerManager : MonoBehaviour
         }
     }
 
-    //private List<Client> fetchClientList()
-    //{
-    //    //TODO: usar las siguient lineas
-    //    //ClientsInLevel cil = ClientsInLevel.LoadClientsFromFile("Assets\\Resources\\ClientsInLevels.json");
-    //    //return cil.Clients;
-    //    return new List<Client>() { //TODO: comentar esto
-    //        new Client{ 
-    //            Name = "Vampiro",
-    //            Sprite = "Sprites/Vampiro",
-    //            WantedDrinks = new List<Drink>
-    //            {
+    private List<Client> fetchClientList()
+    {
+        //TODO: usar las siguient lineas
+        //ClientsInLevel cil = ClientsInLevel.LoadClientsFromFile("Assets\\Resources\\ClientsInLevels.json");
+        //return cil.Clients;
+        return new List<Client>() { //TODO: comentar esto
+            new Client{
+                Name = "Vampiro",
+                Sprite = "Sprites/Vampiro",
+                WantedDrink = new Drink
+                {
 
-    //            }
-    //        },
-    //        new Client{ },
-    //    }; 
-    //}
+                }
+            },
+            new Client{ },
+        };
+    }
 
-    public bool ProcessOrder(Drink d)
+    public bool ProcessOrder(List<Ingredient> actualDrink)
     {
         var customer = customerList[customerIndex];
-        foreach (var cond in customer.WantedDrinks)
+        //checkear por si hay algún ingrediente no deseado en la bebida
+        foreach (Ingredient notWantedIng in customer.WantedDrink.UndesiredIngredients)
         {
-            if (cond.Want && cond.Drink != d)
-                return false;
-            if (!cond.Want && cond.Drink == d)
-                return false;
-        }
-        int wantedIngredients = customer.WantedIngredients.Count;
-        int gotWantedIngredients = 0;
-        foreach (IngredientOrder io in customer.WantedIngredients)
-        {
-            foreach (Ingredient i in d.Ingredients)
+            foreach(Ingredient i in actualDrink)
             {
-                if (io.Wanted && io.Ingredient == i)
-                {
-                    gotWantedIngredients++;
-                }
-                if (!io.Wanted && io.Ingredient == i)
+                if(i.name == notWantedIng.name)
                     return false;
             }
         }
-        if (wantedIngredients < gotWantedIngredients)
+        //checkear si hay alguna propiedad no deseada en la bebida
+        foreach (Ingredient.IngredientProperties ip in customer.WantedDrink.UndesiredProperties)
+        {
+            foreach (Ingredient i in actualDrink)
+            {
+                foreach(Ingredient.IngredientProperties actualip in i.m_Properties)
+                {
+                    if (actualip == ip)
+                        return false;
+                }
+            }
+        }
+        //TODO: check de temperatura
+
+        //checkear si todos los ingredientes deseados están
+        int desiredIngredientsCount = 0;
+        foreach(Ingredient i in customer.WantedDrink.Ingredients)
+        {
+            foreach(Ingredient actualIngredient in actualDrink)
+            {
+                if (i.name == actualIngredient.Name)
+                    desiredIngredientsCount++;
+            }
+        }
+        if (desiredIngredientsCount < customer.WantedDrink.Ingredients.Count)
             return false;
+
+        //checkear si todas las propiedades deseadas están
+        int desiredPropertiesCount = 0;
+        foreach (Ingredient.IngredientProperties ip in customer.WantedDrink.Properties)
+        {
+            foreach (Ingredient i in actualDrink)
+            {
+                foreach (Ingredient.IngredientProperties actualip in i.m_Properties)
+                {
+                    if (actualip == ip)
+                        desiredPropertiesCount++;
+                }
+            }
+        }
+        if (desiredPropertiesCount < customer.WantedDrink.Properties.Count)
+            return false;
+
         return true;
+
     }
 }
