@@ -8,24 +8,34 @@ using UnityEngine.UIElements;
 public class CustomerManager : MonoBehaviour
 {
     public GlassManager gm;
+    public UnityEngine.UI.Image customer1;
+    public UnityEngine.UI.Image customer2;
 
     [SerializeField]  Transform topX;
+    [SerializeField]  Transform topX2;
     [SerializeField] float m_Speed;
     [SerializeField] UIKey customerDialogue;  // preguntar por qué esto era antes un UIKey
     [SerializeField] TranslationsManager translationManager;
     private bool customerEntranceFinished = true;
+    private bool exitCustomer = false;
     [SerializeField] List<Client> customerList = new List<Client>();
     private int customerIndex;
+    private UnityEngine.UI.Image customerEntering;
+    private UnityEngine.UI.Image customerLeaving;
+    private Vector3 customerInitPosition;
     private void Start()
     {
         customerList = fetchClientList();
+        customerEntering = customer1;
+        customerInitPosition = customer1.transform.position;
     }
     void FixedUpdate()
     {
+       
         if (!customerEntranceFinished)
         {
-            if (transform.position.x <= topX.transform.position.x)
-                transform.position += Vector3.right * m_Speed;
+            if (customerEntering.transform.position.x <= topX.transform.position.x)
+                customerEntering.transform.position += Vector3.right * m_Speed;
             else
             {
                 //TODO: el texto debe ser cargado desde un json y debe poderse pasar a otros diálogos
@@ -34,6 +44,22 @@ public class CustomerManager : MonoBehaviour
                 customerEntranceFinished = true;
                 //customerIndex++;
             }
+        }      
+        if(customerLeaving != null)
+        {
+            if (exitCustomer && customerLeaving.transform.position.x <= topX2.transform.position.x)
+            {
+                customerLeaving.transform.position += Vector3.right * m_Speed;
+            }
+            else
+            {
+                if (customerLeaving.transform.position.x >= topX2.transform.position.x)
+                {
+                    exitCustomer = false;
+                    customerLeaving.transform.position = customerInitPosition;
+                }
+                    
+            }
         }        
     }
     private void Update()
@@ -41,7 +67,7 @@ public class CustomerManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && customerEntranceFinished)
         {
             Sprite sprite = Resources.Load<Sprite>(customerList[customerIndex].Sprite);
-            gameObject.GetComponent<UnityEngine.UI.Image>().sprite = sprite;
+            customer1.sprite = sprite;
             customerEntranceFinished = false;
         }
     }
@@ -53,12 +79,32 @@ public class CustomerManager : MonoBehaviour
         //return cil.Clients;
         
         return new List<Client>() { //TODO: comentar esto
-            Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 1")
+            Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 1"),
+            Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 2"),
+            Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 3")
+
         };
     }
 
     public bool ProcessOrder()
     {
+        exitCustomer = true;
+        customerDialogue.EmptyText();
+        customerIndex++;
+        customerEntranceFinished = false;
+        if (customerIndex % 2 == 0)
+        {            
+            customerEntering = customer1;
+            customerLeaving = customer2;
+        }           
+        else
+        {
+            customerEntering = customer2;
+            customerLeaving = customer1;
+        }
+           
+        Sprite sprite = Resources.Load<Sprite>(customerList[customerIndex].Sprite);
+        customerEntering.sprite = sprite;
         List<Ingredient> actualDrink = gm.GetIngredients();
         var customer = customerList[customerIndex];
         //checkear por si hay algún ingrediente no deseado en la bebida
