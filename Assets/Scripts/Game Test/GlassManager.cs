@@ -11,6 +11,11 @@ public class GlassManager : Tools
     [SerializeField] SpriteRenderer m_ColorResultTest;
     private bool UnDrinkable;
 
+    public List<Ingredient> GetIngredients()
+    {
+        return ingredients;
+    }
+
     public override void AddIngredient(Ingredient ing)
     {
         if (m_Ingredient != null)

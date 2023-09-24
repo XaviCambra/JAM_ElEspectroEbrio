@@ -40,10 +40,8 @@ public class CustomerManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && customerEntranceFinished)
         {
-            //GameObject go = new GameObject();
-            //go.AddComponent<SpriteRenderer>();
-            //Sprite sprite = customerList[customerIndex].Sprite;
-            //go.GetComponent<SpriteRenderer>().sprite = sprite;
+            Sprite sprite = Resources.Load<Sprite>(customerList[customerIndex].Sprite);
+            gameObject.GetComponent<UnityEngine.UI.Image>().sprite = sprite;
             customerEntranceFinished = false;
         }
     }
@@ -53,21 +51,15 @@ public class CustomerManager : MonoBehaviour
         //TODO: usar las siguient lineas
         //ClientsInLevel cil = ClientsInLevel.LoadClientsFromFile("Assets\\Resources\\ClientsInLevels.json");
         //return cil.Clients;
+        
         return new List<Client>() { //TODO: comentar esto
-            new Client{
-                Name = "Vampiro",
-                Sprite = "Sprites/Vampiro",
-                WantedDrink = new Drink
-                {
-
-                }
-            },
-            new Client{ },
+            Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 1")
         };
     }
 
-    public bool ProcessOrder(List<Ingredient> actualDrink)
+    public bool ProcessOrder()
     {
+        List<Ingredient> actualDrink = gm.GetIngredients();
         var customer = customerList[customerIndex];
         //checkear por si hay algún ingrediente no deseado en la bebida
         foreach (Ingredient notWantedIng in customer.WantedDrink.UndesiredIngredients)
