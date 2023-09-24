@@ -12,13 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9367b7e48e239fa4a9796435f7de6fa0, type: 3}
   m_Name: Peticion 2
   m_EditorClassIdentifier: 
-  Name: 
-  WantedDrink:
-    TextDescriptionKey: Dialogo_Frankenstein_1
-    Ingredients:
-    - {fileID: 11400000, guid: 6220bfc040721cd41a79650ac1c6f25c, type: 2}
-    Properties: 05000000
-    UndesiredIngredients: []
-    UndesiredProperties: 0100000003000000
-  DialogueLines: []
+  Name: Texto_Peticion2_nivel_1
+  DialogueLines:
+  - 
   Sprite: Sprites/HUD Assets/Personajes/frankenstein

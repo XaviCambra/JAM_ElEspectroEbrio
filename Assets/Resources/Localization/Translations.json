@@ -1,40 +1,69 @@
 {
     "TextsByLang": {
         "ESP": {
-            "": "",
+
             "Texto_Jugar": "Jugar",
             "Texto_Opciones": "Opciones",
             "Texto_Creditos": "Créditos",
             "Texto_Salir": "Salir",
             "Texto_Resolucion": "Resolución",
-            "Test_Gorgona": "¡Estoy furiosa! Me acaba de dejar mi novio porque según él tengo muchas serpientes en la cabeza! ¿Te lo puedes creer? Dame un alma malvada con algo mundano. ¡Pero nada espeso! Es tan asqueroso como mi ex.",
-            "Test_Gorgona_2": "Holaaaaaa! Mira, sé que te va a sonar raro pero me en-can-ta el sabor del Beso de Raphael pero soy terriblemente alérgica. Podrías hacerme algo que sepa más o menos igual con otra cosa?",
-            "Dialogo_Vampiro_1": "Estoy sediento, no he encontrado ninguna víctima. Dame algo de sangre con un poco de jugo de murciélago. Más te vale que esté caliente, o te usare como tentempié a ti.",
-            "Dialogo_Frankenstein_1": "Oye amigo, hay una chica que me gustaría impresionar con mi gran aguante con las bebidas. Hazme una mezcla super chunga de lo que tengas que sea necrótico y difícil de tragar. Y una esquirla de lava ahí humeante estaría genial para que alucine…",
-            "Dialogo_Lobo_1": "Umm… Si… H-hola… M-me pondrías un re-refresco de cola, co-con hielo, si.. y ..y con.. una po-poción de maná…  Ay qué vergüenza…",
-            "Dialogo_Vampiro_2": "Hey mi reinaaa! Mira te cuento guapeton, hay un vampiro allí con unos colmillos que me pone los pelos de punta! Le voy a invitar a una copita de martini, ponle Lágrimas de Nyarlathotep con un toquecito mágico pero nada muy fuerte o cargante que lo quiero lúcido para esta noche.",
-            "Dialogo_Bruja_1": "*bosteza* Estoy cansadísima, el trabajo me deja fatal… ¿Tenéis algo que me devuelva un poco al mundo de los vivos? Si puede ser, que esté fresquito… *se duerme el la barra*",   
-            "Dialogo_Gorgona_1": "¡ESTOY FURIOSA! Me acaba de dejar mi novio porque, según él, TENGO MUCHAS SERPIENTES EN LA CABEZA!! ¿Te lo puedes creer? Dame un alma malvada con algo mundano. ¡Pero nada espeso! No quiero que se me atragante como mi ex."
+            "Texto_Peticion1_nivel_1": "Estoy sediento, no he encontrado ninguna víctima hoy. Dame algo de sangre con un poco de jugo de murciélago.\n Mas te vale que esté caliente, o te usare como tentempié a ti.",
+            "Texto_Peticion2_nivel_1":"Oye amigo, hay una chica a la que me gustaría impresionar con mi gran aguante con la bebida.\n Hazme una mezcla super chunga de lo que tengas que sea necrótico y difícil de tragar.\n Y una esquirla de lava humeante estaría genial para que ella alucine.",
+            "Texto_Peticion3_nivel_1":"Umm… Si… H-hola… M-me pondrías un re-refresco de cola, co-con hielo,\n si.. y ..y con.. una po-poción de maná…  Ay qué vergüenza…",
+            "Texto_Peticion4_nivel_1":"Hey mi reinaaa! Mira te cuento guapeton, hay un vampiro allí con unos colmillos que me pone los pelos de punta!\n Le voy a invitar a una copita de martini, ponle Lágrimas de Nyarlathotep con un toquecito mágico, pero nada muy fuerte o cargante que lo quiero lúcido para esta noche.",
+            "Texto_Peticion5_nivel_1":"*bosteza* \n Estoy cansadísima, el trabajo me deja fatal… ¿Tenéis algo que me devuelva al mundo de los vivos? Si puede ser, que esté fresquito… *se duerme el la barra*",
+            "Texto_Peticion6_nivel_1":"¡ESTOY FURIOSA! Me acaba de dejar mi novio porque, según él, TENGO DEMASIADAS SERPIENTES EN LA CABEZA!! ¿Te lo puedes creer? Dame un alma malvada con algo mundano. ¡Pero nada espeso! No quiero que se me atragante como él.",
+
+
+            
         },
         "CAT": {
-            "": "",
+            
             "Texto_Jugar": "Jugar",
             "Texto_Opciones": "Opcions",
             "Texto_Creditos": "Crèdits",
             "Texto_Salir": "Sortir",
             "Texto_Resolucion": "Resolució",
-            "Test_Gorgona": "Estic furiosa! M'acaba de deixar la meva parella perquè segons ell tinc massa serps al cap! T'ho pots creure? Dona'm una Ànima malvada amb un toc mundà. Però gens espès! És tan fatigós com el meu ex.",
-            "Test_Gorgona_2": "Holaaaaaa! Mira, sé que et semblarà extrany però m'en-can-ta el sabor del Petó de Raphael pero soc terriblement alérgica. Podríes fer-me algo que tingui un sabor similar amb una altre cosa?"
+            "Texto_Peticion1_nivel_1":"Estic sec, avui no he trobat cap víctima. Dona'm una mica de sang amb una miqueta de suc de ratpenat.\n Val més que estigui calent, o seràs tu el meu aperitiu",
+            "Texto_Peticion2_nivel_1":"Escolta amic, hi ha una noia a qui m'agradaria impressionar amb la meva resistència amb la beguda.\n Fes-me una barreja super fotuda que sigui necròtica i difícil d'empassar, I un troç de lava fumejant seria genial per a fer-la al·lucinar.",
+            "Texto_Peticion3_nivel_1":"Umm… Si… H-hola… M-em posaries un re-refresc de co-cola amb gel,\n si.. i ..i amb.. ​​una po-poció de mannà… Ai quina vergonya…",
+            "Texto_Peticion4_nivel_1":"Hey reinaaa! Mira t'explico guapet, hi ha un vampir allà amb uns ullals que em posen els cabells de punta.\n El convidaré a una copeta de martini, posa-li Llàgrimes de Nyarlathotep amb un toc màgic però res massa fort, que ell vull lúcid per a aquesta nit.",
+            "Texto_Peticion5_nivel_1":"",
+            "Texto_Peticion6_nivel_1":"",
+
+
+            
+
         },
         "EN": {
-            "": "",
+
             "Texto_Jugar": "Play",
             "Texto_Opciones": "Options",
             "Texto_Creditos": "Credits",
             "Texto_Salir": "Exit",
             "Texto_Resolucion": "Resolution",
-            "Test_Gorgona": "Ingles: ¡ESTOY FURIOSA! Me acaba de dejar mi novio porque según él TENGO MUCHAS SERPIENTES EN LA CABEZA!!, ¿te lo puedes creer? Dame un alma malvada con algo mundano. ¡Pero nada espeso! Es tan asqueroso como mi ex.",
-            "Test_Gorgona_2": "Inglés: Holaaaaaa! Mira, sé que te va a sonar raro pero me en-can-ta el sabor del Beso de Raphael pero soy terriblemente alérgica. Podrías hacerme algo que sepa más o menos igual con otra cosa? Y ponmélo bien fresquito en un vaso que sea así chick que quiero hacerle fotos para pentagram. Ah y nada de sabores mundanos que tengo estándares."
+            "Texto_Peticion1_nivel_1":"I'm thirsty…, haven't found any victims today. Give me some blood with a bit of bat juice. \n And make sure it’s hot, or you’ll be my snack instead.",
+            "Texto_Peticion2_nivel_1":"Hey buddy, there's a girl I'd like to impress with my great drink tolerance.\n Make me a really nasty mix with whatever necrotic and hard to swallow stuff you have. And having a chunk of lava smoking in there would be great to impress her.",
+            "Texto_Peticion3_nivel_1":"Umm... Yes... H-hello... C-could you give me a s-soda, w-with ice,\n yes... and... and with... a mana po-potion?... O-oh… how embarrassing...",
+            "Texto_Peticion4_nivel_1":"Hey queeeeeeeeen! Look handsome, there’s a vampire over there with fangs that make my hair stand on end! \n I wanna get him a glass of martini, add Tears of Nyarlathotep with a little magic touch, but nothing too strong or overpowering, I want him wide-awake for later.",
+            "Texto_Peticion5_nivel_1":"",
+            "Texto_Peticion6_nivel_1":"",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 }

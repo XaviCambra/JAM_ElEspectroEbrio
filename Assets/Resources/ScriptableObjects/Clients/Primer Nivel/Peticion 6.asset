@@ -12,13 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9367b7e48e239fa4a9796435f7de6fa0, type: 3}
   m_Name: Peticion 6
   m_EditorClassIdentifier: 
-  Name: 
-  WantedDrink:
-    TextDescriptionKey: 
-    Ingredients:
-    - {fileID: 11400000, guid: 33f5566e67cb211438d3945645066f6b, type: 2}
-    Properties: 08000000
-    UndesiredIngredients: []
-    UndesiredProperties: 02000000
+  Name: Texto_Peticion6_nivel_1
   DialogueLines: []
   Sprite: Sprites/HUD Assets/Personajes/gorgona
