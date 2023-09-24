@@ -12,18 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9367b7e48e239fa4a9796435f7de6fa0, type: 3}
   m_Name: Peticion 8
   m_EditorClassIdentifier: 
-  Name: 
-  WantedDrinks:
-  - TextDescriptionKey: 
-    Ingredients:
-    - {fileID: 11400000, guid: 6220bfc040721cd41a79650ac1c6f25c, type: 2}
+  WantedDrink:
+    TextDescriptionKey: 
+    Ingredients: []
     Properties: 080000000600000000000000
     UndesiredIngredients: []
     UndesiredProperties: 
-  DialogueLines:
-  - "Sabes esos d\xEDas en los que sientes que te falta esa chispa para mantenerte
-    vivo, barman? Necesito algo que me reanime por dentro, que avive la llama de
-    la tostadora que tengo en el pecho. Una mezcla de todos los elementos atados
-    al plano f\xEDsico, no s\xE9 si me entiendes, que me haga hacer \u2018Ding!\u2019
-    con su intensidad."
+    Temperature: 3
+    GlassType: 0
   Sprite: {fileID: 21300000, guid: 6c3aed1cfec9b524e9e3cf3d32f29d10, type: 3}
