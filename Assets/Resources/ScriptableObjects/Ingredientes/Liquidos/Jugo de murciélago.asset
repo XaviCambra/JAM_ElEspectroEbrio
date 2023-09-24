@@ -17,7 +17,7 @@ MonoBehaviour:
   Type: 0
   SlotsOccupied: 1
   m_Properties: 030000000800000006000000
-  m_Temperature: 1
+  m_Temperature: 2
   m_IngredientColor: {r: 0.8000001, g: 0.68235296, b: 0.93725497, a: 1}
   m_Sprite: {fileID: 21300000, guid: 1a0db87af646d54459f44c1988e54dc3, type: 3}
   mixedIngredientList: []
