@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class Client : ScriptableObject
 {
     public string Name;
-    public List<Drink> WantedDrinks;
+    public Drink WantedDrink;
     public List<string> DialogueLines;
     public Sprite Sprite;
 }

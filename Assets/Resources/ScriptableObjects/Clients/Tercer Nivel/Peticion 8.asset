@@ -13,6 +13,16 @@ MonoBehaviour:
   m_Name: Peticion 8
   m_EditorClassIdentifier: 
   Name: 
-  WantedDrinks: []
-  DialogueLines: []
-  Sprite: {fileID: 0}
+  WantedDrinks:
+  - TextDescriptionKey: 
+    Ingredients: []
+    Properties: 0300000008000000
+    UndesiredIngredients: []
+    UndesiredProperties: 00000000010000000200000004000000050000000600000007000000
+  DialogueLines:
+  - "No se lo digas a mis hermanas pero la verdad es que no me gusta mucho la bebida\u2026
+    \xBFTe importar\xEDa ponerme un poco de Refresco de Cola Sin Marca en un vaso
+    de chupito? As\xED finjo que me ha subido mucho de golpe y me puedo ir a casa
+    a viciar. M\xE9zclalo con algo para que parezca que me est\xE1s preparando una
+    bebida compleja, pero que no altere el sabor, por favor."
+  Sprite: {fileID: 21300000, guid: fe88ed552d320d44f95a64b008d07d59, type: 3}

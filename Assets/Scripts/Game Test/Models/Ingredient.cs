@@ -30,7 +30,7 @@ public class Ingredient : ScriptableObject
     public string Name;
     public string Description;
     public IngredientType Type;
-    [Tooltip("Numero de slots que ocupa. En los líquidos siempre es 1")] public int SlotsOccupied;
+    [Tooltip("Numero de slots que ocupa. En los lï¿½quidos siempre es 1")] public int SlotsOccupied;
     public enum IngredientType
     {
         Liquid,
@@ -46,7 +46,7 @@ public class Ingredient : ScriptableObject
         Espeso,
         Ligero,
         Vivo,
-        Necrótico,
+        NecrÃ³tico,
         Bloody,
         Magic,
         Mundano
@@ -54,9 +54,10 @@ public class Ingredient : ScriptableObject
     public IngredientTemperature m_Temperature;
     public enum IngredientTemperature
     {
+        Indiferente,
         Frio,
         Neutro,
-        Caliente
+        Caliente        
     }
     public Color m_IngredientColor;
 
@@ -74,7 +75,17 @@ public class Ingredient : ScriptableObject
     }
 }
 
+public class IngredientOrder
+{
+    public Ingredient Ingredient;
+    public bool Wanted;
+}
 
+public class IngredientPropertyOrder
+{
+    public Ingredient.IngredientType IngredientType;
+    public bool Wanted;
+}
 [Serializable]
 public class Drink
 {
@@ -83,4 +94,13 @@ public class Drink
     public List<Ingredient.IngredientProperties> Properties;
     public List<Ingredient> UndesiredIngredients;
     public List<Ingredient.IngredientProperties> UndesiredProperties;
+    public Ingredient.IngredientTemperature Temperature;
+
+   /* public Drink() 
+    { 
+        Ingredients = new List<Ingredient>();
+        Properties = new List<Ingredient.IngredientProperties>();
+        UndesiredIngredients = new List<Ingredient>();
+        UndesiredProperties = new List<Ingredient.IngredientProperties>();
+    }*/
 }

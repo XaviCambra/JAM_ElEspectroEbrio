@@ -13,6 +13,17 @@ MonoBehaviour:
   m_Name: Peticion 1
   m_EditorClassIdentifier: 
   Name: 
-  WantedDrinks: []
-  DialogueLines: []
-  Sprite: {fileID: 0}
+  WantedDrinks:
+  - TextDescriptionKey: 
+    Ingredients:
+    - {fileID: 11400000, guid: a72838a7020a62a4792259266a9d924e, type: 2}
+    Properties: 0400000005000000070000000800000006000000
+    UndesiredIngredients: []
+    UndesiredProperties: 
+  DialogueLines:
+  - "Bro, mi colega aqu\xED no conf\xEDa en que me acabo de inventar el mejor cubata
+    del mundo. Pero no pasa nada, porque t\xFA me ayudar\xE1s a crearlo. Es una mezcla
+    de todo lo que puedes saborear en una bebida para que le guste a todo el mundo.
+    Y la mejor parte es que tiene un s\xF3lido que hace de auto mezclador \xA1Que
+    te puedes comer al final! Soy un puto genio."
+  Sprite: {fileID: 21300000, guid: 00d4231bfbd485d4aa78869d564f12d7, type: 3}

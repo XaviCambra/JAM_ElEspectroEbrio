@@ -13,6 +13,18 @@ MonoBehaviour:
   m_Name: Peticion 4
   m_EditorClassIdentifier: 
   Name: 
-  WantedDrinks: []
-  DialogueLines: []
-  Sprite: {fileID: 0}
+  WantedDrinks:
+  - TextDescriptionKey: 
+    Ingredients:
+    - {fileID: 11400000, guid: 14d6b5876f683234aad00cc74416ea6d, type: 2}
+    - {fileID: 11400000, guid: b1c0de868052ced42b0de255e6658f1a, type: 2}
+    - {fileID: 11400000, guid: 6220bfc040721cd41a79650ac1c6f25c, type: 2}
+    Properties: 
+    UndesiredIngredients: []
+    UndesiredProperties: 
+  DialogueLines:
+  - "Tu mindundi!!!, quiero tomar un Calent\xF3n del Yeti pero a\xF1\xE1dele esa
+    constituci\xF3n densa\u2026 como una gelatina que se me mueva en la boca. Por
+    cierto que sea Calent\xF3n no como la \xFAltima vez que lo tome. Lo quiero para
+    ya!!"
+  Sprite: {fileID: 21300000, guid: ddd2c1570b758984e82045529ba21814, type: 3}

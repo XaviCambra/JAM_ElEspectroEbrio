@@ -10,17 +10,27 @@ public class GlassManager : Tools
     [SerializeField] List<Ingredient> ingredients = new List<Ingredient>();
     [SerializeField] SpriteRenderer m_ColorResultTest;
     private bool UnDrinkable;
+    private Drink drink;
+
+    public Drink GetDrink()
+    {
+        return drink;
+    }
+    public List<Ingredient> GetIngredients()
+    {
+        return drink.Ingredients;
+    }
 
     public override void AddIngredient(Ingredient ing)
     {
         if (m_Ingredient != null)
             return;
 
-        if (ing.Type == IngredientType.Mixed ||
-            ing.Type == IngredientType.Liquid)
-            return;
+        //if (ing.Type == IngredientType.Mixed ||   // TODO: preguntar por qué estaba esto
+          //  ing.Type == IngredientType.Liquid)
+            //return;
 
-        ingredients.Add(ing);
+        drink.Ingredients.Add(ing);
         m_GlassSlots += ing.SlotsOccupied;
     }
 
@@ -35,7 +45,7 @@ public class GlassManager : Tools
         ingredientResult.mixedIngredientList = new List<Ingredient>();
         ingredientResult.m_Properties = new List<IngredientProperties>();
         ingredientResult.mixedIngredientList = new List<Ingredient>();
-        foreach (Ingredient ingredient in ingredients)
+        foreach (Ingredient ingredient in drink.Ingredients)
         {
             if (ingredient == ingredients[ingredients.Count - 1])
                 ingredientResult.Name += ingredient.Name;

@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9367b7e48e239fa4a9796435f7de6fa0, type: 3}
   m_Name: Peticion 5
   m_EditorClassIdentifier: 
-  Name: 
-  WantedDrinks: []
+  Name: Texto_Peticion5_nivel_1
   DialogueLines: []
-  Sprite: {fileID: 0}
+  Sprite: Sprites/HUD Assets/Personajes/bruja
