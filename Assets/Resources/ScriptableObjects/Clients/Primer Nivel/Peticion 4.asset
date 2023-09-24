@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Peticion 4
   m_EditorClassIdentifier: 
   WantedDrink:
-    TextDescriptionKey: 
+    TextDescriptionKey: Texto_Peticion4_nivel_1
     Ingredients:
     - {fileID: 11400000, guid: 0e9c6e7701abb3448b04d944eeb0af91, type: 2}
     Properties: 07000000
@@ -21,4 +21,5 @@ MonoBehaviour:
     UndesiredProperties: 0200000000000000
     Temperature: 0
     GlassTypesAccepted: 0300000001000000
+    GlassType: 0
   Sprite: {fileID: 21300000, guid: c366967ad9051b041aad19509b967ea6, type: 3}
