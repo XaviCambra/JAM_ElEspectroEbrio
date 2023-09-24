@@ -9,9 +9,9 @@ public class CustomerManager : MonoBehaviour
 {
     public GlassManager gm;
 
-    [SerializeField]  Transform topX;
+    [SerializeField] Transform topX;
     [SerializeField] float m_Speed;
-    [SerializeField] TextMeshProUGUI customerDialogue;  // preguntar por qué esto era antes un UIKey
+    [SerializeField] TextMeshProUGUI customerDialogue;  // preguntar por quï¿½ esto era antes un UIKey
     [SerializeField] TranslationsManager translationManager;
     private bool customerEntranceFinished = true;
     [SerializeField] List<Client> customerList = new List<Client>();
@@ -28,13 +28,13 @@ public class CustomerManager : MonoBehaviour
                 transform.position += Vector3.right * m_Speed;
             else
             {
-                //TODO: el texto debe ser cargado desde un json y debe poderse pasar a otros diálogos
+                //TODO: el texto debe ser cargado desde un json y debe poderse pasar a otros diï¿½logos
                 customerDialogue.text = customerList[customerIndex].WantedDrink.TextDescriptionKey;
                 translationManager.TranslateTexts();
                 customerEntranceFinished = true;
                 //customerIndex++;
             }
-        }        
+        }
     }
     private void Update()
     {
@@ -51,7 +51,7 @@ public class CustomerManager : MonoBehaviour
         //TODO: usar las siguient lineas
         //ClientsInLevel cil = ClientsInLevel.LoadClientsFromFile("Assets\\Resources\\ClientsInLevels.json");
         //return cil.Clients;
-        
+
         return new List<Client>() { //TODO: comentar esto
             Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 1")
         };
@@ -59,36 +59,43 @@ public class CustomerManager : MonoBehaviour
 
     public bool ProcessOrder()
     {
-        List<Ingredient> actualDrink = gm.GetIngredients();
+        Drink actualDrink = gm.GetDrink();
+        List<Ingredient> actualDrinkIngredients = gm.GetIngredients();
         var customer = customerList[customerIndex];
-        //checkear por si hay algún ingrediente no deseado en la bebida
+        //checkear por si hay algï¿½n ingrediente no deseado en la bebida
         foreach (Ingredient notWantedIng in customer.WantedDrink.UndesiredIngredients)
         {
-            foreach(Ingredient i in actualDrink)
+            foreach (Ingredient i in actualDrinkIngredients)
             {
-                if(i.name == notWantedIng.name)
+                if (i.name == notWantedIng.name)
                     return false;
             }
         }
         //checkear si hay alguna propiedad no deseada en la bebida
         foreach (Ingredient.IngredientProperties ip in customer.WantedDrink.UndesiredProperties)
         {
-            foreach (Ingredient i in actualDrink)
+            foreach (Ingredient i in actualDrinkIngredients)
             {
-                foreach(Ingredient.IngredientProperties actualip in i.m_Properties)
+                foreach (Ingredient.IngredientProperties actualip in i.m_Properties)
                 {
                     if (actualip == ip)
                         return false;
                 }
             }
         }
-        //TODO: check de temperatura
-
-        //checkear si todos los ingredientes deseados están
-        int desiredIngredientsCount = 0;
-        foreach(Ingredient i in customer.WantedDrink.Ingredients)
+        if (customer.WantedDrink.Temperature != Ingredient.IngredientTemperature.Indiferente)
         {
-            foreach(Ingredient actualIngredient in actualDrink)
+            if (customer.WantedDrink.Temperature != actualDrink.Temperature)
+            {
+                return false;
+            }
+        }
+
+        //checkear si todos los ingredientes deseados estï¿½n
+        int desiredIngredientsCount = 0;
+        foreach (Ingredient i in customer.WantedDrink.Ingredients)
+        {
+            foreach (Ingredient actualIngredient in actualDrinkIngredients)
             {
                 if (i.name == actualIngredient.Name)
                     desiredIngredientsCount++;
@@ -97,11 +104,11 @@ public class CustomerManager : MonoBehaviour
         if (desiredIngredientsCount < customer.WantedDrink.Ingredients.Count)
             return false;
 
-        //checkear si todas las propiedades deseadas están
+        //checkear si todas las propiedades deseadas estï¿½n
         int desiredPropertiesCount = 0;
         foreach (Ingredient.IngredientProperties ip in customer.WantedDrink.Properties)
         {
-            foreach (Ingredient i in actualDrink)
+            foreach (Ingredient i in actualDrinkIngredients)
             {
                 foreach (Ingredient.IngredientProperties actualip in i.m_Properties)
                 {
