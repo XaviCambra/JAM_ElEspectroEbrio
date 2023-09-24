@@ -5,8 +5,10 @@ using FMODUnity;
 
 public class FMODEvents : MonoBehaviour
 {
-    [field: Header("Button Menu SFX")]
-    [field: SerializeField] public EventReference buttonMenu { get; private set; }
+    [field: Header("Button Pressed Menu SFX")]
+    [field: SerializeField] public EventReference buttonPressedMenu { get; private set; }
+    [field: Header("Button Over Menu SFX")]
+    [field: SerializeField] public EventReference buttonOverMenu { get; private set; }
     public static FMODEvents instance { get; private set; }
 
     private void Awake()
