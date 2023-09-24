@@ -58,10 +58,39 @@ public class CustomerManager : MonoBehaviour
     //            Sprite = "Sprites/Vampiro",
     //            WantedDrinks = new List<Drink>
     //            {
-                    
+
     //            }
     //        },
     //        new Client{ },
     //    }; 
     //}
+
+    public bool ProcessOrder(Drink d)
+    {
+        var customer = customerList[customerIndex];
+        foreach (var cond in customer.WantedDrinks)
+        {
+            if (cond.Want && cond.Drink != d)
+                return false;
+            if (!cond.Want && cond.Drink == d)
+                return false;
+        }
+        int wantedIngredients = customer.WantedIngredients.Count;
+        int gotWantedIngredients = 0;
+        foreach (IngredientOrder io in customer.WantedIngredients)
+        {
+            foreach (Ingredient i in d.Ingredients)
+            {
+                if (io.Wanted && io.Ingredient == i)
+                {
+                    gotWantedIngredients++;
+                }
+                if (!io.Wanted && io.Ingredient == i)
+                    return false;
+            }
+        }
+        if (wantedIngredients < gotWantedIngredients)
+            return false;
+        return true;
+    }
 }
