@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Peticion 5
   m_EditorClassIdentifier: 
   WantedDrink:
-    TextDescriptionKey: 
+    TextDescriptionKey: Texto_Peticion5_nivel_1
     Ingredients: []
     Properties: 04000000
     UndesiredIngredients: []
     UndesiredProperties: 
     Temperature: 1
     GlassTypesAccepted: 0300000001000000
+    GlassType: 0
   Sprite: {fileID: 21300000, guid: 66bd0187dd1b3b64598bb8a3c5cdb5d1, type: 3}

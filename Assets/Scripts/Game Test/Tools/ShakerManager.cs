@@ -16,6 +16,10 @@ public class ShakerManager : Tools
           ing.Type == IngredientType.Liquid)
             return;
 
+        if (ingredients.Contains(ing) &&
+            ing.Type == IngredientType.Solid)
+            return;
+
         ingredients.Add(ing);
     }
 
@@ -29,6 +33,8 @@ public class ShakerManager : Tools
         ingredientResult.Name = "";
 
         Vector3 RGBColor = Vector3.zero;
+        bool l_IsCold = false;
+        bool l_IsHot = false;
         foreach (Ingredient ingredient in ingredients)
         {
             if (ingredient == ingredients[ingredients.Count - 1])
@@ -36,6 +42,10 @@ public class ShakerManager : Tools
             else
                 ingredientResult.Name += ingredient.Name + " con ";
 
+            if(ingredient.m_Temperature == IngredientTemperature.Frio)
+                l_IsCold = true;
+            if(ingredient.m_Temperature == IngredientTemperature.Caliente)
+                l_IsHot = true;
 
             ingredientResult.SlotsOccupied += ingredient.SlotsOccupied / 2;
             ingredientResult.AddIngredient(ingredient);
