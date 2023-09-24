@@ -10,15 +10,25 @@ public class GlassManager : Tools
     [SerializeField] List<Ingredient> ingredients = new List<Ingredient>();
     [SerializeField] SpriteRenderer m_ColorResultTest;
     private bool UnDrinkable;
+    private Drink drink;
+
+    public Drink GetDrink()
+    {
+        return drink;
+    }
+    public List<Ingredient> GetIngredients()
+    {
+        return ingredients;
+    }
 
     public override void AddIngredient(Ingredient ing)
     {
         if (m_Ingredient != null)
             return;
 
-        if (ing.Type == IngredientType.Mixed ||
-            ing.Type == IngredientType.Liquid)
-            return;
+        //if (ing.Type == IngredientType.Mixed ||   // TODO: preguntar por qué estaba esto
+          //  ing.Type == IngredientType.Liquid)
+            //return;
 
         ingredients.Add(ing);
         m_GlassSlots += ing.SlotsOccupied;
