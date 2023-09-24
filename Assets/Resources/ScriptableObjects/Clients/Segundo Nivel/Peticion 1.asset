@@ -12,14 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9367b7e48e239fa4a9796435f7de6fa0, type: 3}
   m_Name: Peticion 1
   m_EditorClassIdentifier: 
-  Name: 
-  WantedDrinks:
-  - TextDescriptionKey: 
+  WantedDrink:
+    TextDescriptionKey: 
     Ingredients: []
     Properties: 06000000
     UndesiredIngredients: []
     UndesiredProperties: 02000000
-  DialogueLines:
-  - "S\xE9 un buen tentempi\xE9 y hazme un chorrito de algo que me quite esta sed
-    de\u2026 carne que tengo. Pero nada muy espeso me llena y esta noche tengo compa\xF1\xEDa."
+    Temperature: 0
+    GlassType: 0
   Sprite: {fileID: 21300000, guid: c7c13696785b1e14d9da57fb6ceb1966, type: 3}
