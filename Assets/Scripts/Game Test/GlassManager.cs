@@ -10,7 +10,12 @@ public class GlassManager : Tools
     [SerializeField] List<Ingredient> ingredients = new List<Ingredient>();
     [SerializeField] SpriteRenderer m_ColorResultTest;
     private bool UnDrinkable;
+    private Drink drink;
 
+    public Drink GetDrink()
+    {
+        return drink;
+    }
     public List<Ingredient> GetIngredients()
     {
         return ingredients;

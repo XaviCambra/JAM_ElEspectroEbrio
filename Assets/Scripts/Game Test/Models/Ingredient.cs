@@ -85,4 +85,12 @@ public class Drink
     public List<Ingredient> UndesiredIngredients;
     public List<Ingredient.IngredientProperties> UndesiredProperties;
     public Ingredient.IngredientTemperature Temperature;
+
+    public Drink() 
+    { 
+        Ingredients = new List<Ingredient>();
+        Properties = new List<Ingredient.IngredientProperties>();
+        UndesiredIngredients = new List<Ingredient>();
+        UndesiredProperties = new List<Ingredient.IngredientProperties>();
+    }
 }
