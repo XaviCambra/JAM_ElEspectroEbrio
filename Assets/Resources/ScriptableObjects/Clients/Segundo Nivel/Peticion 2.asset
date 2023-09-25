@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Peticion 2
   m_EditorClassIdentifier: 
   WantedDrink:
-    TextDescriptionKey: Texto_Peticion3_nivel_1
+    TextDescriptionKey: Texto_Peticion2_nivel_2
     Ingredients:
     - {fileID: 11400000, guid: 67af2385dcfaec74ab9059febfaab9fa, type: 2}
     Properties: 03000000

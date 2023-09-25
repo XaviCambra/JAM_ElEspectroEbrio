@@ -39,7 +39,7 @@ public class IngredientHoverData : MonoBehaviour
                 {
                     ingredientData += "\n  - Enfría las bebidas";
                 }
-                if (ingredientData == "Esquirlas de lava")
+                if (ingredientData == "Esquirlas de Lava")
                 {
                     ingredientData += "\n  - Calienta las bebidas";
                 }

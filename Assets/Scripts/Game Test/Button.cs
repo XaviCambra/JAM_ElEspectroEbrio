@@ -15,13 +15,18 @@ public class Button : MonoBehaviour
     [field: SerializeField] public EventReference successSound { get; private set; }
     [field: SerializeField] public EventReference mainSong { get; private set; }
     [SerializeField]private int ordersInLevel;
+    public ScoreManager scoreManager;
 
     private int orderNumber = 1;
     private int correctOrders = 0, inCorrectOrders = 0;
 
     private void Start()
     {
-        audioManager.PlayOneShot(mainSong);
+        if (!AudioManager.MainSongPlaying)
+        {
+            audioManager.PlayOneShot(mainSong);
+            AudioManager.MainSongPlaying = true;
+        }        
     }
 
     public void TaskOnClick()
@@ -43,10 +48,16 @@ public class Button : MonoBehaviour
             inCorrectOrders++;
         }
         orderNumber++;
-        if(orderNumber == ordersInLevel + 1) 
+        ScoreManager.CustomersServed = ordersInLevel;
+        ScoreManager.CustomersServedSuccessfully = correctOrders;
+        if(ordersInLevel == 6)
+        {
+            ScoreManager.NextScene = "Game_Main2";
+        }
+        if (orderNumber == ordersInLevel + 1) 
         {
             if (correctOrders >= (ordersInLevel / 2))
-                SceneManager.LoadScene("Menu_Credits");
+                SceneManager.LoadScene("Score");
             else
                 SceneManager.LoadScene("Menu_GameOver");
         }

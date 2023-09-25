@@ -22,6 +22,7 @@ public class CustomerManager : MonoBehaviour
     private UnityEngine.UI.Image customerEntering;
     private UnityEngine.UI.Image customerLeaving;
     private Vector3 customerInitPosition;
+    public int Level;
     private void Start()
     {
         customerList = fetchClientList();
@@ -70,15 +71,29 @@ public class CustomerManager : MonoBehaviour
         //TODO: usar las siguient lineas
         //ClientsInLevel cil = ClientsInLevel.LoadClientsFromFile("Assets\\Resources\\ClientsInLevels.json");
         //return cil.Clients;
-
-        return new List<Client>() { //TODO: comentar esto
-            Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 1"),
-            Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 2"),
-            Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 3"),
-            Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 4"),
-            Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 5"),
-            Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 6")
-        };
+        if(Level == 1)
+        {
+            return new List<Client>() { //TODO: comentar esto
+                Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 1"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 2"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 3"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 4"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 5"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Primer Nivel/Peticion 6")
+            };
+        }
+        if(Level == 2)
+        {
+            return new List<Client>() { //TODO: comentar esto
+                Resources.Load<Client>("ScriptableObjects/Clients/Segundo Nivel/Peticion 1"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Segundo Nivel/Peticion 2"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Segundo Nivel/Peticion 3"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Segundo Nivel/Peticion 4"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Segundo Nivel/Peticion 5"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Segundo Nivel/Peticion 6")
+            };
+        }
+        return new List<Client>() { }; 
     }
 
     public bool ProcessOrder()

@@ -4,6 +4,7 @@ using FMODUnity;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance { get; private set; }
+    public static bool MainSongPlaying { get; set; }
 
     private void Awake()
     {

@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Game/GameTest.unity
     guid: 681dfa16f2300174c88909ded71bf93f
   - enabled: 1
+    path: Assets/Scenes/Game/Score.unity
+    guid: 5682f587462b0f140ad5479cee240684
+  - enabled: 1
+    path: Assets/Scenes/Game/Game_Main2.unity
+    guid: 617fd7685131d944abdd623a0b9fd69d
+  - enabled: 1
     path: Assets/Scenes/Game/Game_Main.unity
     guid: 448037316998d4b4ea4ca77aef75e656
   m_configObjects:
