@@ -19,7 +19,7 @@ public class TranslationsManager : MonoBehaviour
     public void TranslateTexts()
     {
         gameController = FindObjectOfType<GameController>().GetComponent<GameController>();
-        string lang = GetCurrentLanguage().ToUpper();
+        string lang = GetCurrentLanguageByName().ToUpper();
         //Translations trans = Translations.LoadTranslationsFromFile("Assets\\Resources\\Localization\\Translations.json");
         Translations trans = Translations.LoadTranslationsFromResources();
         var translations = trans.TextsByLang[lang];
@@ -33,9 +33,14 @@ public class TranslationsManager : MonoBehaviour
         }
     }
 
-    public string GetCurrentLanguage()
+    public string GetCurrentLanguageByName()
     {
         return gameController.GetLanguage().m_LanguageName;
+    }
+
+    public LanguageSO GetCurrentLanguage()
+    {
+        return gameController.GetLanguage();
     }
 
     public void SetCurrentLanguage(LanguageSO l_Language)

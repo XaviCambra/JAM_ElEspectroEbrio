@@ -11,11 +11,9 @@ public class ShakerManager : Tools
     {
         if (m_Ingredient != null)
             return;
-
         if (ing.Type == IngredientType.Mixed ||   // TODO: preguntar por qué estaba esto
           ing.Type == IngredientType.Liquid)
             return;
-
         if (ingredients.Contains(ing) &&
             ing.Type == IngredientType.Solid)
             return;
@@ -61,6 +59,13 @@ public class ShakerManager : Tools
             RGBColor.y += ingredient.m_IngredientColor.g;
             RGBColor.z += ingredient.m_IngredientColor.b;
         }
+        if (l_IsCold && !l_IsHot)
+            ingredientResult.m_Temperature = IngredientTemperature.Frio;
+        else if (!l_IsCold && l_IsHot)
+            ingredientResult.m_Temperature = IngredientTemperature.Caliente;
+        else
+            ingredientResult.m_Temperature = IngredientTemperature.Neutro;
+
         ingredientResult.name = ingredientResult.Name;
         ingredientResult.Type = IngredientType.Mixed;
         ingredientResult.m_IngredientColor = new Color(RGBColor.x / ingredients.Count, RGBColor.y / ingredients.Count, RGBColor.z / ingredients.Count, 1);

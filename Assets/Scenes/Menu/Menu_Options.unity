@@ -885,10 +885,7 @@ MonoBehaviour:
   m_TranslationsManager: {fileID: 569720848}
   m_Language: {fileID: 11400000, guid: dbae93865f5c68447ad2cbdb686e1711, type: 2}
   m_ImageBackground: {fileID: 245331139}
-  m_TranslationChoser:
-  - {fileID: 370336840}
-  - {fileID: 1732646012}
-  - {fileID: 1053024359}
+  m_TranslationChoser: []
 --- !u!114 &370336841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2300,10 +2297,7 @@ MonoBehaviour:
   m_TranslationsManager: {fileID: 569720848}
   m_Language: {fileID: 11400000, guid: c9c39e4066648474180fee7177d368a1, type: 2}
   m_ImageBackground: {fileID: 446905396}
-  m_TranslationChoser:
-  - {fileID: 370336840}
-  - {fileID: 1732646012}
-  - {fileID: 1053024359}
+  m_TranslationChoser: []
 --- !u!114 &1053024360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3228,10 +3222,7 @@ MonoBehaviour:
   m_TranslationsManager: {fileID: 569720848}
   m_Language: {fileID: 11400000, guid: 1d4a41070a5d3e24a9ec2ac08b4ed8d7, type: 2}
   m_ImageBackground: {fileID: 1774237477}
-  m_TranslationChoser:
-  - {fileID: 370336840}
-  - {fileID: 1732646012}
-  - {fileID: 1053024359}
+  m_TranslationChoser: []
 --- !u!114 &1732646013
 MonoBehaviour:
   m_ObjectHideFlags: 0

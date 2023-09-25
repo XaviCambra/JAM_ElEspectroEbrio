@@ -7,9 +7,9 @@ using static Ingredient;
 public class GlassManager : MonoBehaviour
 {
     [SerializeField] List<Sprite> glassSprites; // order is chupito, martini, rocks, tubo
-    private bool UnDrinkable;
-    private Drink drink;
-    private int maxSlots;
+    [SerializeField] private bool UnDrinkable;
+    [SerializeField] private Drink drink;
+    [SerializeField] private int maxSlots;
     [SerializeField] Drink.GlassTypeEnum glassTypeEnum;
 
     private void Start()
@@ -31,6 +31,10 @@ public class GlassManager : MonoBehaviour
         if(drink.Ingredients.Count < maxSlots)
         {
             drink.Ingredients.Add(ing);
+            foreach(IngredientProperties property in ing.m_Properties)
+            {
+                drink.Properties.Add(property);
+            }
             if (ing.m_Temperature == Ingredient.IngredientTemperature.Frio)
                 drink.Temperature = IngredientTemperature.Frio;
             if (ing.m_Temperature == Ingredient.IngredientTemperature.Caliente)
@@ -43,6 +47,7 @@ public class GlassManager : MonoBehaviour
     {
         drink.Ingredients = new List<Ingredient>();
         drink.Temperature = IngredientTemperature.Neutro;
+        GetComponent<SpriteRenderer>().sprite = null;
     }
 
     public void ChangeGlassType(Drink.GlassTypeEnum glassType)

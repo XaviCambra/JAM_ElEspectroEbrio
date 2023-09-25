@@ -133,13 +133,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5312816}
   - component: {fileID: 5312821}
-  - component: {fileID: 5312820}
   - component: {fileID: 5312819}
-  - component: {fileID: 5312818}
   - component: {fileID: 5312817}
+  - component: {fileID: 5312822}
   m_Layer: 0
-  m_Name: Colador (1)
-  m_TagString: glass
+  m_Name: Basura
+  m_TagString: Garbage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,21 +185,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5312818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5312815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5776d60e90a453449a29cdc6a1254e6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_GlassManager: {fileID: 0}
-  m_JiggerController: {fileID: 0}
-  m_StrainerManager: {fileID: 0}
 --- !u!61 &5312819
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -246,19 +230,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9, y: 3.25}
   m_EdgeRadius: 0
---- !u!114 &5312820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5312815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16ef28c06737daf4ea31d6050c16ce1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Ingredient: {fileID: 0}
 --- !u!212 &5312821
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -311,6 +282,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5312822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5312815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d053c973a52a2fb4c95cebda3acb063a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Ingredient: {fileID: 0}
 --- !u!4 &18477498 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4257687512650260439, guid: 150b186dcb4c151459cf12af7b0bf90a, type: 3}
@@ -585,7 +569,7 @@ GameObject:
   - component: {fileID: 136759455}
   m_Layer: 0
   m_Name: Coctelera
-  m_TagString: glass
+  m_TagString: Shaker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -650,7 +634,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136759447}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.161, y: 0.343, z: 0}
+  m_LocalPosition: {x: 0.51, y: 0.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -756,8 +740,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_GlassManager: {fileID: 0}
+  m_ShakerManager: {fileID: 0}
   m_JiggerController: {fileID: 0}
   m_StrainerManager: {fileID: 0}
+  m_GarbageManager: {fileID: 0}
 --- !u!4 &166916090 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4257687512650260439, guid: 150b186dcb4c151459cf12af7b0bf90a, type: 3}
@@ -1065,10 +1051,9 @@ GameObject:
   - component: {fileID: 234496039}
   - component: {fileID: 234496040}
   - component: {fileID: 234496041}
-  - component: {fileID: 234496042}
   m_Layer: 0
   m_Name: Medidor
-  m_TagString: glass
+  m_TagString: Jigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1146,7 +1131,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234496035}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.671, y: -0.121, z: 0}
+  m_LocalPosition: {x: -2.63, y: -0.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1211,8 +1196,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_GlassManager: {fileID: 0}
-  m_JiggerController: {fileID: 234496036}
+  m_ShakerManager: {fileID: 0}
+  m_JiggerController: {fileID: 0}
   m_StrainerManager: {fileID: 0}
+  m_GarbageManager: {fileID: 0}
 --- !u!50 &234496041
 Rigidbody2D:
   serializedVersion: 4
@@ -1240,19 +1227,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &234496042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 234496035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a936b0d85139864dafb090fc2c30f8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Ingredient: {fileID: 0}
 --- !u!114 &253840862 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4403498072755909502, guid: 0c984726619050b439824ff828369f67, type: 3}
@@ -1306,6 +1280,17 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f71ca950f28656b45b768b0b5bae90d6, type: 3}
   - {fileID: 21300000, guid: e2504051f95ca4540828103d43e8528f, type: 3}
   - {fileID: 21300000, guid: 554a6469a6aeea14da1068395f5d0e32, type: 3}
+  UnDrinkable: 0
+  drink:
+    TextDescriptionKey: 
+    Ingredients: []
+    Properties: 
+    UndesiredIngredients: []
+    UndesiredProperties: 
+    Temperature: 0
+    GlassTypesAccepted: 
+    GlassType: 0
+  maxSlots: 0
   glassTypeEnum: 0
 --- !u!212 &288338920
 SpriteRenderer:
@@ -6012,7 +5997,7 @@ GameObject:
   - component: {fileID: 1979574349}
   m_Layer: 0
   m_Name: Colador
-  m_TagString: glass
+  m_TagString: Strainer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6090,7 +6075,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979574343}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.624, y: -0.671, z: 0}
+  m_LocalPosition: {x: -0.97, y: -0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6155,8 +6140,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_GlassManager: {fileID: 0}
+  m_ShakerManager: {fileID: 0}
   m_JiggerController: {fileID: 0}
   m_StrainerManager: {fileID: 0}
+  m_GarbageManager: {fileID: 0}
 --- !u!50 &1979574349
 Rigidbody2D:
   serializedVersion: 4
