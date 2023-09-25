@@ -148,7 +148,7 @@ public class CustomerManager : MonoBehaviour
                 }
                 else
                 {
-                    if(ing.mixedIngredientList.Count > 0)
+                    if(ing.mixedIngredientList != null && ing.mixedIngredientList.Count > 0)
                     {
                         foreach (Ingredient ingredient in ing.mixedIngredientList)
                         {
