@@ -3,40 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using static Unity.VisualScripting.Icons;
+using UnityEngine.UI;
 
 public class TranslationChoser : MonoBehaviour
 {
-    [SerializeField] TMP_Dropdown m_Dropdown;
-    [SerializeField] TranslationsManager[] m_Translator;
+    [SerializeField] TranslationsManager m_TranslationsManager;
+    [SerializeField] LanguageSO m_Language;
+    [SerializeField] Image m_ImageBackground;
+    [SerializeField] TranslationChoser[] m_TranslationChoser;
 
     private void Start()
     {
-        m_Translator = FindObjectsOfType<TranslationsManager>();
-        if (m_Translator == null)
-            return;
-        List< LanguageSO> l_LanguagesList = m_Translator[0].GetLanguagesList();
-        for(int i = 0;  i < l_LanguagesList.Count; i++)
+        BackgroundEnabler();
+    }
+
+    public void SetLanguage()
+    {
+        m_TranslationsManager.SetCurrentLanguage(m_Language);
+        foreach(var t in m_TranslationChoser)
         {
-            TMP_Dropdown.OptionData option = new TMP_Dropdown.OptionData();
-            option.text = l_LanguagesList[i].m_LanguageName;
-            option.image = l_LanguagesList[i].m_Sprite;
-            m_Dropdown.options.Add(option);
-        }
-        for (int i = 0; i < l_LanguagesList.Count; i++)
-        {
-            
-            if (l_LanguagesList[i].m_LanguageName == m_Translator[0].GetCurrentLanguage())
-            {
-                m_Dropdown.value = i;
-            }
+            t.BackgroundEnabler();
         }
     }
 
-    public void ChangeLanguage(TMP_Dropdown l_Dropdown)
+    public void BackgroundEnabler()
     {
-        foreach(TranslationsManager l_Translator in m_Translator)
-        {
-            l_Translator.SetCurrentLanguage(l_Translator.GetLanguagesList()[l_Dropdown.value]);
-        }
+        m_ImageBackground.enabled = m_TranslationsManager.GetCurrentLanguage() == m_Language;
     }
 }
