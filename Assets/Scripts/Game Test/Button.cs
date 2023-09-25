@@ -12,8 +12,14 @@ public class Button : MonoBehaviour
     public AudioManager audioManager;
     [field: SerializeField] public EventReference failSound { get; private set; }
     [field: SerializeField] public EventReference successSound { get; private set; }
+    [field: SerializeField] public EventReference mainSong { get; private set; }
 
     private int orderNumber = 1;
+
+    private void Start()
+    {
+        audioManager.PlayOneShot(mainSong);
+    }
 
     public void TaskOnClick()
     {
