@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -8,6 +9,9 @@ public class Button : MonoBehaviour
     public CustomerManager customerManager;
     public Sprite successSprite;
     public Sprite failSprite;
+    public AudioManager audioManager;
+    [field: SerializeField] public EventReference failSound { get; private set; }
+    [field: SerializeField] public EventReference successSound { get; private set; }
 
     private int orderNumber = 1;
 
@@ -18,12 +22,14 @@ public class Button : MonoBehaviour
         {
             Debug.Log("Order correct! :D");
             GameObject.Find("Order" + orderNumber.ToString()).GetComponent<UnityEngine.UI.Image>().sprite = successSprite;
+            audioManager.PlayOneShot(successSound);
         }            
         else
         {
             Debug.Log("Order not correct! D:");
             var currentOrderMark = GameObject.Find("Order" + orderNumber.ToString());
             currentOrderMark.GetComponent<UnityEngine.UI.Image>().sprite = failSprite;
+            audioManager.PlayOneShot(failSound);
         }
         orderNumber++;
     }
