@@ -1,0 +1,23 @@
+{b46e509a-552a-48b4-be5a-f6c173bb5950} bank:/Master
+{2c73704e-2451-04f6-3813-7c3f82485fc8} bank:/Master.strings
+{f79e4363-171d-47f4-9365-327f9f88db74} bus:/
+{aa60defc-ac71-41da-8707-55df3efc969d} bus:/Reverb
+{7bb90e53-d6d7-4fb4-a58b-166ac84a1593} event:/In_Game/Characers/gameplay-music-v1
+{53f58bd3-2c20-49bb-ad4c-f23df78d7b1e} event:/In_Game/Characers/vo_frankestein
+{29a9ddac-d155-4bee-89a9-5711b824905a} event:/In_Game/Characers/vo_men_wolf
+{40b52b86-eb62-49f4-bf9c-88dff08a8c32} event:/In_Game/Characers/vo_sfx_gorgona
+{ed18631e-4130-4062-a5aa-5a48b71cfc77} event:/In_Game/Characers/vo_sfx_vampire
+{49940c28-a770-492c-968b-67c5d9a8b34b} event:/In_Game/Characers/vo_witch
+{c2421689-daac-49fa-b127-bdb841534fbf} event:/In_Game/Drag and Drop/sfx_drag_end_action_confirm
+{1267003c-d72c-4e5f-a971-24340744a03b} event:/In_Game/Drag and Drop/sfx_drag_start_action
+{d48a918f-89cb-4d6e-9311-12796cd2cf9f} event:/In_Game/Interactibles/coqueteleira_mixing
+{1269edb2-a1a2-466c-8f88-bb05856c931c} event:/In_Game/Interactibles/fail_drink
+{2da0ca74-c3cb-4770-8330-34b621405df0} event:/In_Game/Interactibles/liquid_down
+{c0e88af6-d873-477c-90fd-0b145133873f} event:/In_Game/Interactibles/mixing_sound_with_hand
+{f5856ef3-597d-4a21-83cb-0459aa73cff4} event:/In_Game/Interactibles/solid_droping_liquid
+{9304ecfb-4687-4b45-ad8e-16d2457587d2} event:/In_Game/Interactibles/sucess_drink
+{8cb1b67e-17f3-47a0-9fb3-188030f3a9c8} event:/In_Game/Interactibles/trash_drink
+{166e5947-6660-4222-9565-fbc7c168927e} event:/Main_ Menu/sfx_click_all_confim
+{a3906be4-4bbb-4fd0-a9ed-67156f87c51d} event:/Main_ Menu/sfx_click_hover
+{7004b7f1-8eab-4202-b1b2-8c149492847f} parameter:/click_menu
+{e1c4525f-18bf-4fbf-a729-69124c6950fb} vca:/vca_characters
