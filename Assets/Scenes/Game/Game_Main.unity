@@ -1670,6 +1670,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customerManager: {fileID: 846288902}
+  successSprite: {fileID: 21300000, guid: 38ab8a53707e21b4ab1c3113df89c6f7, type: 3}
+  failSprite: {fileID: 21300000, guid: f42d768452be2a84f9d5ba56008af4b9, type: 3}
 --- !u!1001 &336006759
 PrefabInstance:
   m_ObjectHideFlags: 0
