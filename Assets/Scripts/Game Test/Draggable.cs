@@ -7,8 +7,10 @@ public class Draggable : MonoBehaviour
     private Vector2 difference;
     Tools m_Tool;
     [SerializeField] GlassManager m_GlassManager;
+    [SerializeField] ShakerManager m_ShakerManager;
     [SerializeField] JiggerController m_JiggerController;
     [SerializeField] StrainerManager m_StrainerManager;
+    [SerializeField] GarbageManager m_GarbageManager;
     private Ingredient m_Ingredient;
 
     private Vector3 m_StartingPosition;
@@ -36,17 +38,24 @@ public class Draggable : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if(m_GlassManager != null)
+        if (m_GlassManager != null)
         {
             m_GlassManager.AddIngredient(m_Ingredient);
             if (m_Tool != null)
                 m_Tool.Clear();
         }
-        if(m_JiggerController != null)
+        if (m_ShakerManager != null)
+        {
+            m_ShakerManager.AddIngredient(m_Ingredient);
+            if (m_Tool != null)
+                m_Tool.Clear();
+        }
+        if (m_JiggerController != null)
         {
             m_JiggerController.AddIngredient(m_Ingredient);
             if (m_Tool != null)
                 m_Tool.Clear();
+            //m_JiggerController.OnMouseUpToolAction();
         }
         if(m_StrainerManager != null)
         {
@@ -69,8 +78,22 @@ public class Draggable : MonoBehaviour
         if(collision.tag == "glass")
         {
             m_GlassManager = collision.gameObject.GetComponent<GlassManager>();
+        }
+        if (collision.tag == "Shaker")
+        {
+            m_ShakerManager = collision.gameObject.GetComponent<ShakerManager>();
+        }
+        if (collision.tag == "Jigger")
+        {
             m_JiggerController = collision.gameObject.GetComponent<JiggerController>();
+        }
+        if (collision.tag == "Strainer")
+        {
             m_StrainerManager = collision.gameObject.GetComponent<StrainerManager>();
+        }
+        if(collision.tag == "Garbage")
+        {
+            m_GarbageManager = collision.gameObject.GetComponent<GarbageManager>();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -78,8 +101,22 @@ public class Draggable : MonoBehaviour
         if (collision.tag == "glass")
         {
             m_GlassManager = null;
+        }
+        if (collision.tag == "Shaker")
+        {
+            m_ShakerManager = null;
+        }
+        if (collision.tag == "Jigger")
+        {
             m_JiggerController = null;
+        }
+        if (collision.tag == "Strainer")
+        {
             m_StrainerManager = null;
+        }
+        if (collision.tag == "Garbage")
+        {
+            m_GarbageManager = null;
         }
     }
 

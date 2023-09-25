@@ -11,26 +11,57 @@ public class IngredientHoverData : MonoBehaviour
     private IngredientManager im;
     private TextMeshProUGUI IngredientName;
     private UnityEngine.UI.Image panel;
+
+    private bool showData;
     private void Start()
     {
         im = GetComponent<IngredientManager>();
         var ingredientNameObject = GameObject.Find(PanelName);
-        IngredientName = ingredientNameObject.GetComponentInChildren<TextMeshProUGUI>();
+        IngredientName = ingredientNameObject.transform.parent.GetComponentInChildren<TextMeshProUGUI>();
         panel = GameObject.Find(PanelName).GetComponent<UnityEngine.UI.Image>();
     }
     public void DisplayIngredientData(Vector2 newPosition)
     {
-        if(im != null)
+        showData = true;
+        
+    }
+
+    private void Update()
+    {
+        if (showData)
         {
-            panel.enabled = true;
-            IngredientName.enabled = true;
-            IngredientName.text = im.Ingredient.name;
-            IngredientName.transform.parent.position = Input.mousePosition;
+            if (im != null)
+            {
+                panel.enabled = true;
+                IngredientName.enabled = true;
+                string ingredientData = im.Ingredient.name;
+                if (ingredientData == "Hielo")
+                {
+                    ingredientData += "\n  - Enfría las bebidas";
+                }
+                if (ingredientData == "Esquirlas de lava")
+                {
+                    ingredientData += "\n  - Calienta las bebidas";
+                }
+                foreach (Ingredient.IngredientProperties property in im.Ingredient.m_Properties)
+                {
+                    ingredientData += "\n  - " + property.ToString();
+                }
+                
+                IngredientName.SetText(ingredientData);
+                IngredientName.ForceMeshUpdate();               
+
+                IngredientName.transform.parent.position = Input.mousePosition;
+
+                Vector2 textSize = IngredientName.GetRenderedValues(false);
+                panel.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, IngredientName.renderedHeight + 20);
+            }
         }
     }
 
     public void HideIngredientData()
     {
+        showData=false;
         panel.enabled = false;
         IngredientName.enabled = false;
     }

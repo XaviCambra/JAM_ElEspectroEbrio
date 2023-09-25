@@ -6,6 +6,10 @@ TagManager:
   tags:
   - ingredient
   - glass
+  - Shaker
+  - Jigger
+  - Strainer
+  - Garbage
   layers:
   - Default
   - TransparentFX

@@ -27,6 +27,10 @@ public class CustomerManager : MonoBehaviour
         customerList = fetchClientList();
         customerEntering = customer1;
         customerInitPosition = customer1.transform.position;
+
+        Sprite sprite = customerList[customerIndex].Sprite;
+        customer1.sprite = sprite;
+        customerEntranceFinished = false;
     }
     void FixedUpdate()
     {
@@ -61,15 +65,6 @@ public class CustomerManager : MonoBehaviour
             }
         }
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && customerEntranceFinished)
-        {
-            Sprite sprite = customerList[customerIndex].Sprite;
-            customer1.sprite = sprite;
-            customerEntranceFinished = false;
-        }
-    }
     private List<Client> fetchClientList()
     {
         //TODO: usar las siguient lineas
@@ -89,14 +84,14 @@ public class CustomerManager : MonoBehaviour
     public bool ProcessOrder()
     {
         exitCustomer = true;
-        customerDialogue.EmptyText();
+        customerDialogue.EmptyText();     
         customerIndex++;
         customerEntranceFinished = false;
         if (customerIndex % 2 == 0)
         {
             customerEntering = customer1;
             customerLeaving = customer2;
-        }
+         }
         else
         {
             customerEntering = customer2;
@@ -107,14 +102,14 @@ public class CustomerManager : MonoBehaviour
         customerEntering.sprite = sprite;
         List<Ingredient> actualDrinkIngredients = gm.GetIngredients();
         Drink actualDrink = gm.GetDrink();
-        var customer = customerList[customerIndex];
+        var customer = customerList[customerIndex-1];
         //checkear por si hay alg�n ingrediente no deseado en la bebida
         foreach (Ingredient notWantedIng in customer.WantedDrink.UndesiredIngredients)
         {
-            foreach (Ingredient i in actualDrinkIngredients)
+            if (actualDrinkIngredients.Contains(notWantedIng))
             {
-                if (i.name == notWantedIng.name)
-                    return false;
+                Debug.Log("El ingrediente no deseado: " + notWantedIng);
+                return false;
             }
         }
         //checkear si hay alguna propiedad no deseada en la bebida
@@ -125,7 +120,10 @@ public class CustomerManager : MonoBehaviour
                 foreach (Ingredient.IngredientProperties actualip in i.m_Properties)
                 {
                     if (actualip == ip)
+                    {
+                        Debug.Log("propiedad no deseado: " + actualip);
                         return false;
+                    }
                 }
             }
         }
@@ -133,41 +131,67 @@ public class CustomerManager : MonoBehaviour
         {
             if (customer.WantedDrink.Temperature != actualDrink.Temperature)
             {
+                Debug.Log("temperatura no deseado: " + actualDrink.Temperature);
                 return false;
             }
         }
         //checkear si todos los ingredientes deseados est�n
-        int desiredIngredientsCount = 0;
+        int allIngredientsIn = 0;
         foreach (Ingredient i in customer.WantedDrink.Ingredients)
         {
-            foreach (Ingredient actualIngredient in actualDrinkIngredients)
+            foreach(Ingredient ing in actualDrinkIngredients)
             {
-                if (i.name == actualIngredient.Name)
-                    desiredIngredientsCount++;
+                if(ing.Name == i.Name)
+                {
+                    Debug.Log("ingredientes existe: " + i.Name);
+                    allIngredientsIn++;
+                }
+                else
+                {
+                    if(ing.mixedIngredientList.Count > 0)
+                    {
+                        foreach (Ingredient ingredient in ing.mixedIngredientList)
+                        {
+                            if (ingredient.Name == i.Name)
+                            {
+                                Debug.Log("ingredientes existe: " + i.Name);
+                                allIngredientsIn++;
+                            }
+                        }
+                    }
+                }
             }
         }
-        if (desiredIngredientsCount < customer.WantedDrink.Ingredients.Count)
+        if (allIngredientsIn < customer.WantedDrink.Ingredients.Count)
             return false;
+
         //checkear si todas las propiedades deseadas est�n
-        int desiredPropertiesCount = 0;
+        int wantedProperties = 0;
         foreach (Ingredient.IngredientProperties ip in customer.WantedDrink.Properties)
         {
             foreach (Ingredient i in actualDrinkIngredients)
             {
-                foreach (Ingredient.IngredientProperties actualip in i.m_Properties)
+                if (i.m_Properties.Contains(ip))
                 {
-                    if (actualip == ip)
-                        desiredPropertiesCount++;
+                    wantedProperties++;
+                    Debug.Log("propiedad existe: " + i.Name);
                 }
             }
         }
-        if (desiredPropertiesCount < customer.WantedDrink.Properties.Count)
+        if(wantedProperties < customer.WantedDrink.Properties.Count)
+        {
+            Debug.Log("Count is false");
             return false;
+        }
         if(customer.WantedDrink.GlassTypesAccepted.Count > 0)
         {
             if (!customer.WantedDrink.GlassTypesAccepted.Contains(actualDrink.GlassType))
+            {
+                Debug.Log("Glass not accepted");
                 return false;
+            }
         }
+        gm.Clear();
         return true;
     }
 }
