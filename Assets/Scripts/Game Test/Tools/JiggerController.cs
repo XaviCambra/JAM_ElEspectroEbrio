@@ -10,7 +10,7 @@ public class JiggerController : Tools
         if (l_IngredientToAdd.Type == IngredientType.Liquid)
         {
             m_Ingredient = ScriptableObject.CreateInstance<Ingredient>();
-            m_Ingredient.name = l_IngredientToAdd.IngredientName;
+            m_Ingredient.name = l_IngredientToAdd.name;
             m_Ingredient.SlotsOccupied = l_IngredientToAdd.SlotsOccupied;
             m_Ingredient.IngredientName = l_IngredientToAdd.IngredientName;
             m_Ingredient.Description = l_IngredientToAdd.Description;

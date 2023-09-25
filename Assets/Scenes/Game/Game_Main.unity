@@ -295,6 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Ingredient: {fileID: 0}
+  gm: {fileID: 288338919}
 --- !u!4 &18477498 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4257687512650260439, guid: 150b186dcb4c151459cf12af7b0bf90a, type: 3}
@@ -2993,7 +2994,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Serve drink
+  m_text: Servir
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
