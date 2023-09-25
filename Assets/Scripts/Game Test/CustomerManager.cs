@@ -27,6 +27,10 @@ public class CustomerManager : MonoBehaviour
         customerList = fetchClientList();
         customerEntering = customer1;
         customerInitPosition = customer1.transform.position;
+
+        Sprite sprite = customerList[customerIndex].Sprite;
+        customer1.sprite = sprite;
+        customerEntranceFinished = false;
     }
     void FixedUpdate()
     {
@@ -59,15 +63,6 @@ public class CustomerManager : MonoBehaviour
                 }
 
             }
-        }
-    }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && customerEntranceFinished)
-        {
-            Sprite sprite = customerList[customerIndex].Sprite;
-            customer1.sprite = sprite;
-            customerEntranceFinished = false;
         }
     }
     private List<Client> fetchClientList()
