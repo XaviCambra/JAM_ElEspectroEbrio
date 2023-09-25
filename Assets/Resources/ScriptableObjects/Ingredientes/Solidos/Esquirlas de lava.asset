@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e807156795427b42a0a6f8f453fb819, type: 3}
-  m_Name: Esquirlas de lava
+  m_Name: Esquirlas de Lava
   m_EditorClassIdentifier: 
-  Name: Esquirla de Lava
+  Name: Esquirlas de Lava
   Description: Se siente al entrar y al salir
   Type: 2
   SlotsOccupied: 2

@@ -7,7 +7,7 @@ public class Ingredient : ScriptableObject
 {
     public Ingredient(string name, string description, IngredientType type, List<IngredientProperties> ingredientProperties, IngredientTemperature temperature, Color color, Sprite sprite)
     {
-        Name = name;
+        IngredientName = name;
         Description = description;
         Type = type;
         m_Properties = ingredientProperties;
@@ -18,7 +18,7 @@ public class Ingredient : ScriptableObject
 
     public Ingredient(Ingredient ingredient)
     {
-        Name = ingredient.Name;
+        IngredientName = ingredient.IngredientName;
         Description = ingredient.Description;
         Type = ingredient.Type;
         m_Properties = ingredient.m_Properties;
@@ -27,7 +27,7 @@ public class Ingredient : ScriptableObject
         m_Sprite = ingredient.m_Sprite;
     }
 
-    public string Name;
+    public string IngredientName;
     public string Description;
     public IngredientType Type;
     [Tooltip("Numero de slots que ocupa. En los l�quidos siempre es 1")] public int SlotsOccupied;

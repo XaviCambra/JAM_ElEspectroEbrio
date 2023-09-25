@@ -28,7 +28,7 @@ public class ShakerManager : Tools
         ingredientResult.mixedIngredientList = new List<Ingredient>();
         ingredientResult.m_Properties = new List<IngredientProperties>();
         ingredientResult.mixedIngredientList = new List<Ingredient>();
-        ingredientResult.Name = "";
+        ingredientResult.IngredientName = "";
 
         Vector3 RGBColor = Vector3.zero;
         bool l_IsCold = false;
@@ -36,9 +36,9 @@ public class ShakerManager : Tools
         foreach (Ingredient ingredient in ingredients)
         {
             if (ingredient == ingredients[ingredients.Count - 1])
-                ingredientResult.Name += ingredient.Name;
+                ingredientResult.IngredientName += ingredient.IngredientName;
             else
-                ingredientResult.Name += ingredient.Name + " con ";
+                ingredientResult.IngredientName += ingredient.IngredientName + " con ";
 
             if(ingredient.m_Temperature == IngredientTemperature.Frio)
                 l_IsCold = true;
@@ -66,7 +66,7 @@ public class ShakerManager : Tools
         else
             ingredientResult.m_Temperature = IngredientTemperature.Neutro;
 
-        ingredientResult.name = ingredientResult.Name;
+        ingredientResult.name = ingredientResult.IngredientName;
         ingredientResult.Type = IngredientType.Mixed;
         ingredientResult.m_IngredientColor = new Color(RGBColor.x / ingredients.Count, RGBColor.y / ingredients.Count, RGBColor.z / ingredients.Count, 1);
 

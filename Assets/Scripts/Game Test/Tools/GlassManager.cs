@@ -47,6 +47,7 @@ public class GlassManager : MonoBehaviour
     {
         drink.Ingredients = new List<Ingredient>();
         drink.Temperature = IngredientTemperature.Neutro;
+        drink.Properties = new List<IngredientProperties>();
         GetComponent<SpriteRenderer>().sprite = null;
     }
 

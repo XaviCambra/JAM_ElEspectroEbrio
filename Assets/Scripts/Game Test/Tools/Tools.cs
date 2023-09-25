@@ -14,8 +14,7 @@ public class Tools : MonoBehaviour
 
     private void Update()
     {
-        if(m_Draggable != null)
-            m_Draggable.enabled = m_Ingredient != null;
+        //m_Draggable.enabled = m_Ingredient != null;
     }
 
     public virtual void AddIngredient(Ingredient l_IngredientToAdd) { }

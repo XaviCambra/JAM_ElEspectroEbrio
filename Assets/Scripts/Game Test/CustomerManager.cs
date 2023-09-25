@@ -97,19 +97,21 @@ public class CustomerManager : MonoBehaviour
             customerEntering = customer2;
             customerLeaving = customer1;
         }
-
-        Sprite sprite = customerList[customerIndex].Sprite;
-        customerEntering.sprite = sprite;
+        if(customerIndex < customerList.Count)
+        {
+            Sprite sprite = customerList[customerIndex].Sprite;
+            customerEntering.sprite = sprite;
+        }        
         List<Ingredient> actualDrinkIngredients = gm.GetIngredients();
         Drink actualDrink = gm.GetDrink();
         var customer = customerList[customerIndex-1];
         //checkear por si hay alg�n ingrediente no deseado en la bebida
         foreach (Ingredient notWantedIng in customer.WantedDrink.UndesiredIngredients)
         {
-            if (actualDrinkIngredients.Contains(notWantedIng))
+            foreach (Ingredient i in actualDrinkIngredients)
             {
-                Debug.Log("El ingrediente no deseado: " + notWantedIng);
-                return false;
+                if (i.IngredientName == notWantedIng.IngredientName)
+                    return false;
             }
         }
         //checkear si hay alguna propiedad no deseada en la bebida
@@ -136,49 +138,32 @@ public class CustomerManager : MonoBehaviour
             }
         }
         //checkear si todos los ingredientes deseados est�n
-        int allIngredientsIn = 0;
+        int desiredIngredientsCount = 0;
         foreach (Ingredient i in customer.WantedDrink.Ingredients)
         {
-            foreach(Ingredient ing in actualDrinkIngredients)
+            foreach (Ingredient actualIngredient in actualDrinkIngredients)
             {
-                if(ing.Name == i.Name)
-                {
-                    Debug.Log("ingredientes existe: " + i.Name);
-                    allIngredientsIn++;
-                }
-                else
-                {
-                    if(ing.mixedIngredientList != null && ing.mixedIngredientList.Count > 0)
-                    {
-                        foreach (Ingredient ingredient in ing.mixedIngredientList)
-                        {
-                            if (ingredient.Name == i.Name)
-                            {
-                                Debug.Log("ingredientes existe: " + i.Name);
-                                allIngredientsIn++;
-                            }
-                        }
-                    }
-                }
+                if (i.IngredientName == actualIngredient.IngredientName)
+                    desiredIngredientsCount++;
             }
         }
-        if (allIngredientsIn < customer.WantedDrink.Ingredients.Count)
+        if (desiredIngredientsCount < customer.WantedDrink.Ingredients.Count)
             return false;
 
         //checkear si todas las propiedades deseadas est�n
-        int wantedProperties = 0;
+        int desiredPropertiesCount = 0;
         foreach (Ingredient.IngredientProperties ip in customer.WantedDrink.Properties)
         {
             foreach (Ingredient i in actualDrinkIngredients)
             {
-                if (i.m_Properties.Contains(ip))
+                foreach (Ingredient.IngredientProperties actualip in i.m_Properties)
                 {
-                    wantedProperties++;
-                    Debug.Log("propiedad existe: " + i.Name);
+                    if (actualip == ip)
+                        desiredPropertiesCount++;
                 }
             }
         }
-        if(wantedProperties < customer.WantedDrink.Properties.Count)
+        if (desiredPropertiesCount < customer.WantedDrink.Properties.Count)
         {
             Debug.Log("Count is false");
             return false;

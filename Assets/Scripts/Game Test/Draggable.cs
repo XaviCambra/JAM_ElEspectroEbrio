@@ -11,7 +11,8 @@ public class Draggable : MonoBehaviour
     [SerializeField] JiggerController m_JiggerController;
     [SerializeField] StrainerManager m_StrainerManager;
     [SerializeField] GarbageManager m_GarbageManager;
-    private Ingredient m_Ingredient;
+    public Ingredient m_Ingredient;
+    public bool isJigger;
 
     private Vector3 m_StartingPosition;
 
@@ -38,24 +39,26 @@ public class Draggable : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (m_GlassManager != null)
+        if (m_GlassManager != null && m_Ingredient.Type == Ingredient.IngredientType.Solid)
         {
             m_GlassManager.AddIngredient(m_Ingredient);
             if (m_Tool != null)
                 m_Tool.Clear();
         }
-        if (m_ShakerManager != null)
+        /*if (m_ShakerManager != null)
         {
             m_ShakerManager.AddIngredient(m_Ingredient);
             if (m_Tool != null)
                 m_Tool.Clear();
-        }
+        }*/
         if (m_JiggerController != null)
         {
-            m_JiggerController.AddIngredient(m_Ingredient);
-            if (m_Tool != null)
-                m_Tool.Clear();
-            //m_JiggerController.OnMouseUpToolAction();
+            if(!isJigger)
+                m_JiggerController.AddIngredient(m_Ingredient);
+            //if (m_Tool != null)
+              //  m_Tool.Clear();
+            if(isJigger)
+                m_JiggerController.OnMouseUpToolAction();
         }
         if(m_StrainerManager != null)
         {
@@ -83,7 +86,7 @@ public class Draggable : MonoBehaviour
         {
             m_ShakerManager = collision.gameObject.GetComponent<ShakerManager>();
         }
-        if (collision.tag == "Jigger")
+        if (collision.name == "Medidor")
         {
             m_JiggerController = collision.gameObject.GetComponent<JiggerController>();
         }
@@ -101,22 +104,6 @@ public class Draggable : MonoBehaviour
         if (collision.tag == "glass")
         {
             m_GlassManager = null;
-        }
-        if (collision.tag == "Shaker")
-        {
-            m_ShakerManager = null;
-        }
-        if (collision.tag == "Jigger")
-        {
-            m_JiggerController = null;
-        }
-        if (collision.tag == "Strainer")
-        {
-            m_StrainerManager = null;
-        }
-        if (collision.tag == "Garbage")
-        {
-            m_GarbageManager = null;
         }
     }
 
