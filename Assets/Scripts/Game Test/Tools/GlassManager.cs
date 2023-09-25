@@ -28,14 +28,13 @@ public class GlassManager : MonoBehaviour
 
     public void AddIngredient(Ingredient ing)
     {
-        if(maxSlots < drink.Ingredients.Count)
+        if(drink.Ingredients.Count < maxSlots)
         {
             drink.Ingredients.Add(ing);
             if (ing.m_Temperature == Ingredient.IngredientTemperature.Frio)
                 drink.Temperature = IngredientTemperature.Frio;
             if (ing.m_Temperature == Ingredient.IngredientTemperature.Caliente)
                 drink.Temperature = IngredientTemperature.Caliente;
-
         }
        
     }
@@ -49,6 +48,7 @@ public class GlassManager : MonoBehaviour
     public void ChangeGlassType(Drink.GlassTypeEnum glassType)
     {
         Clear();
+        drink.GlassType = glassType;
         switch (glassType)
         {
             case Drink.GlassTypeEnum.Shot:

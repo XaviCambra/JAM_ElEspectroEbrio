@@ -89,14 +89,14 @@ public class CustomerManager : MonoBehaviour
     public bool ProcessOrder()
     {
         exitCustomer = true;
-        customerDialogue.EmptyText();
+        customerDialogue.EmptyText();     
         customerIndex++;
         customerEntranceFinished = false;
         if (customerIndex % 2 == 0)
         {
             customerEntering = customer1;
             customerLeaving = customer2;
-        }
+         }
         else
         {
             customerEntering = customer2;
@@ -107,7 +107,7 @@ public class CustomerManager : MonoBehaviour
         customerEntering.sprite = sprite;
         List<Ingredient> actualDrinkIngredients = gm.GetIngredients();
         Drink actualDrink = gm.GetDrink();
-        var customer = customerList[customerIndex];
+        var customer = customerList[customerIndex-1];
         //checkear por si hay alg�n ingrediente no deseado en la bebida
         foreach (Ingredient notWantedIng in customer.WantedDrink.UndesiredIngredients)
         {

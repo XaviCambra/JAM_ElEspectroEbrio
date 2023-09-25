@@ -14,7 +14,7 @@ public class Tools : MonoBehaviour
 
     private void Update()
     {
-        m_Draggable.enabled = m_Ingredient != null;
+        //m_Draggable.enabled = m_Ingredient != null;
     }
 
     public virtual void AddIngredient(Ingredient l_IngredientToAdd) { }
@@ -23,4 +23,6 @@ public class Tools : MonoBehaviour
     {
         m_Ingredient = null;
     }
+
+    public virtual void OnMouseUpToolAction() { }
 }

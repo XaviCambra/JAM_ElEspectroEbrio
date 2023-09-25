@@ -36,7 +36,7 @@ public class Draggable : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if(m_GlassManager != null)
+        if(m_GlassManager != null && m_Ingredient.Type == Ingredient.IngredientType.Solid)
         {
             m_GlassManager.AddIngredient(m_Ingredient);
             if (m_Tool != null)
@@ -45,8 +45,9 @@ public class Draggable : MonoBehaviour
         if(m_JiggerController != null)
         {
             m_JiggerController.AddIngredient(m_Ingredient);
-            if (m_Tool != null)
-                m_Tool.Clear();
+            //if (m_Tool != null)
+              //  m_Tool.Clear();
+            m_JiggerController.OnMouseUpToolAction();
         }
         if(m_StrainerManager != null)
         {
@@ -69,8 +70,11 @@ public class Draggable : MonoBehaviour
         if(collision.tag == "glass")
         {
             m_GlassManager = collision.gameObject.GetComponent<GlassManager>();
+        }
+        if(collision.name == "Medidor")
+        {
             m_JiggerController = collision.gameObject.GetComponent<JiggerController>();
-            m_StrainerManager = collision.gameObject.GetComponent<StrainerManager>();
+            Debug.Log(m_JiggerController);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -78,8 +82,6 @@ public class Draggable : MonoBehaviour
         if (collision.tag == "glass")
         {
             m_GlassManager = null;
-            m_JiggerController = null;
-            m_StrainerManager = null;
         }
     }
 

@@ -5,6 +5,7 @@ using static Ingredient;
 
 public class JiggerController : Tools
 {
+    private GlassManager gm;
     public override void AddIngredient(Ingredient l_IngredientToAdd)
     {
         if(l_IngredientToAdd.Type == IngredientType.Liquid)
@@ -28,6 +29,20 @@ public class JiggerController : Tools
             m_Ingredient.m_IngredientColor = l_IngredientToAdd.m_IngredientColor;
             m_Ingredient.Type = IngredientType.Jiggled;
             m_Draggable.AddIngredient(m_Ingredient);
+        }
+    }
+
+    public override void OnMouseUpToolAction()
+    {
+        if(gm != null)
+            gm.AddIngredient(m_Ingredient);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.transform.name == "GlassManager")
+        {
+            gm = collision.gameObject.GetComponent<GlassManager>();
         }
     }
 }
