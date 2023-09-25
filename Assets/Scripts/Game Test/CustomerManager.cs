@@ -27,6 +27,10 @@ public class CustomerManager : MonoBehaviour
         customerList = fetchClientList();
         customerEntering = customer1;
         customerInitPosition = customer1.transform.position;
+
+        Sprite sprite = customerList[customerIndex].Sprite;
+        customer1.sprite = sprite;
+        customerEntranceFinished = false;
     }
     void FixedUpdate()
     {
@@ -61,15 +65,6 @@ public class CustomerManager : MonoBehaviour
             }
         }
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && customerEntranceFinished)
-        {
-            Sprite sprite = customerList[customerIndex].Sprite;
-            customer1.sprite = sprite;
-            customerEntranceFinished = false;
-        }
-    }
     private List<Client> fetchClientList()
     {
         //TODO: usar las siguient lineas
@@ -89,14 +84,14 @@ public class CustomerManager : MonoBehaviour
     public bool ProcessOrder()
     {
         exitCustomer = true;
-        customerDialogue.EmptyText();
+        customerDialogue.EmptyText();     
         customerIndex++;
         customerEntranceFinished = false;
         if (customerIndex % 2 == 0)
         {
             customerEntering = customer1;
             customerLeaving = customer2;
-        }
+         }
         else
         {
             customerEntering = customer2;
@@ -107,7 +102,7 @@ public class CustomerManager : MonoBehaviour
         customerEntering.sprite = sprite;
         List<Ingredient> actualDrinkIngredients = gm.GetIngredients();
         Drink actualDrink = gm.GetDrink();
-        var customer = customerList[customerIndex];
+        var customer = customerList[customerIndex-1];
         //checkear por si hay alg�n ingrediente no deseado en la bebida
         foreach (Ingredient notWantedIng in customer.WantedDrink.UndesiredIngredients)
         {

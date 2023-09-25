@@ -18,4 +18,10 @@ public class Translations
             return trs;
         }
     }
+    public static Translations LoadTranslationsFromResources()
+    {
+        var trsText = Resources.Load<TextAsset>("Localization/Translations");
+        Translations trs = JsonConvert.DeserializeObject<Translations>(trsText.text);
+        return trs;
+    }
 }
