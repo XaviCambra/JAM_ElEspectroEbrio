@@ -9,7 +9,7 @@ public class GlassManager : MonoBehaviour
     [SerializeField] List<Sprite> glassSprites; // order is chupito, martini, rocks, tubo
     [SerializeField] private bool UnDrinkable;
     [SerializeField] private Drink drink;
-    [SerializeField] private int maxSlots;
+    [SerializeField] public int maxSlots;
     [SerializeField] Drink.GlassTypeEnum glassTypeEnum;
 
     private void Start()

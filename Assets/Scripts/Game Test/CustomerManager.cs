@@ -90,7 +90,28 @@ public class CustomerManager : MonoBehaviour
                 Resources.Load<Client>("ScriptableObjects/Clients/Segundo Nivel/Peticion 3"),
                 Resources.Load<Client>("ScriptableObjects/Clients/Segundo Nivel/Peticion 4"),
                 Resources.Load<Client>("ScriptableObjects/Clients/Segundo Nivel/Peticion 5"),
-                Resources.Load<Client>("ScriptableObjects/Clients/Segundo Nivel/Peticion 6")
+                Resources.Load<Client>("ScriptableObjects/Clients/Segundo Nivel/Peticion 6"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Segundo Nivel/Peticion 7"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Segundo Nivel/Peticion 8"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Segundo Nivel/Peticion 9")
+            };
+        }
+        if (Level == 3)
+        {
+            return new List<Client>() { //TODO: comentar esto
+                Resources.Load<Client>("ScriptableObjects/Clients/Tercer Nivel/Peticion 1"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Tercer Nivel/Peticion 2"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Tercer Nivel/Peticion 3"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Tercer Nivel/Peticion 4"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Tercer Nivel/Peticion 5"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Tercer Nivel/Peticion 6"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Tercer Nivel/Peticion 7"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Tercer Nivel/Peticion 8"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Tercer Nivel/Peticion 9"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Tercer Nivel/Peticion 10"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Tercer Nivel/Peticion 11"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Tercer Nivel/Peticion 12"),
+                Resources.Load<Client>("ScriptableObjects/Clients/Tercer Nivel/Peticion 13"),
             };
         }
         return new List<Client>() { }; 
