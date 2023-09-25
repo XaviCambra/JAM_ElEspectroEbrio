@@ -20,7 +20,8 @@ public class TranslationsManager : MonoBehaviour
     {
         gameController = FindObjectOfType<GameController>().GetComponent<GameController>();
         string lang = GetCurrentLanguage().ToUpper();
-        Translations trans = Translations.LoadTranslationsFromFile("Assets\\Resources\\Localization\\Translations.json");
+        //Translations trans = Translations.LoadTranslationsFromFile("Assets\\Resources\\Localization\\Translations.json");
+        Translations trans = Translations.LoadTranslationsFromResources();
         var translations = trans.TextsByLang[lang];
         foreach (UIKey text in texts)
         {
