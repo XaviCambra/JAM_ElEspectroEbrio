@@ -6,7 +6,7 @@ using static Ingredient;
 
 public class GlassManager : MonoBehaviour
 {
-    [SerializeField] List<Sprite> glassSprites; // order is chupito, martini, rocks, tubo
+    [SerializeField] List<GameObject> glassObjects;
     [SerializeField] private bool UnDrinkable;
     [SerializeField] private Drink drink;
     [SerializeField] public int maxSlots;
@@ -55,24 +55,16 @@ public class GlassManager : MonoBehaviour
     {
         Clear();
         drink.GlassType = glassType;
-        switch (glassType)
+        foreach(GameObject l_Glass in glassObjects)
         {
-            case Drink.GlassTypeEnum.Shot:
-                GetComponent<SpriteRenderer>().sprite = glassSprites[0];
-                maxSlots = 1;
-                break;
-            case Drink.GlassTypeEnum.Martini:
-                GetComponent<SpriteRenderer>().sprite = glassSprites[1];
-                maxSlots = 3;
-                break;
-            case Drink.GlassTypeEnum.Rocks:
-                GetComponent<SpriteRenderer>().sprite = glassSprites[2];
-                maxSlots = 4;
-                break;
-            case Drink.GlassTypeEnum.Tube:
-                GetComponent<SpriteRenderer>().sprite = glassSprites[3];
-                maxSlots = 6;
-                break;
+            if(l_Glass.GetComponent<DraggableGlass>().GetGlassType() == glassType)
+            {
+                l_Glass.SetActive(true);
+            }
+            else
+            {
+                l_Glass.SetActive(false);
+            }
         }
     }
 }

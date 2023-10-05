@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMOD/Spain Jan Project Fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638312270047100432
+  lastModified: 638312417828444378
   FileSizes:
   - Name: Desktop
     Value: 1742
@@ -301,7 +301,7 @@ MonoBehaviour:
   - {fileID: 5917059259764851192}
   StringsBanks:
   - {fileID: -9044495824695757034}
-  cacheTime: 638312270047100432
+  cacheTime: 638312417828444378
   cacheVersion: 131607
 --- !u!114 &396302490226724609
 MonoBehaviour:
@@ -454,7 +454,7 @@ MonoBehaviour:
   Path: FMOD/Spain Jan Project Fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638312270047090330
+  lastModified: 638312417828444378
   FileSizes:
   - Name: Desktop
     Value: 1607968

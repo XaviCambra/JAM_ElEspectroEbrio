@@ -4,42 +4,47 @@ using UnityEngine;
 
 public class DraggableGlass : MonoBehaviour
 {
-    private Vector2 difference;
-    private Vector3 initPosition;
-    private GlassManager gm;
-    [SerializeField]private Drink.GlassTypeEnum glassType;
+    private Vector2 m_Difference;
+    private Vector3 m_InitPosition;
+    private GlassManager m_GlassManager;
+    [SerializeField] private Drink.GlassTypeEnum m_GlassType;
     private void Start()
     {
-        initPosition = transform.position;
+        m_InitPosition = transform.position;
     }
     private void OnMouseDown()
     {
-        difference = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
+        m_Difference = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
     }
     private void OnMouseDrag()
     {
-        transform.position = (Vector2)Camera.main.ScreenToWorldPoint((Vector2)Input.mousePosition) - difference;
+        transform.position = (Vector2)Camera.main.ScreenToWorldPoint((Vector2)Input.mousePosition) - m_Difference;
     }
     private void OnMouseUp()
     {
-        transform.position = initPosition;
-        if(gm != null)
+        transform.position = m_InitPosition;
+        if(m_GlassManager != null)
         {
-            gm.ChangeGlassType(glassType);
+            m_GlassManager.ChangeGlassType(m_GlassType);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "glass")
         {
-            gm = collision.gameObject.GetComponent<GlassManager>();
+            m_GlassManager = collision.gameObject.GetComponent<GlassManager>();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "glass")
         {
-            gm = null;
+            m_GlassManager = null;
         }
+    }
+
+    public Drink.GlassTypeEnum GetGlassType()
+    {
+        return m_GlassType;
     }
 }
